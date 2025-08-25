@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8">
@@ -9,9 +9,9 @@
   <!--
     - primary meta tags
   -->
-  <title>Doclab - home</title>
-  <meta name="title" content="Doclab - home">
-  <meta name="description" content="This is a madical html template made by codewithsadee">
+  <title>Contact - Dialyse BOUCENNA</title>
+  <meta name="title" content="Dialyse BOUCENNA - Contact">
+  <meta name="description" content="Contactez-nous pour vos besoins en dialyse et transport médical.">
 
   <!--
     - favicon
@@ -23,13 +23,13 @@
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Rubik:wght@400;500;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
 
   <!--
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
   .navbar-item .dropdown {
     visibility: hidden; opacity: 0; position: absolute; top: 100%; left: 0; width: 250px;
@@ -37,30 +37,27 @@
     box-shadow: 0 4px 16px hsla(0, 0%, 0%, 0.2); transition: var(--transition-1);
     transform: translateY(10px); z-index: 10;
   }
+  .navbar-item { position: relative; }
   .navbar-item:hover .dropdown { visibility: visible; opacity: 1; transform: translateY(0); }
   .dropdown-item { border-bottom: 1px solid var(--white_a10); }
   .dropdown-item:last-child { border-bottom: none; }
   .dropdown-link { color: var(--white); padding: 12px 20px; font-size: 1.4rem; transition: var(--transition-1); display: block; }
   .dropdown-link:hover { background-color: var(--verdigris); }
-  .navbar-item { position: relative; }
-  </style>
-  <!-- Leaflet map CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
-  <style>
-    /* Scoped styles for the map section to avoid interfering with existing CSS */
-    .map-section { padding: 24px; }
-    .map-card { background: var(--white, #fff); border-radius: 12px; box-shadow: var(--shadow-2, 0 4px 16px rgba(0,0,0,.08)); padding: 16px; }
-    #dialyse-map { height: 520px; width: 100%; border-radius: 10px; }
-    .map-header { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 12px; }
-    .map-title { font-family: var(--ff-oswald, sans-serif); font-size: 1.6rem; color: var(--midnight-green, #0f5960); margin: 0; }
-    .map-note { font-size: .95rem; color: var(--independece, #5b607a); margin: 0; }
-    .map-legend { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
-    .map-chip { background: hsla(182, 100%, 35%, .12); color: var(--midnight-green, #0f5960); padding: 6px 10px; border-radius: 999px; font-size: .9rem; text-decoration: none; }
-    @media (max-width: 768px){ #dialyse-map { height: 380px; } .map-title { font-size: 1.3rem; } }
   </style>
 </head>
+
 <body id="top">
 
+  <!--
+    - #PRELOADER
+  -->
+  <div class="preloader" data-preloader>
+    <div class="circle"></div>
+  </div>
+
+  <!--
+    - #HEADER
+  -->
   <header class="header" data-header>
     <div class="container">
 
@@ -71,15 +68,12 @@
       <nav class="navbar" data-navbar>
 
         <div class="navbar-top">
-
           <a href="index.html" class="logo">
             <img src="./assets/images/SVG/new/logo-long-light.png" width="200" height="50" alt="Dialyse BOUCENNA">
           </a>
-
           <button class="nav-close-btn" aria-label="clsoe menu" data-nav-toggler>
             <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
           </button>
-
         </div>
 
         <ul class="navbar-list">
@@ -96,41 +90,15 @@
             </ul>
           </li>
           <li class="navbar-item"><a href="conseil.html" class="navbar-link title-md">CONSEILS</a></li>
-          <li class="navbar-item"><a href="contact.html" class="navbar-link title-md">CONTACTEZ NOUS</a></li>
+          <li class="navbar-item"><a href="contact.html" class="navbar-link title-md active">CONTACTEZ NOUS</a></li>
         </ul>
 
         <ul class="social-list">
-
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-pinterest"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-youtube"></ion-icon>
-            </a>
-          </li>
-
+          <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-pinterest"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-youtube"></ion-icon></a></li>
         </ul>
 
       </nav>
@@ -146,329 +114,212 @@
     </div>
   </header>
 
-  <section class="map-section">
-    <div class="container">
-      <div class="map-card">
-        <div class="map-header">
-          <h2 class="map-title">Nos Localisations</h2>
-          <p class="map-note">Zoomez/dézoomez pour parcourir nos emplacements.</p>
+  <main>
+    <article>
+
+      <!--
+        - #HERO
+      -->
+      <section class="section hero" style="background-image: url('./assets/images/hero-bg.png')" aria-label="contact hero">
+        <div class="container">
+          <div class="hero-content">
+            <p class="hero-subtitle has-before" data-reveal="left">Contactez-nous</p>
+            <h1 class="headline-lg hero-title" data-reveal="left">CLINIQUE D'HEMODIALYSE</h1>
+            <p class="hero-text" data-reveal="left">N'hésitez pas à nous contacter</p>
+          </div>
+
+          <figure class="hero-banner" data-reveal="right">
+            <img src="./assets/images/hero-banner.png" width="590" height="517" loading="eager" alt="contact hero banner" class="w-100">
+          </figure>
         </div>
-        <div id="dialyse-map"></div>
-        <div class="map-legend" aria-hidden="true">
-          <span class="map-chip">Dialyse Boucenna</span>
-          <span class="map-chip">Transport médical</span>
-          <span class="map-chip">Centres partenaires</span>
+      </section>
+
+      <!--
+        - #CONTACT CONTENT
+      -->
+      <section class="section contact-section">
+        <div class="container">
+          <h2 class="section-title" data-reveal="bottom">Nos Cliniques et Zones de Service</h2>
+
+          <div class="clinics-container">
+            <div class="clinic-card" data-reveal="bottom">
+              <div class="clinic-icon">
+                <i class="fas fa-hospital"></i>
+              </div>
+              <div class="clinic-content">
+                <h3 class="clinic-title">Bouira – Promotion bessa-Ouled Fayet</h3>
+                <p class="clinic-address">Zone médicale principale avec services complets</p>
+                <span class="clinic-type">
+                  <a href="https://www.google.com/maps/search/?api=1&query=Cité711+ainoulmene,+Setif" target="_blank" style="color:inherit;text-decoration:none;">
+                    Voir sur Google Maps
+                  </a>
+                </span>
+              </div>
+            </div>
+
+            <div class="clinic-card" data-reveal="bottom">
+              <div class="clinic-icon">
+                <i class="fas fa-clinic-medical"></i>
+              </div>
+              <div class="clinic-content">
+                <h3 class="clinic-title">Bouira – Cité zerouki</h3>
+                <p class="clinic-address">Unité de soins secondaires et consultations</p>
+                <span class="clinic-type">
+                  <a href="https://www.google.com/maps/search/?api=1&query=Cité711+ainoulmene,+Setif" target="_blank" style="color:inherit;text-decoration:none;">
+                    Voir sur Google Maps
+                  </a>
+                </span>
+              </div>
+            </div>
+
+            <div class="clinic-card" data-reveal="bottom">
+              <div class="clinic-icon">
+                <i class="fas fa-first-aid"></i>
+              </div>
+              <div class="clinic-content">
+                <h3 class="clinic-title">Setif – Cité711 ainoulmene</h3>
+                <p class="clinic-address">Service régional couvrant une large zone</p>
+                <span class="clinic-type">
+                  <a href="https://www.google.com/maps/search/?api=1&query=Cité711+ainoulmene,+Setif" target="_blank" style="color:inherit;text-decoration:none;">
+                    Voir sur Google Maps
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-info">
+            <h2 class="section-title" data-reveal="bottom">Nos Coordonnées</h2>
+
+            <div class="contact-grid">
+              <div class="contact-item" data-reveal="bottom">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-details">
+                  <h3>Adresses</h3>
+                  <p>Promotion bessa-Ouled Fayet, Bouira</p>
+                  <p>Cité zerouki, Bouira</p>
+                  <p>Cité711 ainoulmene, Setif</p>
+                  <p>Cherchell</p>
+                </div>
+              </div>
+
+              <div class="contact-item" data-reveal="bottom">
+                <div class="contact-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="contact-details">
+                  <h3>Téléphones</h3>
+                  <p><a href="tel:0770313136">0770 31 31 36</a></p>
+                  <p><a href="tel:0661935353">0661 93 53 53</a></p>
+                </div>
+              </div>
+
+              <div class="contact-item" data-reveal="bottom">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                  <h3>Email</h3>
+                  <p><a href="mailto:transmalades.boucenna@gmail.com">transmalades.boucenna@gmail.com</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mission-section" data-reveal="bottom">
+            <h2>N'hésitez pas à nous contacter</h2>
+            <p>Notre but est d'assurer une liaison et un acheminement aérien ou terrestre de patients. Notre équipe est disponible 24/7 pour toute demande d'information ou de devis.</p>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
+    </article>
+  </main>
 
-
-
-
-
-
+  <!--
+    - #FOOTER
+  -->
   <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
     <div class="container">
-
       <div class="section footer-top">
-
         <div class="footer-brand" data-reveal="bottom">
-
-                  <a href="index.html" class="logo">
-          <img src="./assets/images/SVG/new/logo-short-dark.png" width="136" height="46" loading="lazy" alt="Dialyse BOUCENNA">
-        </a>
-
+          <a href="index.html" class="logo">
+            <img src="./assets/images/SVG/new/logo-short-dark.png" width="136" height="46" loading="lazy" alt="Dialyse BOUCENNA">
+          </a>
           <ul class="contact-list has-after">
-
             <li class="contact-item">
-
-              <div class="item-icon">
-                <ion-icon name="mail-open-outline"></ion-icon>
-              </div>
-
+              <div class="item-icon"><ion-icon name="mail-open-outline"></ion-icon></div>
               <div>
-                <p>
-                  Main Email : <a href="mailto:contact@website.com" class="contact-link">contact@&shy;website.com</a>
-                </p>
-
-                <p>
-                  Inquiries : <a href="mailto:Info@mail.com" class="contact-link">Info@mail.com</a>
-                </p>
+                <p>Email Principal : <a href="mailto:contact@dialyseboucenna.dz" class="contact-link">contact@dialyseboucenna.dz</a></p>
+                <p>Informations : <a href="mailto:info@dialyseboucenna.dz" class="contact-link">info@dialyseboucenna.dz</a></p>
               </div>
-
             </li>
-
             <li class="contact-item">
-
-              <div class="item-icon">
-                <ion-icon name="call-outline"></ion-icon>
-              </div>
-
+              <div class="item-icon"><ion-icon name="call-outline"></ion-icon></div>
               <div>
-                <p>
-                  Office Telephone : <a href="tel:(+213) 36-614-543" class="contact-link">(+213) 36-614-543</a>
-                </p>
-
-                <p>
-                  Mobile : <a href="tel:000232439493" class="contact-link">000 2324 39493</a>
-                </p>
+                <p>Téléphone : <a href="tel:+213123456789" class="contact-link">(+213) 123 456 789</a></p>
+                <p>Mobile : <a href="tel:+213123456789" class="contact-link">(+213) 123 456 789</a></p>
               </div>
-
             </li>
-
           </ul>
-
         </div>
 
         <div class="footer-list" data-reveal="bottom">
-
-          <p class="headline-sm footer-list-title">About Us</p>
-
-          <p class="text">
-            La clinique de Néphrologie, d'Hémodialyse et de transport sanitaire est une clinique privée spécialisée dans le traitement de l'insuffisance rénale chronique terminale.
-La clinique permet d’accueillir et de soigner dans les meilleures conditions les insuffisants rénale chroniques et les personnes dialysées en passage à Sétif.
-          </p>
-
+          <p class="headline-sm footer-list-title">À Propos de Nous</p>
+          <p class="text">Centre de dialyse de référence offrant des soins exceptionnels et personnalisés pour les patients atteints d'insuffisance rénale chronique.</p>
           <address class="address">
             <ion-icon name="map-outline"></ion-icon>
-
-            <span class="text">
-              CITE KAABOUB COOPERATIVE IMMOBILIERE ESSALEM SECTION 105 I LOT N°151 SETIF <br>
-
-            </span>
+            <span class="text">123 Rue de la Santé, Sétif, Algérie</span>
           </address>
-
         </div>
 
         <ul class="footer-list" data-reveal="bottom">
-
-          <li>
-            <p class="headline-sm footer-list-title">Services</p>
-          </li>
-
-          <li>
-            <a href="#" class="text footer-link">Conditions</a>
-          </li>
-
-          <li>
-            <a href="#" class="text footer-link">Listing</a>
-          </li>
-
-          <li>
-            <a href="#" class="text footer-link">How It Works</a>
-          </li>
-
-          <li>
-            <a href="#" class="text footer-link">What We Offer</a>
-          </li>
-
-          <li>
-            <a href="#" class="text footer-link">Latest News</a>
-          </li>
-
-          <li>
-            <a href="#" class="text footer-link">Contact Us</a>
-          </li>
-
-        </ul>
-
-        <ul class="footer-list" data-reveal="bottom">
-
-          <li>
-            <p class="headline-sm footer-list-title">Useful Links</p>
-          </li>
-
-          <li>
-            <a href="#" class="text footer-link">Conditions</a>
-          </li>
-
-          <li>
-            <a href="#" class="text footer-link">Terms of Use</a>
-          </li>
-
-          <li>
-            <a href="#" class="text footer-link">Our Services</a>
-          </li>
-
-          <li>
-            <a href="#" class="text footer-link">Join as a Doctor</a>
-          </li>
-
-          <li>
-            <a href="#" class="text footer-link">New Guests List</a>
-          </li>
-
-          <li>
-            <a href="#" class="text footer-link">The Team List</a>
-          </li>
-
+          <li><p class="headline-sm footer-list-title">Liens Utiles</p></li>
+          <li><a href="index.html" class="text footer-link">Accueil</a></li>
+          <li><a href="apropos.html" class="text footer-link">A Propos</a></li>
+          <li><a href="departement.html" class="text footer-link">Départements</a></li>
+          <li><a href="conseil.html" class="text footer-link">Conseils</a></li>
+          <li><a href="contact.html" class="text footer-link">Contactez Nous</a></li>
         </ul>
 
         <div class="footer-list" data-reveal="bottom">
-
-          <p class="headline-sm footer-list-title">Subscribe</p>
-
-          <form action="" class="footer-form">
-            <input type="email" name="email" placeholder="Email" class="input-field title-lg">
-
-            <button type="submit" class="btn has-before title-md">Subscribe</button>
-          </form>
-
-          <p class="text">
-            N’hésitez pas à nous contacter !
-Envoyer un e-mail
-          </p>
-
+          <p class="headline-sm footer-list-title">Nos Services</p>
+          <ul>
+            <li><a href="departement.html#hemodialyse" class="text footer-link">Hémodialyse</a></li>
+            <li><a href="departement.html#nephrologie" class="text footer-link">Néphrologie</a></li>
+            <li><a href="departement.html#occasionnelle" class="text footer-link">Dialyse Occasionnelle</a></li>
+            <li><a href="departement.html#transport" class="text footer-link">Transport Sanitaire</a></li>
+            <li><a href="departement.html#pharmacie" class="text footer-link">Pharmacie</a></li>
+          </ul>
         </div>
-
       </div>
 
       <div class="footer-bottom">
-
-        <p class="text copyright">
-          &copy; CLINIQUE2025 | All Rights Reserved
-        </p>
-
+        <p class="text copyright">&copy; 2024 Dialyse BOUCENNA | Tous droits réservés</p>
         <ul class="social-list">
-
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-google"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-pinterest"></ion-icon>
-            </a>
-          </li>
-
+          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-google"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-pinterest"></ion-icon></a></li>
         </ul>
-
       </div>
-
     </div>
   </footer>
 
-  <!-- Leaflet JS (placed before closing body for performance) -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-  <script>
-    // Configuration: put your Google Maps JavaScript API key here
-    // If left empty or 'YOUR_GOOGLE_MAPS_API_KEY', the map will fall back to Leaflet (no API key required)
-    const GOOGLE_MAPS_API_KEY = '';
+  <!-- back to top -->
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up"></ion-icon>
+  </a>
 
-    // Locations provided (URLs or text). We'll use Google Places Text Search when Google is available
-    const dialyseLocations = [
-      { name: 'Dialyse Boucenna - Cherchell', query: 'Dialyse Boucenna trois cherchell', link: 'https://maps.app.goo.gl/TiKLvfpFM7HFZLtE6?g_st=aw' },
-      { name: 'Localisation 2', query: 'https://maps.app.goo.gl/xXewNB57cKCSLivw7?g_st=aw', link: 'https://maps.app.goo.gl/xXewNB57cKCSLivw7?g_st=aw' },
-      { name: 'Localisation 3', query: 'https://goo.gl/maps/kYisVGtG8thwMQBY9?g_st=aw', link: 'https://goo.gl/maps/kYisVGtG8thwMQBY9?g_st=aw' },
-      { name: 'Localisation 4', query: 'https://maps.app.goo.gl/7qUifzcvvgeNnRYE9?g_st=aw', link: 'https://maps.app.goo.gl/7qUifzcvvgeNnRYE9?g_st=aw' }
-    ];
+  <!-- custom js -->
+  <script src="./assets/js/script.js"></script>
 
-    // Utility to normalize URL queries into text for search/geocoding
-    function normalizeQuery(q){
-      if(/^https?:\/\//i.test(q)){
-        try {
-          const u = new URL(q);
-          return decodeURIComponent((u.pathname || '').replace(/\//g,' ').replace(/-/g,' ').trim()) || q;
-        } catch { return q; }
-      }
-      return q;
-    }
+  <!-- ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-    // Leaflet fallback map (no key needed)
-    async function initLeafletMap(){
-      const map = L.map('dialyse-map', { scrollWheelZoom: true }).setView([36.4, 2.8], 7);
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap' }).addTo(map);
-
-      async function geocode(q){
-        try {
-          const url = `https://nominatim.openstreetmap.org/search?format=json&limit=1&q=${encodeURIComponent(q)}`;
-          const res = await fetch(url, { headers: { 'Accept-Language': 'fr' } });
-          const data = await res.json();
-          if(Array.isArray(data) && data.length){ return [parseFloat(data[0].lat), parseFloat(data[0].lon)]; }
-        } catch(e) {}
-        return null;
-      }
-
-      const bounds = [];
-      for (const loc of dialyseLocations){
-        const coords = await geocode(normalizeQuery(loc.query));
-        if(coords){
-          const marker = L.marker(coords).addTo(map);
-          marker.bindPopup(`<strong>${loc.name}</strong><br><a href="${loc.link}" target="_blank" rel="noopener">Ouvrir dans Google Maps</a>`);
-          bounds.push(coords);
-        }
-      }
-      if(bounds.length){ map.fitBounds(bounds, { padding: [30, 30] }); }
-    }
-
-    // Google Maps loader & initializer
-    function loadGoogle(callback){
-      const s = document.createElement('script');
-      s.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(GOOGLE_MAPS_API_KEY)}&libraries=places&callback=${callback}`;
-      s.async = true; s.defer = true; s.onerror = function(){ initLeafletMap(); };
-      document.head.appendChild(s);
-    }
-
-    // Google init callback
-    window.initDialyseMap = function(){
-      const map = new google.maps.Map(document.getElementById('dialyse-map'), {
-        zoom: 7,
-        center: { lat: 36.4, lng: 2.8 },
-        mapTypeControl: false,
-        streetViewControl: false,
-        fullscreenControl: true
-      });
-      const bounds = new google.maps.LatLngBounds();
-      const service = new google.maps.places.PlacesService(map);
-
-      const requests = dialyseLocations.map(loc => new Promise((resolve) => {
-        const query = normalizeQuery(loc.query);
-        service.textSearch({ query, region: 'dz' }, (results, status) => {
-          if (status === google.maps.places.PlacesServiceStatus.OK && results && results[0]){
-            const place = results[0];
-            const pos = place.geometry.location;
-            const marker = new google.maps.Marker({ position: pos, map, title: loc.name });
-            const info = new google.maps.InfoWindow({ content: `<strong>${loc.name}</strong><br><a href="${loc.link}" target="_blank" rel="noopener">Ouvrir dans Google Maps</a>` });
-            marker.addListener('click', () => info.open({ anchor: marker, map }));
-            bounds.extend(pos);
-          }
-          resolve();
-        });
-      }));
-
-      Promise.all(requests).then(() => {
-        if(!bounds.isEmpty()){ map.fitBounds(bounds, { padding: 30 }); }
-      });
-    }
-
-    // Decide which map to load
-    if (GOOGLE_MAPS_API_KEY && GOOGLE_MAPS_API_KEY !== 'YOUR_GOOGLE_MAPS_API_KEY'){
-      loadGoogle('initDialyseMap');
-    } else {
-      initLeafletMap();
-    }
-  </script>
 </body>
 </html>

@@ -158,9 +158,9 @@ body {
   color: var(--independece);
   line-height: 1.8;
   overflow: hidden;
-  padding-top: 120px;
+  padding-top: 0;
 }
-@media (max-width: 1199px){ body { padding-top: 100px; } }
+@media (max-width: 1199px){ body { padding-top: 0; } }
 
 body.loaded { overflow-y: visible; }
 
@@ -1587,4 +1587,35 @@ img:is(:hover, :focus-visible) {
 
 }
 
-.header + * { margin-top: 120px; }
+/* Contact page styles */
+.contact-section { padding-block: var(--section-padding); }
+.section-title { color: var(--midnight-green); font-family: var(--ff-oswald); margin: 0 0 16px 0; }
+.clinics-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+@media (max-width: 1024px){ .clinics-container { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px){ .clinics-container { grid-template-columns: 1fr; } }
+.clinic-card { background: var(--white); border-radius: var(--radius-12); padding: 18px; box-shadow: var(--shadow-2); display: grid; grid-template-columns: 56px 1fr; gap: 14px; align-items: start; }
+.clinic-icon { width: 56px; height: 56px; display: grid; place-items: center; border-radius: 12px; background: var(--middle-blue-green_40); color: var(--midnight-green); font-size: 22px; }
+.clinic-title { margin: 0 0 6px 0; font-family: var(--ff-oswald); color: var(--midnight-green); }
+.clinic-address { margin: 0 0 6px 0; color: var(--independece); }
+.clinic-type a { color: var(--verdigris); font-weight: var(--fw-700); }
+.contact-info { margin-top: 28px; }
+.contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+@media (max-width: 900px){ .contact-grid { grid-template-columns: 1fr; } }
+.contact-item { background: var(--white); border-radius: var(--radius-12); padding: 18px; box-shadow: var(--shadow-2); display: grid; grid-template-columns: 56px 1fr; gap: 14px; }
+.contact-icon { width: 56px; height: 56px; display: grid; place-items: center; border-radius: 12px; background: var(--white_a10); color: var(--verdigris); font-size: 22px; }
+.contact-details h3 { margin: 0 0 6px 0; font-family: var(--ff-oswald); color: var(--midnight-green); }
+.contact-details a { color: var(--midnight-green); text-decoration: none; }
+.contact-details a:hover { text-decoration: underline; }
+.mission-section { margin-top: 28px; background: var(--alice-blue); border-radius: var(--radius-12); padding: 20px; box-shadow: var(--shadow-1); }
+.mission-section h2 { margin: 0 0 8px 0; font-family: var(--ff-oswald); color: var(--midnight-green); }
+
+.footer .contact-item { background: transparent; }
+.footer .contact-item .item-icon { background: var(--verdigris); color: var(--white); }
+.footer .contact-link { color: var(--white); }
+.footer .contact-link:hover { color: var(--middle-blue-green); }
+
+.footer-list-title {
+  color: var(--white);
+  font-weight: var(--fw-700);
+  margin-block-end: 20px;
+}
