@@ -16,7 +16,7 @@ const addEventOnElements = function (elements, eventType, callback) {
 
 /**
  * PRELOADER
- * 
+ *
  * preloader will be visible until document load
  */
 
@@ -31,7 +31,7 @@ window.addEventListener("load", function () {
 
 /**
  * MOBILE NAVBAR
- * 
+ *
  * show the mobile navbar when click menu button
  * and hidden after click menu close button or overlay
  */
@@ -52,7 +52,7 @@ addEventOnElements(navTogglers, "click", toggleNav);
 
 /**
  * HEADER & BACK TOP BTN
- * 
+ *
  * active header & back top btn when window scroll down to 100px
  */
 

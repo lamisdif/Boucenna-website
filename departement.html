@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--
+    - primary meta tags
+  -->
+  <title>Clinique - Départements</title>
+  <meta name="title" content="Clinique - Départements">
+  <meta name="description" content="Départements de la clinique: hémodialyse, néphrologie, transport, pharmacie.">
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <style>
+  .navbar-item .dropdown {
+    visibility: hidden; opacity: 0; position: absolute; top: 100%; left: 0; width: 250px;
+    background-color: var(--rich-black-fogra-29); border-radius: var(--radius-6);
+    box-shadow: 0 4px 16px hsla(0, 0%, 0%, 0.2); transition: var(--transition-1);
+    transform: translateY(10px); z-index: 10;
+  }
+  .navbar-item { position: relative; }
+  .navbar-item:hover .dropdown { visibility: visible; opacity: 1; transform: translateY(0); }
+  .dropdown-item { border-bottom: 1px solid var(--white_a10); }
+  .dropdown-item:last-child { border-bottom: none; }
+  .dropdown-link { color: var(--white); padding: 12px 20px; font-size: 1.4rem; transition: var(--transition-1); display: block; }
+  .dropdown-link:hover { background-color: var(--verdigris); }
+
+  /* -- Accordion Styles -- */
+  .accordion-item {
+    border: 2px solid var(--alice-blue);
+    border-radius: var(--radius-12);
+    margin-bottom: 20px;
+    background-color: var(--white);
+    box-shadow: var(--shadow-2);
+  }
+  .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    cursor: pointer;
+    background-color: var(--alice-blue);
+    border-radius: var(--radius-12);
+  }
+  .accordion-header:hover { background-color: var(--gainsboro); }
+  .accordion-header h3 {
+    color: var(--midnight-green);
+    font-family: var(--ff-oswald);
+    font-size: var(--headline-sm);
+    margin: 0;
+  }
+  .accordion-icon {
+    font-size: 2.5rem;
+    color: var(--verdigris);
+    transition: transform 0.3s ease;
+  }
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1), padding 0.5s ease;
+    padding: 0 30px;
+  }
+  .accordion-item.active .accordion-content {
+    max-height: 5000px; /* generous limit */
+    padding: 30px;
+    transition: max-height 1s ease-in-out, padding 0.5s ease;
+  }
+  .accordion-item.active .accordion-icon { transform: rotate(45deg); }
+  .doctor-profile {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 25px;
+    align-items: center;
+    border-top: 1px solid var(--gainsboro);
+    padding-top: 25px;
+    margin-top: 25px;
+  }
+  .doctor-profile img { border-radius: var(--radius-12); }
+  .doctor-details-list { list-style: none; padding-left: 0; }
+  .doctor-details-list li { margin-bottom: 8px; }
+  </style>
+
+  <!--
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+  <link rel="preload" as="image" href="./assets/images/hero-bg.png">
+
+</head>
+
+<body id="top">
+
+  <!--
+    - #PRELOADER
+  -->
+
+  <div class="preloader" data-preloader>
+    <div class="circle"></div>
+  </div>
+
+  <!--
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="index.html" class="logo">
+        <img src="./assets/images/SVG/new/logo-long-dark.png" width="200" height="50" alt="Dialyse BOUCENNA">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <a href="index.html" class="logo">
+            <img src="./assets/images/SVG/new/logo-long-light.png" width="200" height="50" alt="Dialyse BOUCENNA">
+          </a>
+          <button class="nav-close-btn" aria-label="clsoe menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link title-md">ACCUEIL</a>
+          </li>
+          <li class="navbar-item">
+            <a href="apropos.html" class="navbar-link title-md">A PROPOS</a>
+          </li>
+          <li class="navbar-item">
+            <a href="departement.html" class="navbar-link title-md active">DEPARTEMENTS</a>
+            <ul class="dropdown">
+              <li class="dropdown-item"><a href="#hemodialyse" class="dropdown-link">Séance D'Hémodialyse</a></li>
+              <li class="dropdown-item"><a href="#nephrologie" class="dropdown-link">Consultation En Néphrologie</a></li>
+              <li class="dropdown-item"><a href="#occasionnelle" class="dropdown-link">Dialyse Occasionnelle</a></li>
+              <li class="dropdown-item"><a href="#transport" class="dropdown-link">Transport Sanitaire</a></li>
+              <li class="dropdown-item"><a href="#pharmacie" class="dropdown-link">La Pharmacie</a></li>
+            </ul>
+          </li>
+          <li class="navbar-item">
+            <a href="conseil.html" class="navbar-link title-md">CONSEILS</a>
+          </li>
+          <li class="navbar-item">
+            <a href="contact.html" class="navbar-link title-md">CONTACTEZ NOUS</a>
+          </li>
+        </ul>
+
+        <ul class="social-list">
+          <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-pinterest"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-youtube"></ion-icon></a></li>
+        </ul>
+
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <a href="contact.html" class="btn has-before title-md">Prendre Rendez-vous</a>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <!-- HERO SECTION -->
+      <section class="section hero" style="background-image: url('./assets/images/hero-bg.png'); padding-top: 150px; padding-bottom: 80px;" aria-label="departments hero">
+        <div class="container">
+          <div class="hero-content">
+            <p class="hero-subtitle has-before" data-reveal="left">Nos Départements</p>
+            <h1 class="headline-lg hero-title" data-reveal="left">Des Soins d'Excellence Pour Nos Patients</h1>
+          </div>
+        </div>
+      </section>
+
+      <!-- DEPARTMENTS ACCORDION SECTION -->
+      <section class="section departments-accordion">
+        <div class="container">
+
+          <!-- Accordion Item 1: Hémodialyse -->
+          <div class="accordion-item active" id="hemodialyse">
+            <div class="accordion-header">
+              <h3>Séance D'Hémodialyse</h3>
+              <ion-icon name="add-outline" class="accordion-icon"></ion-icon>
+            </div>
+            <div class="accordion-content">
+              <p class="section-text">Le centre d'hémodialyse et de néphrologie BOUCENNA met à votre disposition 15 postes de dialyse tout le long de la semaine sauf le vendredi. Pour plus d'information, veuillez consulter nos horaires de travail.</p>
+              <h4 class="title-lg" style="margin-top: 20px;">Heures de Consultation</h4>
+              <ul class="card-list">
+                <li><span>Samedi - Jeudi :</span><span class="value" style="float: right;">04:00 à 17:30</span></li>
+              </ul>
+              <h4 class="title-lg" style="margin-top: 20px;">Liste des Docteurs</h4>
+              <div class="doctor-profile">
+                <img src="./assets/images/clinique.jpg" alt="Dr. Filali Sonia" width="200" height="200">
+                <div>
+                  <h5 class="headline-sm">Dr. Filali Sonia</h5>
+                  <ul class="doctor-details-list">
+                    <li><strong>Spécialité:</strong> Généraliste</li>
+                    <li><strong>Diplôme:</strong> Docteur</li>
+                    <li><strong>Domaines d'expertise:</strong> Médecine Générale</li>
+                    <li><strong>Bureau:</strong> Clinique BOUCENNA</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="doctor-profile">
+                <img src="./assets/images/clinique.jpg" alt="Dr. Khaled Linda" width="200" height="200">
+                <div>
+                  <h5 class="headline-sm">Dr. Khaled Linda</h5>
+                  <ul class="doctor-details-list">
+                    <li><strong>Spécialité:</strong> Généraliste</li>
+                    <li><strong>Diplôme:</strong> Docteur</li>
+                    <li><strong>Domaines d'expertise:</strong> Médecine Générale</li>
+                    <li><strong>Bureau:</strong> Clinique BOUCENNA</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="doctor-profile">
+                <img src="./assets/images/clinique.jpg" alt="Dr. Ouali Hibat Allah" width="200" height="200">
+                <div>
+                  <h5 class="headline-sm">Dr. Ouali Hibat Allah</h5>
+                  <ul class="doctor-details-list">
+                    <li><strong>Spécialité:</strong> Généraliste</li>
+                    <li><strong>Diplôme:</strong> Docteur</li>
+                    <li><strong>Domaines d'expertise:</strong> Médecine Générale</li>
+                    <li><strong>Bureau:</strong> Clinique BOUCENNA</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Item 2: Néphrologie -->
+          <div class="accordion-item" id="nephrologie">
+            <div class="accordion-header">
+              <h3>Consultation En Néphrologie</h3>
+              <ion-icon name="add-outline" class="accordion-icon"></ion-icon>
+            </div>
+            <div class="accordion-content">
+              <p class="section-text">La clinique BOUCENNA vous propose des consultations en Néphrologie et maladies rénales du dimanche au jeudi, de 08h00 à 15h30, avec le Dr. Rabia Chafai.</p>
+              <h4 class="title-lg" style="margin-top: 20px;">Heures de Consultation</h4>
+              <ul class="card-list">
+                <li><span>Dimanche - Jeudi :</span><span class="value" style="float: right;">08:00 à 15:30</span></li>
+              </ul>
+              <h4 class="title-lg" style="margin-top: 20px;">Contact</h4>
+              <ul class="card-list">
+                <li><span>Numéro De Téléphone :</span><span class="value" style="float: right;"><a href="tel:+213560255523" class="contact-link">(+213) 560 255 523</a></span></li>
+              </ul>
+              <div class="doctor-profile">
+                <img src="./assets/images/clinique.jpg" alt="Dr. Rabia Chafai" width="200" height="200">
+                <div>
+                  <h5 class="headline-sm">Dr. Rabia Chafai</h5>
+                  <ul class="doctor-details-list">
+                    <li><strong>Spécialité:</strong> Néphrologue</li>
+                    <li><strong>Diplôme:</strong> Docteur</li>
+                    <li><strong>Domaines d'expertise:</strong> Néphrologie</li>
+                    <li><strong>Bureau:</strong> Clinique BOUCENNA</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Item 3: Dialyse Occasionnelle -->
+          <div class="accordion-item" id="occasionnelle">
+            <div class="accordion-header">
+              <h3>Dialyse Occasionnelle</h3>
+              <ion-icon name="add-outline" class="accordion-icon"></ion-icon>
+            </div>
+            <div class="accordion-content">
+              <p class="section-text">Le centre d’hémodialyse et de néphrologie BOUCENNA prend en charge les vacanciers pour une courte durée et assure les dialyses occasionnelles pour les voyageurs de passage dans la région de Sétif.</p>
+            </div>
+          </div>
+
+          <!-- Accordion Item 4: Transport Sanitaire -->
+          <div class="accordion-item" id="transport">
+            <div class="accordion-header">
+              <h3>Transport Sanitaire</h3>
+              <ion-icon name="add-outline" class="accordion-icon"></ion-icon>
+            </div>
+            <div class="accordion-content">
+              <p class="section-text">La Clinique assure votre transport depuis et vers votre domicile à travers notre réseau de voitures sanitaires légères (VSL). Nos chauffeurs sont engagés 24h/24 et 7j/7 pour vous amener à votre destination, que ce soit sur le territoire algérien (inter-wilaya) ou hors de l’Algérie (Tunis).</p>
+            </div>
+          </div>
+
+          <!-- Accordion Item 5: Pharmacie -->
+          <div class="accordion-item" id="pharmacie">
+            <div class="accordion-header">
+              <h3>La Pharmacie Nabil Aouabdia</h3>
+              <ion-icon name="add-outline" class="accordion-icon"></ion-icon>
+            </div>
+            <div class="accordion-content">
+              <p class="section-text">Nous vous proposons les services de notre pharmacie affiliée.</p>
+              <h4 class="title-lg" style="margin-top: 20px;">Les Horaires de Travail</h4>
+              <ul class="card-list">
+                <li><span>Samedi - Vendredi :</span><span class="value" style="float: right;">08:00 à 23:30</span></li>
+              </ul>
+              <h4 class="title-lg" style="margin-top: 20px;">Convention</h4>
+              <ul class="card-list">
+                <li>Conventionné avec la CNAS</li>
+                <li>Conventionné avec la CASNOS</li>
+                <li>Conventionné avec la CAISSE MILITAIRE</li>
+              </ul>
+              <h4 class="title-lg" style="margin-top: 20px;">Localisation et Contact</h4>
+              <p class="section-text"><strong>Adresse :</strong> 43, Rue Mansouri Kbier (Rond-point, face Gendarmerie), Sétif.</p>
+              <div style="margin-top: 20px; text-align: center;">
+                <a href="https://www.google.com/maps/place/Pharmacie+AOUABDIA" target="_blank" class="btn has-before title-md">Voir sur la carte</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <!--
+    - #FOOTER
+  -->
+
+  <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
+    <div class="container">
+      <div class="section footer-top">
+        <div class="footer-brand" data-reveal="bottom">
+                  <a href="index.html" class="logo">
+          <img src="./assets/images/SVG/new/logo-short-dark.png" width="136" height="46" loading="lazy" alt="Dialyse BOUCENNA">
+        </a>
+          <ul class="contact-list has-after">
+            <li class="contact-item">
+              <div class="item-icon">
+                <ion-icon name="mail-open-outline"></ion-icon>
+              </div>
+              <div>
+                <p>Main Email : <a href="mailto:contact@website.com" class="contact-link">contact@website.com</a></p>
+                <p>Inquiries : <a href="mailto:Info@mail.com" class="contact-link">Info@mail.com</a></p>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="item-icon">
+                <ion-icon name="call-outline"></ion-icon>
+              </div>
+              <div>
+                <p>Office Telephone : <a href="tel:(+213)36614543" class="contact-link">(+213) 36-614-543</a></p>
+                <p>Mobile : <a href="tel:000232439493" class="contact-link">000 2324 39493</a></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-list" data-reveal="bottom">
+          <p class="headline-sm footer-list-title">About Us</p>
+          <p class="text">
+            La clinique de Néphrologie, d'Hémodialyse et de transport sanitaire est une clinique privée spécialisée dans le traitement de l'insuffisance rénale chronique terminale.
+          </p>
+          <address class="address">
+            <ion-icon name="map-outline"></ion-icon>
+            <span class="text">
+              CITE KAABOUB COOPERATIVE IMMOBILIERE ESSALEM SECTION 105 I LOT N°151 SETIF
+            </span>
+          </address>
+        </div>
+        <ul class="footer-list" data-reveal="bottom">
+          <li><p class="headline-sm footer-list-title">Useful Links</p></li>
+          <li><a href="index.html" class="text footer-link">Accueil</a></li>
+          <li><a href="about.html" class="text footer-link">A Propos</a></li>
+          <li><a href="departement.html" class="text footer-link">Départements</a></li>
+          <li><a href="conseil.html" class="text footer-link">Conseils</a></li>
+          <li><a href="contact.html" class="text footer-link">Contactez Nous</a></li>
+        </ul>
+        <div class="footer-list" data-reveal="bottom">
+          <p class="headline-sm footer-list-title">Subscribe</p>
+          <form action="" class="footer-form">
+            <input type="email" name="email" placeholder="Email" class="input-field title-lg">
+            <button type="submit" class="btn has-before title-md">Subscribe</button>
+          </form>
+          <p class="text">N’hésitez pas à nous contacter !</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="text copyright">&copy; CLINIQUE 2025 | All Rights Reserved</p>
+        <ul class="social-list">
+          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-google"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-pinterest"></ion-icon></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!--
+    - #BACK TO TOP
+  -->
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up"></ion-icon>
+  </a>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const accordionItems = document.querySelectorAll(".accordion-item");
+
+      accordionItems.forEach(item => {
+        const header = item.querySelector(".accordion-header");
+        if (!header) return;
+        header.addEventListener("click", () => {
+          accordionItems.forEach(otherItem => {
+            if (otherItem !== item && otherItem.classList.contains("active")) {
+              otherItem.classList.remove("active");
+            }
+          });
+          item.classList.toggle("active");
+        });
+      });
+    });
+  </script>
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

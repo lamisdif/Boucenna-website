@@ -6,19 +6,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- 
+  <!--
     - primary meta tags
   -->
-  <title>Doclab - home</title>
+  <title>Clinique - home</title>
   <meta name="title" content="Doclab - home">
   <meta name="description" content="This is a madical html template made by codewithsadee">
 
-  <!-- 
+  <!--
     - favicon
   -->
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 
-  <!-- 
+  <!--
     - google font link
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,12 +26,44 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Rubik:wght@400;500;700&display=swap"
     rel="stylesheet">
 
-  <!-- 
+  <!--
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <style>
+  .navbar-item .dropdown {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 250px;
+    background-color: var(--rich-black-fogra-29);
+    border-radius: var(--radius-6);
+    box-shadow: 0 4px 16px hsla(0, 0%, 0%, 0.2);
+    transition: var(--transition-1);
+    transform: translateY(10px);
+    z-index: 10;
+  }
+  .navbar-item:hover .dropdown {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .dropdown-item { border-bottom: 1px solid var(--white_a10); }
+  .dropdown-item:last-child { border-bottom: none; }
+  .dropdown-link {
+    color: var(--white);
+    padding: 12px 20px;
+    font-size: 1.4rem;
+    transition: var(--transition-1);
+    display: block;
+  }
+  .dropdown-link:hover { background-color: var(--verdigris); }
+  .navbar-item { position: relative; }
+  </style>
 
-  <!-- 
+  <!--
     - preload images
   -->
   <link rel="preload" as="image" href="./assets/images/hero-banner.png">
@@ -41,7 +73,7 @@
 
 <body id="top">
 
-  <!-- 
+  <!--
     - #PRELOADER
   -->
 
@@ -53,23 +85,23 @@
 
 
 
-  <!-- 
+  <!--
     - #HEADER
   -->
 
   <header class="header" data-header>
     <div class="container">
 
-      <a href="#" class="logo">
-        <img src="./assets/images/logo.svg" width="136" height="46" alt="Doclab home">
+      <a href="index.html" class="logo">
+        <img src="./assets/images/SVG/new/logo-long-dark.png" width="200" height="50" alt="Dialyse BOUCENNA">
       </a>
 
       <nav class="navbar" data-navbar>
 
         <div class="navbar-top">
 
-          <a href="#" class="logo">
-            <img src="./assets/images/logo.svg" width="136" height="46" alt="Doclab home">
+          <a href="index.html" class="logo">
+            <img src="./assets/images/SVG/new/logo-long-light.png" width="200" height="50" alt="Dialyse BOUCENNA">
           </a>
 
           <button class="nav-close-btn" aria-label="clsoe menu" data-nav-toggler>
@@ -79,27 +111,20 @@
         </div>
 
         <ul class="navbar-list">
-
+          <li class="navbar-item"><a href="index.html" class="navbar-link title-md">ACCUEIL</a></li>
+          <li class="navbar-item"><a href="apropos.html" class="navbar-link title-md">A PROPOS</a></li>
           <li class="navbar-item">
-            <a href="#" class="navbar-link title-md">Home</a>
+            <a href="departement.html" class="navbar-link title-md">DEPARTEMENTS</a>
+            <ul class="dropdown">
+              <li class="dropdown-item"><a href="departement.html#hemodialyse" class="dropdown-link">Séance D'Hémodialyse</a></li>
+              <li class="dropdown-item"><a href="departement.html#nephrologie" class="dropdown-link">Consultation En Néphrologie</a></li>
+              <li class="dropdown-item"><a href="departement.html#occasionnelle" class="dropdown-link">Dialyse Occasionnelle</a></li>
+              <li class="dropdown-item"><a href="departement.html#transport" class="dropdown-link">Transport Sanitaire</a></li>
+              <li class="dropdown-item"><a href="departement.html#pharmacie" class="dropdown-link">La Pharmacie</a></li>
+            </ul>
           </li>
-
-          <li class="navbar-item">
-            <a href="#" class="navbar-link title-md">Doctors</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#" class="navbar-link title-md">Services</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#" class="navbar-link title-md">Blog</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#" class="navbar-link title-md">Contact</a>
-          </li>
-
+          <li class="navbar-item"><a href="conseil.html" class="navbar-link title-md">CONSEILS</a></li>
+          <li class="navbar-item"><a href="contact.html" class="navbar-link title-md">CONTACTEZ NOUS</a></li>
         </ul>
 
         <ul class="social-list">
@@ -142,7 +167,7 @@
         <ion-icon name="menu-outline"></ion-icon>
       </button>
 
-      <a href="#" class="btn has-before title-md">Make Appointment</a>
+      <a href="contact.html" class="btn has-before title-md">Prendre Rendez-vous</a>
 
       <div class="overlay" data-nav-toggler data-overlay></div>
 
@@ -156,7 +181,7 @@
   <main>
     <article>
 
-      <!-- 
+      <!--
         - #HERO
       -->
 
@@ -165,36 +190,13 @@
 
           <div class="hero-content">
 
-            <p class="hero-subtitle has-before" data-reveal="left">Welcome To Doclab</p>
+            <p class="hero-subtitle has-before" data-reveal="left">Bienvenue </p>
 
             <h1 class="headline-lg hero-title" data-reveal="left">
-              Find Nearest <br>
-              Doctor.
+              CLINIQUE D'HEMODIALYSE<br>
+
             </h1>
 
-            <div class="hero-card" data-reveal="left">
-
-              <p class="title-lg card-text">
-                Search doctors. clinics. hospitals. etc.
-              </p>
-
-              <div class="wrapper">
-
-                <div class="input-wrapper title-lg">
-                  <input type="text" name="location" placeholder="Locations" class="input-field">
-
-                  <ion-icon name="location"></ion-icon>
-                </div>
-
-                <button class="btn has-before">
-                  <ion-icon name="search"></ion-icon>
-
-                  <span class="span title-md">Find Now</span>
-                </button>
-
-              </div>
-
-            </div>
 
           </div>
 
@@ -210,7 +212,7 @@
 
 
 
-      <!-- 
+      <!--
         - #SERVICE
       -->
 
@@ -227,11 +229,11 @@
                 </div>
 
                 <h3 class="headline-sm card-title">
-                  <a href="#">Psychiatry</a>
+                  <a href="#">Transport Hors Algérie</a>
                 </h3>
 
                 <p class="card-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing
+                  Nos chauffeurs sont engagés 24h / 24h ; 7j / 7j pour vous faire arriver à votre destination Qu’elle soit dans le territoire algérien (inter-wilaya) ou bien hors de l’Algérie (Tunis).
                 </p>
 
                 <button class="btn-circle" aria-label="read more about psychiatry">
@@ -249,11 +251,11 @@
                 </div>
 
                 <h3 class="headline-sm card-title">
-                  <a href="#">Gynecology</a>
+                  <a href="#">Dialyse pour vacanciers</a>
                 </h3>
 
                 <p class="card-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing
+                  Le centre d’hémodialyse et de néphrologie BOUCENNA,propose un service de dialyse pour vacanciers et voyageurs,avec une prise en charge de courte durée.
                 </p>
 
                 <button class="btn-circle" aria-label="read more about Gynecology">
@@ -271,11 +273,12 @@
                 </div>
 
                 <h3 class="headline-sm card-title">
-                  <a href="#">Pulmonology</a>
+                  <a href="#">Pharmacie</a>
                 </h3>
 
                 <p class="card-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing
+                  Nous vous proposons les services de notre pharmacie
+Conventionné avec : LA CAISSE MILITAIRE, CNAS ET CASNOS
                 </p>
 
                 <button class="btn-circle" aria-label="read more about Pulmonology">
@@ -285,27 +288,6 @@
               </div>
             </li>
 
-            <li>
-              <div class="service-card" data-reveal="bottom">
-
-                <div class="card-icon">
-                  <img src="./assets/images/icon-4.png" width="71" height="71" loading="lazy" alt="icon">
-                </div>
-
-                <h3 class="headline-sm card-title">
-                  <a href="#">Orthopedics</a>
-                </h3>
-
-                <p class="card-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing
-                </p>
-
-                <button class="btn-circle" aria-label="read more about Orthopedics">
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                </button>
-
-              </div>
-            </li>
 
           </ul>
 
@@ -316,7 +298,7 @@
 
 
 
-      <!-- 
+      <!--
         - #ABOUT
       -->
 
@@ -327,11 +309,10 @@
 
             <p class="section-subtitle title-lg has-after" id="about-label" data-reveal="left">About Us</p>
 
-            <h2 class="headline-md" data-reveal="left">Experienced Workers</h2>
+            <h2 class="headline-md" data-reveal="left">BIENVENUS CHEZ BOUCENNA</h2>
 
             <p class="section-text" data-reveal="left">
-              Aliquam faucibus, odio nec commodo aliquam, neque felis placerat dui, a porta ante lectus dapibus est.
-              Aliquam
+              La clinique de Néphrologie, d’Hémodialyse et de transport sanitaire BOUCENNA, a été crée dans le but d’établir des soins exceptionnels pour les patients atteints d’insuffisance rénale chronique,ainsi que les malades au stade d’hémodialyse  dans la région sétifienne, ainsi que dans tous le territoire national et international, la clinique comprend désormais un néphrologue et trois généralistes, huit infirmières praticiennes.
             </p>
 
             <ul class="tab-list" data-reveal="left">
@@ -350,10 +331,7 @@
 
             </ul>
 
-            <p class="tab-text" data-reveal="left">
-              Aliquam faucibus, odio nec commodo aliquam, neque felis placerat dui, a porta ante lectus dapibus est.
-              Aliquam a bibendum mi, sed condimentum
-            </p>
+
 
             <div class="wrapper">
 
@@ -362,26 +340,22 @@
                 <li class="about-item" data-reveal="left">
                   <ion-icon name="checkmark-circle-outline"></ion-icon>
 
-                  <span class="span">Sonsectetur adipisicing elit</span>
+                  <span class="span">Des technologies médicales de pointe</span>
                 </li>
 
                 <li class="about-item" data-reveal="left">
                   <ion-icon name="checkmark-circle-outline"></ion-icon>
 
-                  <span class="span">Exercitation ullamco laboris</span>
+                  <span class="span">Le bien-être et le confort des patients avant tout</span>
                 </li>
 
                 <li class="about-item" data-reveal="left">
                   <ion-icon name="checkmark-circle-outline"></ion-icon>
 
-                  <span class="span">Eiusmod tempor incididunt</span>
+                  <span class="span">Conseils et informations pratiques à votre disposition</span>
                 </li>
 
-                <li class="about-item" data-reveal="left">
-                  <ion-icon name="checkmark-circle-outline"></ion-icon>
 
-                  <span class="span">Aolore magna aliqua</span>
-                </li>
 
               </ul>
 
@@ -401,118 +375,14 @@
 
 
 
-      <!-- 
+      <!--
         - #LISTING
       -->
 
       <section class="section listing" aria-labelledby="listing-label">
         <div class="container">
 
-          <ul class="grid-list">
 
-            <li>
-              <p class="section-subtitle title-lg" id="listing-label" data-reveal="left">Doctors Listig</p>
-
-              <h2 class="headline-md" data-reveal="left">Browse by specialist</h2>
-            </li>
-
-            <li>
-              <div class="listing-card" data-reveal="bottom">
-
-                <div class="card-icon">
-                  <img src="./assets/images/icon-1.png" width="71" height="71" loading="lazy" alt="icon">
-                </div>
-
-                <div>
-                  <h3 class="headline-sm card-title">Psychiatry</h3>
-
-                  <p class="card-text">Porta velit</p>
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="listing-card" data-reveal="bottom">
-
-                <div class="card-icon">
-                  <img src="./assets/images/icon-2.png" width="71" height="71" loading="lazy" alt="icon">
-                </div>
-
-                <div>
-                  <h3 class="headline-sm card-title">Gynecology</h3>
-
-                  <p class="card-text">Mattis augue</p>
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="listing-card" data-reveal="bottom">
-
-                <div class="card-icon">
-                  <img src="./assets/images/icon-4.png" width="71" height="71" loading="lazy" alt="icon">
-                </div>
-
-                <div>
-                  <h3 class="headline-sm card-title">Pulmonology</h3>
-
-                  <p class="card-text">Mauris laoreet</p>
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="listing-card" data-reveal="bottom">
-
-                <div class="card-icon">
-                  <img src="./assets/images/icon-5.png" width="71" height="71" loading="lazy" alt="icon">
-                </div>
-
-                <div>
-                  <h3 class="headline-sm card-title">Orthopedics</h3>
-
-                  <p class="card-text">Convallis vulputate</p>
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="listing-card" data-reveal="bottom">
-
-                <div class="card-icon">
-                  <img src="./assets/images/icon-6.png" width="71" height="71" loading="lazy" alt="icon">
-                </div>
-
-                <div>
-                  <h3 class="headline-sm card-title">Pediatrics</h3>
-
-                  <p class="card-text">Posuere maecenas</p>
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="listing-card" data-reveal="bottom">
-
-                <div class="card-icon">
-                  <img src="./assets/images/icon-7.png" width="71" height="71" loading="lazy" alt="icon">
-                </div>
-
-                <div>
-                  <h3 class="headline-sm card-title">Osteology</h3>
-
-                  <p class="card-text">Nisi nullam</p>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
 
         </div>
       </section>
@@ -521,18 +391,16 @@
 
 
 
-      <!-- 
+      <!--
         - #BLOG
       -->
 
       <section class="section blog" aria-labelledby="blog-label">
         <div class="container">
 
-          <p class="section-subtitle title-lg text-center" id="blog-label" data-reveal="bottom">
-            News & Article
-          </p>
 
-          <h2 class="section-title headline-md text-center" data-reveal="bottom">Latest Articles</h2>
+
+          <h2 class="section-title headline-md text-center" data-reveal="bottom">NOS SERVICES</h2>
 
           <ul class="grid-list">
 
@@ -555,13 +423,12 @@
 
                 </div>
 
-                <h3 class="headline-sm card-title">Could intermittent fasting reduce breast cancer</h3>
+                <h3 class="headline-sm card-title">Consultaion En Néphrologie</h3>
 
                 <time class="title-sm date" datetime="2022-01-28">28 January, 2022</time>
 
                 <p class="card-text">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                  labore et dolore magna aliquyam erat
+                  la clinique BOUCENNA vous proposent des consultation en Néphrologie et maladies rénale du dimanche au jeudi De 08h00 à 15h30 Avec le Dr. Rabia Chafai
                 </p>
 
                 <a href="#" class="btn-text title-lg">Read More</a>
@@ -588,13 +455,12 @@
 
                 </div>
 
-                <h3 class="headline-sm card-title">Give children more autonomy during the pandemic</h3>
+                <h3 class="headline-sm card-title">Dialyse pour vacanciers</h3>
 
                 <time class="title-sm date" datetime="2022-01-28">28 January, 2022</time>
 
                 <p class="card-text">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                  labore et dolore magna aliquyam erat
+                 Le centre d’hémodialyse et de néphrologie BOUCENNA,prend en charge les  vacanciers pour une courte durée,et  assure les dialyses occasionnelles pour voyageurs de passage dans la région de sétif.
                 </p>
 
                 <a href="#" class="btn-text title-lg">Read More</a>
@@ -621,13 +487,76 @@
 
                 </div>
 
-                <h3 class="headline-sm card-title">How do binge eating and drinking impact the liver?</h3>
+                <h3 class="headline-sm card-title">La Pharmacie Nabil Aouabdia</h3>
 
                 <time class="title-sm date" datetime="2022-01-28">28 January, 2022</time>
 
                 <p class="card-text">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                  labore et dolore magna aliquyam erat
+                  Nous vous proposons les services de notre pharmacie
+                </p>
+
+                <a href="#" class="btn-text title-lg">Read More</a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card has-before has-after" data-reveal="bottom">
+
+                <div class="meta-wrapper">
+
+                  <div class="card-meta">
+                    <ion-icon name="person-outline"></ion-icon>
+
+                    <span class="span">By Admin</span>
+                  </div>
+
+                  <div class="card-meta">
+                    <ion-icon name="folder-outline"></ion-icon>
+
+                    <span class="span">Specialist</span>
+                  </div>
+
+                </div>
+
+                <h3 class="headline-sm card-title">Séance D’Hémodialyse</h3>
+
+                <time class="title-sm date" datetime="2022-01-28">28 January, 2022</time>
+
+                <p class="card-text">
+                  Le centre d'hémodialyse et de néphrologie BOUCENNA met à votre disposition 15 poste de dialyse tous le long de la semaine sauf le vendredi pour plus d'information veillez consultez nos horaires de travail
+                </p>
+
+                <a href="#" class="btn-text title-lg">Read More</a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card has-before has-after" data-reveal="bottom">
+
+                <div class="meta-wrapper">
+
+                  <div class="card-meta">
+                    <ion-icon name="person-outline"></ion-icon>
+
+                    <span class="span">By Admin</span>
+                  </div>
+
+                  <div class="card-meta">
+                    <ion-icon name="folder-outline"></ion-icon>
+
+                    <span class="span">Specialist</span>
+                  </div>
+
+                </div>
+
+                <h3 class="headline-sm card-title">Transport Sanitaire</h3>
+
+                <time class="title-sm date" datetime="2022-01-28">28 January, 2022</time>
+
+                <p class="card-text">
+                  La Clinique assure votre transport depuis/vers votre domicile à travers notre réseau de voitures sanitaires légères (VSL).
                 </p>
 
                 <a href="#" class="btn-text title-lg">Read More</a>
@@ -647,206 +576,77 @@
 
 
 
-  <!-- 
+  <!--
     - #FOOTER
   -->
 
   <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
     <div class="container">
-
       <div class="section footer-top">
-
         <div class="footer-brand" data-reveal="bottom">
-
-          <a href="#" class="logo">
-            <img src="./assets/images/logo.svg" width="136" height="46" loading="lazy" alt="Doclab home">
-          </a>
-
+                  <a href="index.html" class="logo">
+          <img src="./assets/images/SVG/new/logo-short-dark.png" width="136" height="46" loading="lazy" alt="Dialyse BOUCENNA">
+        </a>
           <ul class="contact-list has-after">
-
             <li class="contact-item">
-
               <div class="item-icon">
                 <ion-icon name="mail-open-outline"></ion-icon>
               </div>
-
               <div>
-                <p>
-                  Main Email : <a href="mailto:contact@website.com" class="contact-link">contact@&shy;website.com</a>
-                </p>
-
-                <p>
-                  Inquiries : <a href="mailto:Info@mail.com" class="contact-link">Info@mail.com</a>
-                </p>
+                <p>Main Email : <a href="mailto:contact@website.com" class="contact-link">contact@website.com</a></p>
+                <p>Inquiries : <a href="mailto:Info@mail.com" class="contact-link">Info@mail.com</a></p>
               </div>
-
             </li>
-
             <li class="contact-item">
-
               <div class="item-icon">
                 <ion-icon name="call-outline"></ion-icon>
               </div>
-
               <div>
-                <p>
-                  Office Telephone : <a href="tel:0029129102320" class="contact-link">0029129102320</a>
-                </p>
-
-                <p>
-                  Mobile : <a href="tel:000232439493" class="contact-link">000 2324 39493</a>
-                </p>
+                <p>Office Telephone : <a href="tel:(+213)36614543" class="contact-link">(+213) 36-614-543</a></p>
+                <p>Mobile : <a href="tel:000232439493" class="contact-link">000 2324 39493</a></p>
               </div>
-
             </li>
-
           </ul>
-
         </div>
-
         <div class="footer-list" data-reveal="bottom">
-
           <p class="headline-sm footer-list-title">About Us</p>
-
           <p class="text">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+            La clinique de Néphrologie, d'Hémodialyse et de transport sanitaire est une clinique privée spécialisée dans le traitement de l'insuffisance rénale chronique terminale.
           </p>
-
           <address class="address">
             <ion-icon name="map-outline"></ion-icon>
-
             <span class="text">
-              2416 Mapleview Drive <br>
-              Tampa, FL 33634
+              CITE KAABOUB COOPERATIVE IMMOBILIERE ESSALEM SECTION 105 I LOT N°151 SETIF
             </span>
           </address>
-
         </div>
-
         <ul class="footer-list" data-reveal="bottom">
-
-          <li>
-            <p class="headline-sm footer-list-title">Services</p>
-          </li>
-
-          <li>
-            <a href="#" class="text footer-link">Conditions</a>
-          </li>
-
-          <li>
-            <a href="#" class="text footer-link">Listing</a>
-          </li>
-
-          <li>
-            <a href="#" class="text footer-link">How It Works</a>
-          </li>
-
-          <li>
-            <a href="#" class="text footer-link">What We Offer</a>
-          </li>
-
-          <li>
-            <a href="#" class="text footer-link">Latest News</a>
-          </li>
-
-          <li>
-            <a href="#" class="text footer-link">Contact Us</a>
-          </li>
-
+          <li><p class="headline-sm footer-list-title">Useful Links</p></li>
+          <li><a href="index.html" class="text footer-link">Accueil</a></li>
+          <li><a href="about.html" class="text footer-link">A Propos</a></li>
+          <li><a href="departement.html" class="text footer-link">Départements</a></li>
+          <li><a href="conseil.html" class="text footer-link">Conseils</a></li>
+          <li><a href="contact.html" class="text footer-link">Contactez Nous</a></li>
         </ul>
-
-        <ul class="footer-list" data-reveal="bottom">
-
-          <li>
-            <p class="headline-sm footer-list-title">Useful Links</p>
-          </li>
-
-          <li>
-            <a href="#" class="text footer-link">Conditions</a>
-          </li>
-
-          <li>
-            <a href="#" class="text footer-link">Terms of Use</a>
-          </li>
-
-          <li>
-            <a href="#" class="text footer-link">Our Services</a>
-          </li>
-
-          <li>
-            <a href="#" class="text footer-link">Join as a Doctor</a>
-          </li>
-
-          <li>
-            <a href="#" class="text footer-link">New Guests List</a>
-          </li>
-
-          <li>
-            <a href="#" class="text footer-link">The Team List</a>
-          </li>
-
-        </ul>
-
         <div class="footer-list" data-reveal="bottom">
-
           <p class="headline-sm footer-list-title">Subscribe</p>
-
           <form action="" class="footer-form">
             <input type="email" name="email" placeholder="Email" class="input-field title-lg">
-
             <button type="submit" class="btn has-before title-md">Subscribe</button>
           </form>
-
-          <p class="text">
-            Get the latest updates via email. Any time you may unsubscribe
-          </p>
-
+          <p class="text">N’hésitez pas à nous contacter !</p>
         </div>
-
       </div>
-
       <div class="footer-bottom">
-
-        <p class="text copyright">
-          &copy; Doclab 2022 | All Rights Reserved by codewithsadee
-        </p>
-
+        <p class="text copyright">&copy; CLINIQUE 2025 | All Rights Reserved</p>
         <ul class="social-list">
-
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-google"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-pinterest"></ion-icon>
-            </a>
-          </li>
-
+          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-google"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-pinterest"></ion-icon></a></li>
         </ul>
-
       </div>
-
     </div>
   </footer>
 
@@ -854,7 +654,7 @@
 
 
 
-  <!-- 
+  <!--
     - #BACK TO TOP
   -->
 
@@ -866,12 +666,12 @@
 
 
 
-  <!-- 
+  <!--
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
 
-  <!-- 
+  <!--
     - ionicon link
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

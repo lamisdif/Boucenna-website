@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--
+    - primary meta tags
+  -->
+  <title>Conseils - Dialyse BOUCENNA</title>
+  <meta name="title" content="Dialyse BOUCENNA - Conseils">
+  <meta name="description" content="Informations et conseils pratiques pour les patients en hémodialyse.">
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- Navbar dropdown helper (copied from index.html) -->
+  <style>
+  .navbar-item .dropdown {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 250px;
+    background-color: var(--rich-black-fogra-29);
+    border-radius: var(--radius-6);
+    box-shadow: 0 4px 16px hsla(0, 0%, 0%, 0.2);
+    transition: var(--transition-1);
+    transform: translateY(10px);
+    z-index: 10;
+  }
+  .navbar-item:hover .dropdown { visibility: visible; opacity: 1; transform: translateY(0); }
+  .dropdown-item { border-bottom: 1px solid var(--white_a10); }
+  .dropdown-item:last-child { border-bottom: none; }
+  .dropdown-link {
+    color: var(--white);
+    padding: 12px 20px;
+    font-size: 1.4rem;
+    transition: var(--transition-1);
+    display: block;
+  }
+  .dropdown-link:hover { background-color: var(--verdigris); }
+  .navbar-item { position: relative; }
+  </style>
+
+  <!-- Page-scoped, brand-new styles for conseil content -->
+  <style>
+  /* Conseil page unique styles (scoped) */
+  #conseil-content { padding-block: var(--section-padding); background: var(--alice-blue); }
+  .conseil-container { max-width: 1200px; margin: 0 auto; padding-inline: 24px; }
+
+  .conseil-hero { position: relative; overflow: hidden; background: linear-gradient(135deg, var(--midnight-green), var(--verdigris)); color: var(--white); border-radius: var(--radius-12); padding: 44px 36px; box-shadow: var(--shadow-1); margin-bottom: 24px; }
+  .conseil-hero::after { content:""; position:absolute; inset:-40%; background: radial-gradient(60% 60% at 20% 20%, hsla(182,100%,35%,0.25) 0%, transparent 60%), radial-gradient(50% 50% at 80% 30%, hsla(186,100%,19%,0.25) 0%, transparent 55%), radial-gradient(40% 40% at 50% 80%, hsla(182,100%,35%,0.2) 0%, transparent 60%); animation: heroFloat 14s linear infinite; z-index:0; }
+  @keyframes heroFloat { 0% { transform: translate3d(0,0,0) scale(1); } 50% { transform: translate3d(3%,2%,0) scale(1.02); } 100% { transform: translate3d(0,0,0) scale(1); } }
+
+  .breadcrumb { position: relative; z-index:1; font-size: 1rem; opacity: 0.9; margin-bottom: 12px; }
+  .breadcrumb a { color: var(--white); text-decoration: none; opacity: 0.95; }
+  .breadcrumb a:hover { text-decoration: underline; }
+
+  .conseil-hero h1 { position: relative; z-index:1; font-family: var(--ff-oswald); margin: 0 0 12px 0; letter-spacing: 0.5px; }
+  .conseil-hero p { position: relative; z-index:1; margin: 0; opacity: 1; max-width: 70ch; font-size: 1.18rem; line-height: 1.75; }
+
+  .hero-actions { position: relative; z-index:1; margin-top: 22px; display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-solid { background: var(--verdigris); color: var(--white); padding: 14px 22px; border-radius: var(--radius-6); text-decoration: none; box-shadow: var(--shadow-2); transition: var(--transition-1); font-weight: var(--fw-700); }
+  .btn-solid:hover { filter: brightness(1.05); transform: translateY(-2px); }
+  .btn-ghost { background: transparent; color: var(--white); border: 1px solid var(--white_a20); padding: 14px 22px; border-radius: var(--radius-6); text-decoration: none; backdrop-filter: blur(2px); transition: var(--transition-1); font-weight: var(--fw-700); }
+  .btn-ghost:hover { background: var(--white_a10); }
+
+  /* Sticky toolbar */
+  .chip-toolbar { position: sticky; top: 100px; z-index: 2; margin-bottom: 28px; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); background: hsla(0,0%,100%,0.45); border: 1px solid var(--gainsboro); border-radius: 999px; padding: 10px 12px; box-shadow: var(--shadow-2); display: flex; gap: 8px; flex-wrap: wrap; }
+  .chip-toolbar .chip { background: var(--middle-blue-green_40); color: var(--midnight-green); }
+  .chip.active { box-shadow: 0 0 0 2px var(--verdigris); background: hsla(182,100%,35%,0.2); }
+  @media (max-width: 768px){ .chip-toolbar { top: 84px; overflow-x:auto; white-space: nowrap; border-radius: 14px; } }
+
+  .conseil-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px; align-items: start; }
+  @media (max-width: 980px) { .conseil-grid { grid-template-columns: 1fr; } }
+
+  .conseil-card { background: var(--white); border: none; border-radius: var(--radius-12); padding: 26px 24px; box-shadow: var(--shadow-2); transition: transform var(--transition-1), box-shadow var(--transition-1); }
+  .conseil-card + .conseil-card { margin-top: 22px; }
+  .conseil-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-1); }
+
+  .conseil-toggle { color: var(--midnight-green); font-family: var(--ff-oswald); margin: 0; margin-bottom: 12px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .conseil-caret { font-size: 20px; color: var(--independece); transition: transform 0.25s ease; }
+  .conseil-card.collapsed .conseil-caret { transform: rotate(-90deg); }
+
+  .conseil-body { margin-top: 6px; overflow: hidden; max-height: 1200px; opacity: 1; transition: max-height 0.35s ease, opacity 0.25s ease; }
+  .conseil-card.collapsed .conseil-body { max-height: 0; opacity: 0; }
+
+  .conseil-box { background: var(--alice-blue); border: 1px dashed var(--verdigris); border-radius: var(--radius-12); padding: 16px 18px; margin: 12px 0 18px 0; }
+  .conseil-list { margin: 0; padding-left: 18px; }
+  .conseil-list li { margin: 6px 0; }
+
+  .conseil-widget { background: var(--white); border: none; border-radius: var(--radius-12); padding: 22px; box-shadow: var(--shadow-2); position: sticky; top: 120px; }
+  .conseil-widget h3 { color: var(--midnight-green); margin-top: 0; font-family: var(--ff-oswald); }
+  .conseil-widget p { color: var(--independece); margin-bottom: 12px; }
+
+  .chip { display: inline-block; background: var(--middle-blue-green_40); color: var(--midnight-green); padding: 8px 14px; border-radius: 999px; font-size: 0.95rem; margin: 8px 10px 0 0; text-decoration: none; }
+  .chip:hover { filter: brightness(0.95); }
+
+  .underline { width: 80px; height: 3px; background: var(--verdigris); border: none; border-radius: 4px; margin: 12px 0 18px 0; }
+
+  @media (max-width: 768px) { #conseil-content { padding-block: 80px; } .conseil-hero { padding: 28px 20px; } .conseil-hero p { font-size: 1.05rem; } .conseil-card { padding: 20px; } .chip { font-size: 0.9rem; padding: 6px 12px; } .conseil-widget { position: static; top: auto; } }
+  </style>
+</head>
+
+<body id="top">
+
+  <!--
+    - #PRELOADER
+  -->
+  <div class="preloader" data-preloader>
+    <div class="circle"></div>
+  </div>
+
+  <!--
+    - #HEADER
+  -->
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="index.html" class="logo">
+        <img src="./assets/images/SVG/new/logo-long-dark.png" width="200" height="50" alt="Dialyse BOUCENNA">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <a href="index.html" class="logo">
+            <img src="./assets/images/SVG/new/logo-long-light.png" width="200" height="50" alt="Dialyse BOUCENNA">
+          </a>
+          <button class="nav-close-btn" aria-label="clsoe menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+          <li class="navbar-item"><a href="index.html" class="navbar-link title-md">ACCUEIL</a></li>
+          <li class="navbar-item"><a href="apropos.html" class="navbar-link title-md">A PROPOS</a></li>
+          <li class="navbar-item">
+            <a href="departement.html" class="navbar-link title-md">DEPARTEMENTS</a>
+            <ul class="dropdown">
+              <li class="dropdown-item"><a href="departement.html#hemodialyse" class="dropdown-link">Séance D'Hémodialyse</a></li>
+              <li class="dropdown-item"><a href="departement.html#nephrologie" class="dropdown-link">Consultation En Néphrologie</a></li>
+              <li class="dropdown-item"><a href="departement.html#occasionnelle" class="dropdown-link">Dialyse Occasionnelle</a></li>
+              <li class="dropdown-item"><a href="departement.html#transport" class="dropdown-link">Transport Sanitaire</a></li>
+              <li class="dropdown-item"><a href="departement.html#pharmacie" class="dropdown-link">La Pharmacie</a></li>
+            </ul>
+          </li>
+          <li class="navbar-item"><a href="conseil.html" class="navbar-link title-md active">CONSEILS</a></li>
+          <li class="navbar-item"><a href="contact.html" class="navbar-link title-md">CONTACTEZ NOUS</a></li>
+        </ul>
+
+        <ul class="social-list">
+          <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-pinterest"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-youtube"></ion-icon></a></li>
+        </ul>
+
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <a href="contact.html" class="btn has-before title-md">Prendre Rendez-vous</a>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+  <main id="conseil-content">
+    <div class="conseil-container">
+
+      <section class="conseil-hero" data-reveal="bottom">
+        <nav class="breadcrumb"><a href="index.html">Accueil</a> / <span>Conseils</span></nav>
+        <h1>Suis-je pris en charge pour ma maladie ?</h1>
+        <p>Toutes les informations sur la prise en charge, les documents nécessaires et les conseils pratiques.</p>
+        <div class="hero-actions">
+          <a href="#documents" class="btn-solid">Télécharger la checklist</a>
+          <a href="contact.html" class="btn-ghost">Prendre contact</a>
+        </div>
+      </section>
+
+      <nav class="chip-toolbar" aria-label="Sections de la page">
+        <a class="chip" href="#prise-en-charge">Prise en charge</a>
+        <a class="chip" href="#documents">Documents</a>
+        <a class="chip" href="#transport">Transport</a>
+        <a class="chip" href="#fistule">Fistule</a>
+        <a class="chip" href="#nutrition">Nutrition</a>
+      </nav>
+
+      <div class="conseil-grid">
+        <div>
+          <article id="prise-en-charge" class="conseil-card card-elev" data-reveal="bottom">
+            <h2 class="conseil-toggle" tabindex="0" aria-expanded="true">Prise en charge financière <span class="conseil-caret">▾</span></h2>
+            <div class="conseil-body">
+              <p>L’insuffisance rénale chronique est prise en charge à <strong>100% par la sécurité sociale</strong>.</p>
+            </div>
+          </article>
+
+          <article id="documents" class="conseil-card card-elev" data-reveal="bottom">
+            <h2 class="conseil-toggle" tabindex="0" aria-expanded="true">Documents à présenter <span class="conseil-caret">▾</span></h2>
+            <div class="conseil-body">
+              <h3>Vacanciers étrangers / locaux</h3>
+              <div class="conseil-box">
+                <ul class="conseil-list">
+                  <li>Protocole de dialyse / Fiche de liaison</li>
+                  <li>Bilan récent (Sérologie)</li>
+                  <li>Compte rendu médical</li>
+                </ul>
+              </div>
+
+              <h3>Permanents et occasionnels</h3>
+              <p>Cette catégorie concerne les patients affiliés à une caisse de sécurité sociale (<strong>CNAS, CASNOS</strong>).</p>
+
+              <h3 id="cnas">CNAS</h3>
+              <div class="conseil-box">
+                <ul class="conseil-list">
+                  <li>Ouverture de droit originale et récente</li>
+                  <li>Bilan récent (Sérologie)</li>
+                  <li>Carte de groupage</li>
+                  <li>Dossier médical et/ou fiche de liaison</li>
+                  <li>02 photos</li>
+                  <li>01 certificat de résidence</li>
+                </ul>
+              </div>
+
+              <h3 id="casnos">CASNOS</h3>
+              <div class="conseil-box">
+                <ul class="conseil-list">
+                  <li>Prise en charge valide</li>
+                  <li>Bilan récent (Sérologie)</li>
+                  <li>Carte de groupage</li>
+                  <li>Dossier médical et/ou fiche de liaison</li>
+                  <li>02 photos</li>
+                  <li>01 certificat de résidence</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article id="transport" class="conseil-card card-elev" data-reveal="bottom">
+            <h2 class="conseil-toggle" tabindex="0" aria-expanded="true">Transport <span class="conseil-caret">▾</span></h2>
+            <div class="conseil-body">
+              <p>La clinique Néphrose vous propose son service de transport sanitaire à l’aide de notre ambulance et de nos nombreuses VSL.</p>
+              <p>Nos chauffeurs sont engagés <strong>24h/24 et 7j/7</strong> pour vous faire arriver à destination, que ce soit en Algérie (inter-wilaya) ou à l’étranger (Tunisie).</p>
+            </div>
+          </article>
+
+          <article id="fistule" class="conseil-card card-elev" data-reveal="bottom">
+            <h2 class="conseil-toggle" tabindex="0" aria-expanded="true">Fistule <span class="conseil-caret">▾</span></h2>
+            <div class="conseil-body">
+              <ul class="conseil-list">
+                <li>Une fistule doit être créée avant le début de l’hémodialyse.</li>
+                <li>Surveiller son bon fonctionnement (battements caractéristiques).</li>
+                <li>Évitez montres, bijoux ou pansements serrés.</li>
+                <li>Protégez-la lors d’activités physiques.</li>
+                <li>N’utilisez pas de produits sans avis médical.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article id="tenue" class="conseil-card card-elev" data-reveal="bottom">
+            <h2 class="conseil-toggle" tabindex="0" aria-expanded="true">Tenue <span class="conseil-caret">▾</span></h2>
+            <div class="conseil-body">
+              <p>Une tenue adaptée à la dialyse est recommandée (jogging ou pyjama).</p>
+            </div>
+          </article>
+
+          <article id="nutrition" class="conseil-card card-elev" data-reveal="bottom">
+            <h2 class="conseil-toggle" tabindex="0" aria-expanded="true">Nutrition <span class="conseil-caret">▾</span></h2>
+            <div class="conseil-body">
+              <ul class="conseil-list">
+                <li>Une alimentation équilibrée est essentielle.</li>
+                <li>La prise de poids entre deux séances ne doit pas dépasser 5% du poids du corps.</li>
+                <li>Contrôler les apports en sel, potassium et phosphore.</li>
+                <li>Limiter les aliments riches en potassium (bananes, chocolat, légumes secs, potages...).</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <aside>
+          <div class="conseil-widget card-elev" data-reveal="left">
+            <h3>Raccourcis utiles</h3>
+            <p>Accédez rapidement aux informations clés et aux documents nécessaires.</p>
+            <div>
+              <a class="chip" href="#cnas">CNAS</a>
+              <a class="chip" href="#casnos">CASNOS</a>
+              <a class="chip" href="#transport">Transport</a>
+              <a class="chip" href="#fistule">Fistule</a>
+              <a class="chip" href="#nutrition">Nutrition</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </main>
+
+  <!--
+    - #FOOTER (copied and normalized like index.html)
+  -->
+  <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
+    <div class="container">
+      <div class="section footer-top">
+        <div class="footer-brand" data-reveal="bottom">
+          <a href="index.html" class="logo">
+            <img src="./assets/images/SVG/new/logo-short-dark.png" width="136" height="46" loading="lazy" alt="Dialyse BOUCENNA">
+          </a>
+          <ul class="contact-list has-after">
+            <li class="contact-item">
+              <div class="item-icon"><ion-icon name="mail-open-outline"></ion-icon></div>
+              <div>
+                <p>Email Principal : <a href="mailto:contact@dialyseboucenna.dz" class="contact-link">contact@dialyseboucenna.dz</a></p>
+                <p>Informations : <a href="mailto:info@dialyseboucenna.dz" class="contact-link">info@dialyseboucenna.dz</a></p>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="item-icon"><ion-icon name="call-outline"></ion-icon></div>
+              <div>
+                <p>Téléphone : <a href="tel:+213123456789" class="contact-link">(+213) 123 456 789</a></p>
+                <p>Mobile : <a href="tel:+213123456789" class="contact-link">(+213) 123 456 789</a></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-list" data-reveal="bottom">
+          <p class="headline-sm footer-list-title">À Propos de Nous</p>
+          <p class="text">Centre de dialyse de référence offrant des soins exceptionnels et personnalisés pour les patients atteints d'insuffisance rénale chronique.</p>
+          <address class="address">
+            <ion-icon name="map-outline"></ion-icon>
+            <span class="text">123 Rue de la Santé, Sétif, Algérie</span>
+          </address>
+        </div>
+
+        <ul class="footer-list" data-reveal="bottom">
+          <li><p class="headline-sm footer-list-title">Liens Utiles</p></li>
+          <li><a href="index.html" class="text footer-link">Accueil</a></li>
+          <li><a href="about.html" class="text footer-link">A Propos</a></li>
+          <li><a href="departement.html" class="text footer-link">Départements</a></li>
+          <li><a href="conseil.html" class="text footer-link">Conseils</a></li>
+          <li><a href="contact.html" class="text footer-link">Contactez Nous</a></li>
+        </ul>
+
+        <div class="footer-list" data-reveal="bottom">
+          <p class="headline-sm footer-list-title">Nos Services</p>
+          <ul>
+            <li><a href="departement.html#hemodialyse" class="text footer-link">Hémodialyse</a></li>
+            <li><a href="departement.html#nephrologie" class="text footer-link">Néphrologie</a></li>
+            <li><a href="departement.html#occasionnelle" class="text footer-link">Dialyse Occasionnelle</a></li>
+            <li><a href="departement.html#transport" class="text footer-link">Transport Sanitaire</a></li>
+            <li><a href="departement.html#pharmacie" class="text footer-link">Pharmacie</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="text copyright">&copy; 2024 Dialyse BOUCENNA | Tous droits réservés</p>
+        <ul class="social-list">
+          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-google"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-pinterest"></ion-icon></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- back to top -->
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up"></ion-icon>
+  </a>
+
+  <!-- custom js -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+  // Smooth scroll for all in-page anchors
+  document.addEventListener('click', function(e){
+    const link = e.target.closest('a[href^="#"]');
+    if(!link) return;
+    const id = link.getAttribute('href');
+    const target = document.querySelector(id);
+    if(target){
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      history.replaceState(null, '', id);
+    }
+  });
+
+  // Collapsible cards with animated caret and body
+  const toggles = document.querySelectorAll('.conseil-toggle');
+  toggles.forEach((tg, idx) => {
+    const card = tg.closest('.conseil-card');
+    if(idx > 0) { card.classList.add('collapsed'); tg.setAttribute('aria-expanded','false'); }
+    tg.addEventListener('click', () => toggleCard(card, tg));
+    tg.addEventListener('keydown', (ev) => { if(ev.key==='Enter' || ev.key===' '){ ev.preventDefault(); toggleCard(card, tg); } });
+  });
+  function toggleCard(card, tg){ const collapsed = card.classList.toggle('collapsed'); tg.setAttribute('aria-expanded', collapsed ? 'false' : 'true'); }
+
+  // Active chip highlighting based on section visibility
+  const sectionIds = ['#prise-en-charge','#documents','#transport','#fistule','#nutrition'];
+  const chips = Array.from(document.querySelectorAll('.chip-toolbar .chip, .conseil-hero .chip, .conseil-widget .chip'));
+  const map = new Map(sectionIds.map(id => [id, chips.filter(c => c.getAttribute('href')===id)]));
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        const id = '#' + entry.target.id;
+        chips.forEach(c=>c.classList.remove('active'));
+        (map.get(id)||[]).forEach(c=>c.classList.add('active'));
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px', threshold: [0, 0.3, 1] });
+  sectionIds.forEach(id => { const el = document.querySelector(id); if(el) io.observe(el); });
+  </script>
+</body>
+</html>
