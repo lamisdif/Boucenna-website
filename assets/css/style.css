@@ -1610,7 +1610,7 @@ img:is(:hover, :focus-visible) {
 .mission-section h2 { margin: 0 0 8px 0; font-family: var(--ff-oswald); color: var(--midnight-green); }
 
 .footer .contact-item { background: transparent; }
-.footer .contact-item .item-icon { background: var(--verdigris); color: var(--white); }
+.footer .contact-item .item-icon { background: transparent; color: var(--white); }
 .footer .contact-link { color: var(--white); }
 .footer .contact-link:hover { color: var(--middle-blue-green); }
 
