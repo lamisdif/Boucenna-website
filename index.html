@@ -167,7 +167,7 @@
         <ion-icon name="menu-outline"></ion-icon>
       </button>
 
-      <a href="contact.html" class="btn has-before title-md">Prendre Rendez-vous</a>
+      <a href="#" class="btn has-before title-md" data-rdv data-phone="+213661935353" data-mail="contact@website.com">Prendre Rendez-vous</a>
 
       <div class="overlay" data-nav-toggler data-overlay></div>
 
@@ -185,27 +185,17 @@
         - #HERO
       -->
 
-      <section class="section hero" style="background-image: url('./assets/images/hero-bg.png')" aria-label="home">
-        <div class="container">
-
-          <div class="hero-content">
-
-            <p class="hero-subtitle has-before" data-reveal="left">Bienvenue </p>
-
-            <h1 class="headline-lg hero-title" data-reveal="left">
-              CLINIQUE D'HEMODIALYSE<br>
-
-            </h1>
-
-
-          </div>
-
-          <figure class="hero-banner" data-reveal="right">
-            <img src="./assets/images/hero-banner.png" width="590" height="517" loading="eager" alt="hero banner"
-              class="w-100">
-          </figure>
-
+      <section class="section hero" aria-label="home">
+        <div id="hero-carousel" class="hero-carousel" aria-live="polite"></div>
+        <div class="hero-controls" aria-label="carousel controls">
+          <button class="hero-arrow" id="hero-prev" aria-label="Précédent">
+            <ion-icon name="chevron-back-outline"></ion-icon>
+          </button>
+          <button class="hero-arrow" id="hero-next" aria-label="Suivant">
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </button>
         </div>
+        <div class="hero-dots" id="hero-dots" role="tablist" aria-label="Choisir une clinique"></div>
       </section>
 
 
