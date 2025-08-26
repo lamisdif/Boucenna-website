@@ -111,9 +111,10 @@ window.addEventListener("load", revealElementOnScroll);
     carouselRoot.innerHTML = '';
 
     // Simple slides data
-    // Keep only 2 best images per location for fast load
+    // Full sets again; we'll optimize delivery via Netlify Image CDN + lazy load
     const ainOulmene = [
-      'a.jpg', 'am.jpg'
+      'a.jpg', 'am.jpg', 'am2.jpg', 'am4.jpg', 'am5.jpg', 'am6.jpg',
+      'am11.jpg', 'am12.jpg', 'am13.jpg', 'am14.jpg', 'am15.jpg', '20250526_162148.jpg'
     ].map(name => ({
       imageSrc: `./assets/images/ain oulmene/${name}`,
       title: "Clinique d'Aïn Oulmène",
@@ -121,21 +122,40 @@ window.addEventListener("load", revealElementOnScroll);
     }));
 
     const bouira = [
-      'bouira.jpg', 'Screenshot_20250528_071616_Gallery.jpg'
+      'bouira.jpg',
+      'Screenshot_20250528_071616_Gallery.jpg',
+      'Screenshot_20250528_071624_Gallery.jpg',
+      'Screenshot_20250528_071631_Gallery.jpg',
+      'Screenshot_20250528_071638_Gallery.jpg',
+      'Screenshot_20250528_071645_Gallery.jpg',
+      'Screenshot_20250528_071651_Gallery.jpg',
+      'Screenshot_20250528_071658_Gallery.jpg',
+      'Screenshot_20250528_071704_Gallery.jpg',
+      'Screenshot_20250528_071710_Gallery.jpg',
+      'Screenshot_20250528_071716_Gallery.jpg',
+      'Screenshot_20250528_071727_Gallery.jpg',
+      'Screenshot_20250528_071733_Gallery.jpg',
+      'Screenshot_20250528_071741_Gallery.jpg',
+      'Screenshot_20250528_071748_Gallery.jpg',
+      'Screenshot_20250528_071755_Gallery.jpg',
+      'Screenshot_20250528_071801_Gallery.jpg',
+      'Screenshot_20250528_071809_Gallery.jpg',
+      'Screenshot_20250528_071815_Gallery.jpg',
+      'Screenshot_20250528_071912_Gallery.jpg'
     ].map(name => ({
       imageSrc: `./assets/images/bouira/${name}`,
       title: 'Clinique de Bouira',
       description: 'Équipements de pointe, suivi personnalisé.'
     }));
 
-    const cherchcel = ['chh1.jpg', 'chh2.jpg']
+    const cherchcel = ['chch4.jpg', 'chh.jpg', 'chh1.jpg', 'chh2.jpg', 'chh3.jpg']
       .map(name => ({
         imageSrc: `./assets/images/cherchcel/${name}`,
         title: 'Clinique de Cherchell',
         description: 'Soins d\'hémodialyse sûrs et confortables.'
       }));
 
-    const pharmacie = ['ph1.jpg', 'ph2.jpg']
+    const pharmacie = ['ph.jpg', 'ph1.jpg', 'ph2.jpg', 'ph3.jpg', 'phh1.jpg', 'phh2.jpg', 'phh3.jpg', 'phh4.jpg']
       .map(name => ({
         imageSrc: `./assets/images/pharmacie/${name}`,
         title: 'Pharmacie Boucenna',
@@ -152,7 +172,16 @@ window.addEventListener("load", revealElementOnScroll);
 
     console.log('Building carousel with', slides.length, 'slides');
 
-    // Build slides
+    // Helper to generate optimized WebP via Netlify Image CDN (fallback: original)
+    function optimizedUrl(src, width) {
+      try {
+        const u = new URL(src, location.origin);
+        const path = u.pathname + (u.search || '');
+        return `/.netlify/images?url=${encodeURIComponent(path)}&fm=webp&w=${width||1600}&fit=cover&auto=compress`;
+      } catch { return src; }
+    }
+
+    // Build slides (lazy-load heavy images to speed up initial render)
     slides.forEach((s, idx) => {
       const slide = document.createElement('div');
       slide.className = 'hero-slide' + (idx === 0 ? ' active' : '');
@@ -162,14 +191,23 @@ window.addEventListener("load", revealElementOnScroll);
       slide.style.width = '100%';
       slide.style.height = '100%';
       // Opacity & transition handled by CSS (.hero-slide / .hero-slide.active)
+      slide.dataset.src = optimizedUrl(s.imageSrc, 1600); // store optimized src for lazy load
 
-      const img = document.createElement('img');
-      img.src = s.imageSrc;
-      img.alt = s.title;
-      img.loading = 'lazy';
-      img.style.width = '100%';
-      img.style.height = '100%';
-      img.style.objectFit = 'cover';
+      // Only inject the actual <img> for the first slide to improve LCP
+      if (idx === 0) {
+        const img = document.createElement('img');
+        img.src = optimizedUrl(s.imageSrc, 1600);
+        img.alt = s.title;
+        img.loading = 'eager';
+        img.decoding = 'async';
+        img.setAttribute('fetchpriority', 'high');
+        img.srcset = [1920,1600,1280,960,768].map(w=>`${optimizedUrl(s.imageSrc,w)} ${w}w`).join(', ');
+        img.sizes = '(min-width: 1200px) 1200px, (min-width: 768px) 90vw, 100vw';
+        img.style.width = '100%';
+        img.style.height = '100%';
+        img.style.objectFit = 'cover';
+        slide.appendChild(img);
+      }
 
       const overlay = document.createElement('div');
       overlay.style.position = 'absolute';
@@ -204,7 +242,6 @@ window.addEventListener("load", revealElementOnScroll);
       textInner.appendChild(p);
       textWrap.appendChild(textInner);
 
-      slide.appendChild(img);
       slide.appendChild(overlay);
       slide.appendChild(textWrap);
 
@@ -218,7 +255,31 @@ window.addEventListener("load", revealElementOnScroll);
     let current = 0;
     let autoplayId = null;
 
+    function ensureLoaded(idx) {
+      const el = slideEls[idx];
+      if (!el) return;
+      const hasImg = el.querySelector('img');
+      if (!hasImg) {
+        const src = el.dataset.src;
+        if (src) {
+          const img = document.createElement('img');
+          img.src = src;
+          img.alt = slides[idx]?.title || 'Slide';
+          img.loading = 'lazy';
+          img.decoding = 'async';
+          // responsive variants
+          img.srcset = [1920,1600,1280,960,768].map(w=>`${optimizedUrl(slides[idx].imageSrc,w)} ${w}w`).join(', ');
+          img.sizes = '(min-width: 1200px) 1200px, (min-width: 768px) 90vw, 100vw';
+          img.style.width = '100%';
+          img.style.height = '100%';
+          img.style.objectFit = 'cover';
+          el.insertBefore(img, el.firstChild);
+        }
+      }
+    }
+
     function show(idx){
+      ensureLoaded(idx);
       slideEls.forEach((el, i) => {
         if (i === idx) {
           el.classList.add('active');
@@ -226,6 +287,14 @@ window.addEventListener("load", revealElementOnScroll);
           el.classList.remove('active');
         }
       });
+      // Preload next slide opportunistically
+      const nextIdx = (idx + 1) % slideEls.length;
+      const preload = () => ensureLoaded(nextIdx);
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(preload, { timeout: 500 });
+      } else {
+        setTimeout(preload, 150);
+      }
     }
 
     const startAutoplay = () => {
