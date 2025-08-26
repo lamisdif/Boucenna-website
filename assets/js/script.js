@@ -111,9 +111,9 @@ window.addEventListener("load", revealElementOnScroll);
     carouselRoot.innerHTML = '';
 
     // Simple slides data
+    // Keep only 2 best images per location for fast load
     const ainOulmene = [
-      'a.jpg', 'am.jpg', 'am2.jpg', 'am4.jpg', 'am5.jpg', 'am6.jpg',
-      'am11.jpg', 'am12.jpg', 'am13.jpg', 'am14.jpg', 'am15.jpg', '20250526_162148.jpg'
+      'a.jpg', 'am.jpg'
     ].map(name => ({
       imageSrc: `./assets/images/ain oulmene/${name}`,
       title: "Clinique d'Aïn Oulmène",
@@ -121,40 +121,21 @@ window.addEventListener("load", revealElementOnScroll);
     }));
 
     const bouira = [
-      'bouira.jpg',
-      'Screenshot_20250528_071616_Gallery.jpg',
-      'Screenshot_20250528_071624_Gallery.jpg',
-      'Screenshot_20250528_071631_Gallery.jpg',
-      'Screenshot_20250528_071638_Gallery.jpg',
-      'Screenshot_20250528_071645_Gallery.jpg',
-      'Screenshot_20250528_071651_Gallery.jpg',
-      'Screenshot_20250528_071658_Gallery.jpg',
-      'Screenshot_20250528_071704_Gallery.jpg',
-      'Screenshot_20250528_071710_Gallery.jpg',
-      'Screenshot_20250528_071716_Gallery.jpg',
-      'Screenshot_20250528_071727_Gallery.jpg',
-      'Screenshot_20250528_071733_Gallery.jpg',
-      'Screenshot_20250528_071741_Gallery.jpg',
-      'Screenshot_20250528_071748_Gallery.jpg',
-      'Screenshot_20250528_071755_Gallery.jpg',
-      'Screenshot_20250528_071801_Gallery.jpg',
-      'Screenshot_20250528_071809_Gallery.jpg',
-      'Screenshot_20250528_071815_Gallery.jpg',
-      'Screenshot_20250528_071912_Gallery.jpg'
+      'bouira.jpg', 'Screenshot_20250528_071616_Gallery.jpg'
     ].map(name => ({
       imageSrc: `./assets/images/bouira/${name}`,
       title: 'Clinique de Bouira',
       description: 'Équipements de pointe, suivi personnalisé.'
     }));
 
-    const cherchcel = ['chch4.jpg', 'chh.jpg', 'chh1.jpg', 'chh2.jpg', 'chh3.jpg']
+    const cherchcel = ['chh1.jpg', 'chh2.jpg']
       .map(name => ({
         imageSrc: `./assets/images/cherchcel/${name}`,
         title: 'Clinique de Cherchell',
         description: 'Soins d\'hémodialyse sûrs et confortables.'
       }));
 
-    const pharmacie = ['ph.jpg', 'ph1.jpg', 'ph2.jpg', 'ph3.jpg', 'phh1.jpg', 'phh2.jpg', 'phh3.jpg', 'phh4.jpg']
+    const pharmacie = ['ph1.jpg', 'ph2.jpg']
       .map(name => ({
         imageSrc: `./assets/images/pharmacie/${name}`,
         title: 'Pharmacie Boucenna',
@@ -185,6 +166,7 @@ window.addEventListener("load", revealElementOnScroll);
       const img = document.createElement('img');
       img.src = s.imageSrc;
       img.alt = s.title;
+      img.loading = 'lazy';
       img.style.width = '100%';
       img.style.height = '100%';
       img.style.objectFit = 'cover';
