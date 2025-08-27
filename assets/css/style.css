@@ -251,6 +251,7 @@ body.nav-active { overflow: hidden; }
 .grid-list {
   display: grid;
   gap: 40px 28px;
+  justify-content: center;
 }
 
 .text-center { text-align: center; }
@@ -390,7 +391,7 @@ body.nav-active { overflow: hidden; }
 
 .hero-banner { display: none; }
 
-.hero { position: relative; overflow: hidden; background-color: var(--midnight-green); --section-padding: 200px; min-height: 60vh; padding-top: calc(var(--section-padding) + var(--header-offset, 0px)); }
+.hero { position: relative; overflow: hidden; background-color: var(--midnight-green); --section-padding: 200px; min-height: 60vh; padding-top: calc(var(--section-padding) + var(--header-offset, 0px)); margin-bottom: 60px; }
 .hero-carousel { position: absolute; inset: 0; width: 100%; height: 100%; }
 @media (min-width: 992px){ .hero { min-height: 70vh; } .hero-carousel { height: 100%; min-height: 520px; } }
 .hero-slide { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.8s ease; }
@@ -399,7 +400,7 @@ body.nav-active { overflow: hidden; }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.38) 40%, rgba(0,0,0,0.2) 100%); }
 .hero-text { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; padding: 24px; color: var(--white); pointer-events: none; }
 .hero-text h2 { font-family: var(--ff-oswald); font-size: clamp(2.4rem, 3.5vw, 4.8rem); font-weight: 700; margin: 0 0 10px 0; }
-.hero-text p { font-size: clamp(1.5rem, 1.7vw, 2rem); opacity: 0.95; margin: 0; letter-spacing: 0.2px; }
+.hero-text p { font-size: clamp(1.5rem, 1.7vw, 2rem); opacity: 0.95; margin: 0; letter-spacing: 0.2px;}
 .hero-text .badge { display: inline-block; padding: 8px 14px; border-radius: 999px; font-weight: var(--fw-700); font-size: clamp(1.1rem, 1.2vw, 1.4rem); margin-bottom: 14px; box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
 .hero-text .badge[data-type="ain"] { background: linear-gradient(135deg, #00b4d8, #0077b6); }
 .hero-text .badge[data-type="bouira"] { background: linear-gradient(135deg, #2ecc71, #27ae60); }
@@ -571,7 +572,7 @@ body.nav-active { overflow: hidden; }
   padding-block-start: 0;
 }
 
-.blog .section-title { margin-block-end: 60px; }
+.blog .section-title { margin-block-end: 30px; }
 
 .blog-card {
   padding: 50px 36px;
@@ -1330,6 +1331,7 @@ img:is(:hover, :focus-visible) {
   .about-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-block-start: 30px;
   }
 
   .about-banner {

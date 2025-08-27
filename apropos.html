@@ -47,8 +47,6 @@
       font-family: "Segoe UI", sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
     }
 
     body[data-page="apropos"] .section:not(.footer-top) {
@@ -188,6 +186,9 @@
     body[data-page="apropos"] .features-section {
       padding: 80px 10%;
       background: linear-gradient(135deg, #f0f4f7 0%, #e6eef7 100%);
+      
+
+      
     }
 
     body[data-page="apropos"] .features-container {
@@ -274,7 +275,7 @@
       display: block;
       margin-top: 25px;
       padding: 12px 20px;
-      background: #1d3557;
+      background: hsla(186, 100%, 19%, 0.699);;
       color: white;
       text-decoration: none;
       border-radius: 8px;
@@ -284,7 +285,7 @@
     }
 
     body[data-page="apropos"] .website-link:hover {
-      background: #2a4a7e;
+      background: hsl(186, 100%, 19%);
     }
 
     /* Nouveaux styles pour les séparateurs */
@@ -375,6 +376,13 @@
       height: 15px;
       background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%23ffffff'%3E%3C/path%3E%3C/svg%3E");
       background-size: cover;
+    }
+
+    body[data-page="apropos"] .hero-content {
+    }
+
+    body[data-page="apropos"] .hero-subtitle {
+      color: white;
     }
 
     @media (max-width: 900px) {
@@ -491,6 +499,42 @@
     </div>
   </header>
 
+  <section class="section hero" style="background-image: url('./assets/images/hero-bg.png'); padding-top: 150px; padding-bottom: 80px; background: linear-gradient(135deg, #0b1620 0%, #0e2a38 50%, #0b4b4b 100%);" aria-label="departments hero">
+    <div class="container">
+      <div class="hero-content">
+        <p class="hero-subtitle has-before" data-reveal="left">Apropos de nous </p>
+        <h1 class="headline-lg hero-title" data-reveal="left">Une expertise médicale au service <br> de votre bien-être</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nouvelles boîtes - Pourquoi nous choisir et Notre Engagement -->
+  <section class="features-section">
+    <div class="features-container">
+      <!-- Boîte 1: Pourquoi nous choisir -->
+      <div class="feature-box">
+        <h3>Pourquoi nous choisir ?</h3>
+        <ul class="feature-list">
+          <li>Professionnels aguerris</li>
+          <li>Meilleures conditions de prise en charge</li>
+          <li>Équipements de pointe</li>
+          <li>Certifications internationales</li>
+        </ul>
+      </div>
+
+      <!-- Boîte 2: Notre Engagement -->
+      <div class="feature-box">
+        <h3>Notre transport</h3>
+        <ul class="feature-list engagement-list">
+          <li>Disponibilité 24/7</li>
+          <li>Intervention rapide</li>
+          <li>Suivi personnalisé</li>
+        </ul>
+        <a href="https://medicairdz.com" class="website-link">medicairdz.com</a>
+      </div>
+    </div>
+  </section>
+
   <!-- Section 1 -->
   <div class="section">
     <img src="assets/images/cherchcel/chch4.jpg" alt="Clinique">
@@ -525,43 +569,13 @@
     </div>
   </div>
 
-  <!-- Séparateur avec fond coloré -->
-  <div class="section-divider divider-with-bg">
-
-    <h2 class="divider-title">À propos</h2>
-    <div class="divider-icon">
-      <i class="fas fa-hand-holding-heart"></i>
-    </div>
-  </div>
+  
 
 
 
   <!-- Nouvelles boîtes - Pourquoi nous choisir et Notre Engagement -->
-  <section class="features-section">
-    <div class="features-container">
-      <!-- Boîte 1: Pourquoi nous choisir -->
-      <div class="feature-box">
-        <h3>Pourquoi nous choisir ?</h3>
-        <ul class="feature-list">
-          <li>Professionnels aguerris</li>
-          <li>Meilleures conditions de prise en charge</li>
-          <li>Équipements de pointe</li>
-          <li>Certifications internationales</li>
-        </ul>
-      </div>
-
-      <!-- Boîte 2: Notre Engagement -->
-      <div class="feature-box">
-        <h3>Notre transport</h3>
-        <ul class="feature-list engagement-list">
-          <li>Disponibilité 24/7</li>
-          <li>Intervention rapide</li>
-          <li>Suivi personnalisé</li>
-        </ul>
-        <a href="https://medicairdz.com" class="website-link">medicairdz.com</a>
-      </div>
-    </div>
-  </section>
+  
+  
   <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
     <div class="container">
       <div class="section footer-top">
@@ -575,8 +589,8 @@
                 <ion-icon name="mail-open-outline"></ion-icon>
               </div>
               <div>
-                <p>Main Email : <a href="mailto:contact@website.com" class="contact-link">contact@website.com</a></p>
-                <p>Inquiries : <a href="mailto:Info@mail.com" class="contact-link">Info@mail.com</a></p>
+                <p>Main Email : <a href="transmalades.boucenna@gmail.com" class="contact-link"> transmalades.boucenna@gmail.com</a></p>
+               
               </div>
             </li>
             <li class="contact-item">
@@ -584,8 +598,8 @@
                 <ion-icon name="call-outline"></ion-icon>
               </div>
               <div>
-                <p>Office Telephone : <a href="tel:(+213)36614543" class="contact-link">(+213) 36-614-543</a></p>
-                <p>Mobile : <a href="tel:000232439493" class="contact-link">000 2324 39493</a></p>
+                <p>Office Telephone : <a href="tel:0770 31 31 36" class="contact-link">0770 31 31 36</a></p>
+                <p>Mobile : <a href="tel:0661 93 53 53" class="contact-link">0661 93 53 53</a></p>
               </div>
             </li>
           </ul>
@@ -613,17 +627,12 @@
 
       </div>
       <div class="footer-bottom">
-        <p class="text copyright">&copy; CLINIQUE 2025 | All Rights Reserved</p>
-        <ul class="social-list">
-          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
-          <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
-          <li><a href="#" class="social-link"><ion-icon name="logo-google"></ion-icon></a></li>
-          <li><a href="#" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-          <li><a href="#" class="social-link"><ion-icon name="logo-pinterest"></ion-icon></a></li>
-        </ul>
+        <p class="text copyright">&copy; CLINIQUE 2025 | DIALYSES BOUCENNA</p>
+        
       </div>
     </div>
   </footer>
+
 
   <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
     <ion-icon name="chevron-up"></ion-icon>
