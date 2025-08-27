@@ -196,13 +196,11 @@ Join as a Doctor
 New Guests List
 The Team List
 
-Subscribe
 
 placeholder = Email
 
-Subscribe 
 
-Get the latest updates via email. Any time you may unsubscribe
+
 
 &copy; Doclab 2022 | All Rights Reserved by codewithsadee
 

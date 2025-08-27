@@ -1,53 +1,410 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!--
-    - primary meta tags
-  -->
-  <title>Doclab - home</title>
-  <meta name="title" content="Doclab - home">
-  <meta name="description" content="This is a madical html template made by codewithsadee">
-
-  <!--
-    - favicon
-  -->
+  <title>Clinique - A propos</title>
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-
-  <!--
-    - google font link
-  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Rubik:wght@400;500;700&display=swap"
-    rel="stylesheet">
-
-  <!--
-    - custom css link
-  -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
   <style>
   .navbar-item .dropdown {
-    visibility: hidden; opacity: 0; position: absolute; top: 100%; left: 0; width: 250px;
-    background-color: var(--rich-black-fogra-29); border-radius: var(--radius-6);
-    box-shadow: 0 4px 16px hsla(0, 0%, 0%, 0.2); transition: var(--transition-1);
-    transform: translateY(10px); z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 250px;
+    background-color: var(--rich-black-fogra-29);
+    border-radius: var(--radius-6);
+    box-shadow: 0 4px 16px hsla(0, 0%, 0%, 0.2);
+    transition: var(--transition-1);
+    transform: translateY(10px);
+    z-index: 10;
   }
-  .navbar-item:hover .dropdown { visibility: visible; opacity: 1; transform: translateY(0); }
+  .navbar-item:hover .dropdown {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
   .dropdown-item { border-bottom: 1px solid var(--white_a10); }
   .dropdown-item:last-child { border-bottom: none; }
-  .dropdown-link { color: var(--white); padding: 12px 20px; font-size: 1.4rem; transition: var(--transition-1); display: block; }
+  .dropdown-link {
+    color: var(--white);
+    padding: 12px 20px;
+    font-size: 1.4rem;
+    transition: var(--transition-1);
+    display: block;
+  }
   .dropdown-link:hover { background-color: var(--verdigris); }
   .navbar-item { position: relative; }
   </style>
+  <style>
+    /* Styles existants portés uniquement pour la page A propos */
+    body[data-page="apropos"] {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    body[data-page="apropos"] .section:not(.footer-top) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 10%;
+      gap: 40px;
+    }
+
+    body[data-page="apropos"] .section:not(.footer-top):nth-child(even) {
+      flex-direction: row-reverse;
+      background: #f0f4f7;
+    }
+
+    body[data-page="apropos"] .section:not(.footer-top) img {
+      width: 45%;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      object-fit: cover;
+    }
+
+    body[data-page="apropos"] .content {
+      width: 50%;
+    }
+
+    body[data-page="apropos"] .content h2 {
+      font-size: 28px;
+      color: #1d3557;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    body[data-page="apropos"] .content h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #e63946;
+      margin-top: 8px;
+      border-radius: 5px;
+    }
+
+    body[data-page="apropos"] .content p {
+      line-height: 1.7;
+      font-size: 16px;
+      margin-bottom: 15px;
+      color: #444;
+    }
+
+    body[data-page="apropos"] .info-box {
+      background: #fff;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      margin-top: 25px;
+    }
+
+    body[data-page="apropos"] .info-box p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #1d3557;
+      margin-bottom: 18px;
+      position: relative;
+      padding-left: 28px;
+    }
+
+    body[data-page="apropos"] .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      top: 8px;
+    }
+
+    body[data-page="apropos"] .blue { background: #2196f3; }
+    body[data-page="apropos"] .green { background: #4caf50; }
+    body[data-page="apropos"] .orange { background: #ff9800; }
+
+    body[data-page="apropos"] .services {
+      text-align: center;
+      padding: 80px 20px;
+      background: #f9fbfd;
+    }
+
+    body[data-page="apropos"] .services h2 {
+      font-size: 32px;
+      color: #1d3557;
+      margin-bottom: 10px;
+    }
+
+    body[data-page="apropos"] .services .subtitle {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 50px;
+    }
+
+    body[data-page="apropos"] .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    body[data-page="apropos"] .service-card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    body[data-page="apropos"] .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+
+    body[data-page="apropos"] .service-card .icon {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    body[data-page="apropos"] .service-card h3 {
+      font-size: 20px;
+      color: #1d3557;
+      margin-bottom: 10px;
+    }
+
+    body[data-page="apropos"] .service-card p {
+      font-size: 15px;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    /* Styles pour les nouvelles boîtes */
+    body[data-page="apropos"] .features-section {
+      padding: 80px 10%;
+      background: linear-gradient(135deg, #f0f4f7 0%, #e6eef7 100%);
+    }
+
+    body[data-page="apropos"] .features-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    body[data-page="apropos"] .feature-box {
+      flex: 1;
+      min-width: 300px;
+      background: white;
+      border-radius: 20px;
+      padding: 35px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    body[data-page="apropos"] .feature-box:hover {
+      transform: translateY(-5px);
+    }
+
+    body[data-page="apropos"] .feature-box h3 {
+      color: #1d3557;
+      font-size: 24px;
+      margin-bottom: 25px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    body[data-page="apropos"] .feature-box h3::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: #e63946;
+      border-radius: 3px;
+    }
+
+    body[data-page="apropos"] .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    body[data-page="apropos"] .feature-list li {
+      padding: 12px 0;
+      padding-left: 30px;
+      position: relative;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    body[data-page="apropos"] .feature-list li:last-child {
+      border-bottom: none;
+    }
+
+    body[data-page="apropos"] .feature-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 22px;
+      height: 22px;
+      background: #e6f7ff;
+      border-radius: 50%;
+      color: #2196f3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    body[data-page="apropos"] .engagement-list li::before {
+      background: #fff0e6;
+      color: #ff9800;
+    }
+
+    body[data-page="apropos"] .website-link {
+      display: block;
+      margin-top: 25px;
+      padding: 12px 20px;
+      background: #1d3557;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    body[data-page="apropos"] .website-link:hover {
+      background: #2a4a7e;
+    }
+
+    /* Nouveaux styles pour les séparateurs */
+    body[data-page="apropos"] .section-divider {
+      position: relative;
+      padding: 2px 0;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    body[data-page="apropos"] .divider-title {
+      font-size: 32px;
+      color: #1d3557;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+      padding: 0 20px;
+      background: #f9f9f9;
+      z-index: 2;
+    }
 
 
+
+    body[data-page="apropos"] .divider-icon {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      border-radius: 50%;
+      background: #1d3557;
+      color: white;
+      font-size: 24px;
+      margin-top: 20px;
+      box-shadow: 0 5px 15px rgba(29, 53, 87, 0.3);
+    }
+
+    body[data-page="apropos"] .divider-with-bg {
+      background: linear-gradient(135deg, #1d3557 0%, #2a4a7e 100%);
+      color: white;
+    }
+
+    body[data-page="apropos"] .divider-with-bg .divider-title {
+      background: transparent;
+      color: white;
+    }
+
+    body[data-page="apropos"] .divider-with-bg .divider-line {
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+    }
+
+    body[data-page="apropos"] .divider-with-bg .divider-icon {
+      background: white;
+      color: #1d3557;
+    }
+
+    body[data-page="apropos"] .wave-divider {
+      position: relative;
+      height: 100px;
+      background: #f0f4f7;
+      overflow: hidden;
+    }
+
+    body[data-page="apropos"] .wave-divider::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 15px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%23ffffff'%3E%3C/path%3E%3C/svg%3E");
+      background-size: cover;
+      transform: rotate(180deg);
+    }
+
+    body[data-page="apropos"] .wave-divider-bottom {
+      position: relative;
+      height: 100px;
+      background: #f0f4f7;
+      overflow: hidden;
+    }
+
+    body[data-page="apropos"] .wave-divider-bottom::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 15px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%23ffffff'%3E%3C/path%3E%3C/svg%3E");
+      background-size: cover;
+    }
+
+    @media (max-width: 900px) {
+      body[data-page="apropos"] .section {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+      }
+
+      body[data-page="apropos"] .section img,
+      body[data-page="apropos"] .content {
+        width: 100%;
+      }
+
+      body[data-page="apropos"] .features-container {
+        flex-direction: column;
+      }
+
+      body[data-page="apropos"] .feature-box {
+        min-width: 100%;
+        margin-bottom: 30px;
+      }
+
+      body[data-page="apropos"] .divider-title {
+        font-size: 26px;
+      }
+    }
+  </style>
 </head>
-<body id="top">
+<body data-page="apropos" id="top">
 
   <header class="header" data-header>
     <div class="container">
@@ -61,7 +418,7 @@
         <div class="navbar-top">
 
           <a href="index.html" class="logo">
-            <img src="./assets/images/SVG/new/logo-long-light.png" width="200" height="50" alt="Dialyse BOUCENNA">
+            <img src="./assets/images/SVG/new/logo-dark.png" width="200" height="50" alt="Dialyse BOUCENNA">
           </a>
 
           <button class="nav-close-btn" aria-label="clsoe menu" data-nav-toggler>
@@ -72,7 +429,7 @@
 
         <ul class="navbar-list">
           <li class="navbar-item"><a href="index.html" class="navbar-link title-md">ACCUEIL</a></li>
-          <li class="navbar-item"><a href="apropos.html" class="navbar-link title-md">A PROPOS</a></li>
+          <li class="navbar-item"><a href="apropos.html" class="navbar-link title-md active">A PROPOS</a></li>
           <li class="navbar-item">
             <a href="departement.html" class="navbar-link title-md">DEPARTEMENTS</a>
             <ul class="dropdown">
@@ -127,25 +484,90 @@
         <ion-icon name="menu-outline"></ion-icon>
       </button>
 
-      <a href="contact.html" class="btn has-before title-md">Prendre Rendez-vous</a>
+      <a href="#" class="btn has-before title-md" data-rdv data-phone="+213661935353" data-mail="contact@website.com">Prendre Rendez-vous</a>
 
       <div class="overlay" data-nav-toggler data-overlay></div>
 
     </div>
   </header>
 
+  <!-- Section 1 -->
+  <div class="section">
+    <img src="assets/images/cherchcel/chch4.jpg" alt="Clinique">
+    <div class="content">
+      <h2>Leader de l'Assistance Médicale en Algérie</h2>
+      <p>BOUCENNA MEDICAIR a réussi à se positionner comme un des leaders de l'assistance médicale en Algérie. Ce succès repose sur un staff de professionnels aguerris et la gestion de moyens matériels et humains aptes à offrir les meilleures conditions de prise en charge pour notre clientèle.</p>
+      <p>La clinique comprend désormais un néphrologue, trois généralistes et huit infirmières praticiennes.</p>
+    </div>
+  </div>
 
 
 
+  <!-- Section 2 -->
+  <div class="section">
+    <img src="assets/images/cherchcel/chh3.jpg" alt="Salle de traitement">
+    <div class="content">
+      <h2>Dr Nassim Boucenna</h2>
+      <p>Fondateur & Leader en santé et innovation médicale.</p>
+
+      <div class="info-box">
+        <p><span class="dot blue"></span> Fort de plus de 12 ans d'expérience dans le secteur de la santé,
+           je pilote un réseau de cliniques spécialisées en hémodialyse,
+           une entreprise de transport médical terrestre et aérien, ainsi qu'une officine.</p>
+
+        <p><span class="dot green"></span> DPharm et MSc en Biochimie, je mène des projets alliant
+           biologie moléculaire, biologie du cancer et intégration de l'intelligence artificielle
+           pour optimiser les soins et la logistique médicale.</p>
+
+        <p><span class="dot orange"></span> Passionné par l'innovation et l'amélioration du bien-être des patients,
+           je conçois et déploie des solutions de santé avancées, alignées sur les besoins réels du terrain et les valeurs.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Séparateur avec fond coloré -->
+  <div class="section-divider divider-with-bg">
+
+    <h2 class="divider-title">À propos</h2>
+    <div class="divider-icon">
+      <i class="fas fa-hand-holding-heart"></i>
+    </div>
+  </div>
 
 
 
+  <!-- Nouvelles boîtes - Pourquoi nous choisir et Notre Engagement -->
+  <section class="features-section">
+    <div class="features-container">
+      <!-- Boîte 1: Pourquoi nous choisir -->
+      <div class="feature-box">
+        <h3>Pourquoi nous choisir ?</h3>
+        <ul class="feature-list">
+          <li>Professionnels aguerris</li>
+          <li>Meilleures conditions de prise en charge</li>
+          <li>Équipements de pointe</li>
+          <li>Certifications internationales</li>
+        </ul>
+      </div>
+
+      <!-- Boîte 2: Notre Engagement -->
+      <div class="feature-box">
+        <h3>Notre transport</h3>
+        <ul class="feature-list engagement-list">
+          <li>Disponibilité 24/7</li>
+          <li>Intervention rapide</li>
+          <li>Suivi personnalisé</li>
+        </ul>
+        <a href="https://medicairdz.com" class="website-link">medicairdz.com</a>
+      </div>
+    </div>
+  </section>
   <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
     <div class="container">
       <div class="section footer-top">
         <div class="footer-brand" data-reveal="bottom">
                   <a href="index.html" class="logo">
-          <img src="./assets/images/SVG/new/logo-short-dark.png" width="136" height="46" loading="lazy" alt="Dialyse BOUCENNA">
+          <img src="./assets/images/SVG/new/logo-dark.png" width="200" height="70" loading="lazy" alt="Dialyse BOUCENNA">
         </a>
           <ul class="contact-list has-after">
             <li class="contact-item">
@@ -183,19 +605,12 @@
         <ul class="footer-list" data-reveal="bottom">
           <li><p class="headline-sm footer-list-title">Useful Links</p></li>
           <li><a href="index.html" class="text footer-link">Accueil</a></li>
-          <li><a href="about.html" class="text footer-link">A Propos</a></li>
+          <li><a href="apropos.html" class="text footer-link">A Propos</a></li>
           <li><a href="departement.html" class="text footer-link">Départements</a></li>
           <li><a href="conseil.html" class="text footer-link">Conseils</a></li>
           <li><a href="contact.html" class="text footer-link">Contactez Nous</a></li>
         </ul>
-        <div class="footer-list" data-reveal="bottom">
-          <p class="headline-sm footer-list-title">Subscribe</p>
-          <form action="" class="footer-form">
-            <input type="email" name="email" placeholder="Email" class="input-field title-lg">
-            <button type="submit" class="btn has-before title-md">Subscribe</button>
-          </form>
-          <p class="text">N’hésitez pas à nous contacter !</p>
-        </div>
+
       </div>
       <div class="footer-bottom">
         <p class="text copyright">&copy; CLINIQUE 2025 | All Rights Reserved</p>
@@ -209,6 +624,14 @@
       </div>
     </div>
   </footer>
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up"></ion-icon>
+  </a>
+
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 </html>
