@@ -391,24 +391,37 @@ body.nav-active { overflow: hidden; }
 
 .hero-banner { display: none; }
 
+.hero-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto; /* Align image to the right */
+}
+
 .hero {
   position: relative;
   overflow: hidden;
-  background-color: hsl(186, 100%, 19%); /* Set to solid dark teal color */
-  
-  min-height: 60vh;
+  min-height: 70vh; /* Medium unified height for all hero sections */
   padding-top: calc(var(--section-padding) + var(--header-offset, 0px));
   margin-bottom: 60px;
+  height: 70vh;  /* ou la hauteur que tu veux */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
 }
 
-/* Removed overlay as it's not needed for solid background */
-/* .hero::before { */
-/*   content: ""; */
-/*   position: absolute; */
-/*   inset: 0; */
-/*   background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.3) 100%); */
-/*   z-index: 1; */
-/* } */
+/* Added overlay for text readability over background image */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: hsla(186, 100%, 12%, 0.6); /* Darker, more uniform overlay */
+  backdrop-filter: blur(5px); /* Apply blur effect */
+  -webkit-backdrop-filter: blur(5px); /* For Safari support */
+  z-index: 1;
+}
 
 .hero > * {
   position: relative;
@@ -416,7 +429,7 @@ body.nav-active { overflow: hidden; }
 }
 
 .hero-carousel { position: absolute; inset: 0; width: 100%; height: 100%; }
-@media (min-width: 992px){ .hero { min-height: 70vh; } .hero-carousel { height: 100%; min-height: 520px; } }
+@media (min-width: 992px){ .hero { min-height: 80vh; } .hero-carousel { height: 100%; } }
 .hero-slide { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.8s ease; }
 .hero-slide.active { opacity: 1; }
 .hero-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -876,6 +889,7 @@ body.nav-active { overflow: hidden; }
 .hero {
   --section-padding: 120px;
   text-align: center;
+  min-height: 70vh; /* Medium unified height for mobile hero sections */
 }
 
 .hero-title {
@@ -1097,6 +1111,7 @@ html {
 @media (max-width: 768px) and (orientation: landscape) {
   .hero {
     --section-padding: 80px;
+    min-height: 70vh; /* Medium unified height for landscape mobile hero sections */
   }
 
   .navbar-top {
@@ -1457,6 +1472,18 @@ img:is(:hover, :focus-visible) {
     align-items: center;
   }
 
+  .hero-banner {
+    display: block;
+    /* Ensure it takes up its grid space */
+  }
+
+  .hero-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto; /* Align image to the right */
+  }
+
 
 
   /**
@@ -1557,6 +1584,7 @@ img:is(:hover, :focus-visible) {
   .hero .container {
     grid-template-columns: 0.8fr 1fr;
     gap: 96px;
+    min-height: 80vh; /* Medium unified height for large screen hero sections */
   }
 
 
@@ -1649,4 +1677,43 @@ img:is(:hover, :focus-visible) {
 .contact-item::before,
 .contact-item::after {
   display: none !important;
+}
+
+/* Page-specific hero heights */
+body[data-page="contact"] .hero,
+body[data-page="departement"] .hero,
+body[data-page="apropos"] .hero {
+  min-height: 5vh; /* Very short height for contact, departement, and apropos hero sections */
+}
+
+@media (min-width: 992px) {
+  body[data-page="contact"] .hero,
+  body[data-page="departement"] .hero,
+  body[data-page="apropos"] .hero {
+    min-height: 5vh; 
+  }
+}
+
+@media (max-width: 768px) {
+  body[data-page="contact"] .hero,
+  body[data-page="departement"] .hero,
+  body[data-page="apropos"] .hero {
+    min-height: 5vh; 
+  }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  body[data-page="contact"] .hero,
+  body[data-page="departement"] .hero,
+  body[data-page="apropos"] .hero {
+    min-height: 5vh; 
+  }
+}
+
+/* Apropos.html specific hero title styling */
+body[data-page="apropos"] .hero-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
