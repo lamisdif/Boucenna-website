@@ -172,8 +172,12 @@ window.addEventListener("load", revealElementOnScroll);
 
     console.log('Building carousel with', slides.length, 'slides');
 
+    // Detect if running in a Netlify environment
+    const isNetlifyEnv = window.location.hostname.includes('netlify.app') || (window.netlify && window.netlify.build);
+
     // Helper to generate optimized WebP via Netlify Image CDN (fallback: original)
     function optimizedUrl(src, width) {
+      if (!isNetlifyEnv) return src; // Use original source for local development
       try {
         const u = new URL(src, location.origin);
         const path = u.pathname + (u.search || '');
@@ -201,7 +205,7 @@ window.addEventListener("load", revealElementOnScroll);
         img.loading = 'eager';
         img.decoding = 'async';
         img.setAttribute('fetchpriority', 'high');
-        img.srcset = [1920,1600,1280,960,768].map(w=>`${optimizedUrl(s.imageSrc,w)} ${w}w`).join(', ');
+        img.srcset = [1920,1600,1280,960,768].map(w=>`${isNetlifyEnv ? optimizedUrl(s.imageSrc,w) : s.imageSrc} ${w}w`).join(', ');
         img.sizes = '(min-width: 1200px) 1200px, (min-width: 768px) 90vw, 100vw';
         img.style.width = '100%';
         img.style.height = '100%';
@@ -228,17 +232,21 @@ window.addEventListener("load", revealElementOnScroll);
       else if (s.imageSrc.includes('/pharmacie/')) badge.setAttribute('data-type', 'pharmacie');
       badge.textContent = s.title;
 
-      const h2 = document.createElement('h2');
-      h2.textContent = s.title;
+      const h1 = document.createElement('h1');
+      h1.textContent = s.title;
+      h1.classList.add('headline-lg', 'hero-title');
+      h1.setAttribute('data-reveal', 'left');
 
       const p = document.createElement('p');
       p.textContent = s.description;
+      p.classList.add('hero-subtitle', 'has-before');
+      p.setAttribute('data-reveal', 'left');
 
       const textInner = document.createElement('div');
       textInner.style.maxWidth = '960px';
       textInner.style.margin = '0 auto';
       textInner.appendChild(badge);
-      textInner.appendChild(h2);
+      textInner.appendChild(h1);
       textInner.appendChild(p);
       textWrap.appendChild(textInner);
 
@@ -268,7 +276,7 @@ window.addEventListener("load", revealElementOnScroll);
           img.loading = 'lazy';
           img.decoding = 'async';
           // responsive variants
-          img.srcset = [1920,1600,1280,960,768].map(w=>`${optimizedUrl(slides[idx].imageSrc,w)} ${w}w`).join(', ');
+          img.srcset = [1920,1600,1280,960,768].map(w=>`${isNetlifyEnv ? optimizedUrl(slides[idx].imageSrc,w) : slides[idx].imageSrc} ${w}w`).join(', ');
           img.sizes = '(min-width: 1200px) 1200px, (min-width: 768px) 90vw, 100vw';
           img.style.width = '100%';
           img.style.height = '100%';
