@@ -402,6 +402,7 @@ body.nav-active { overflow: hidden; }
   position: relative;
   overflow: hidden;
   min-height: 120vh; /* Increased from 60vh to 75vh */
+  height: 120vh; /* Explicitly set height to ensure it takes effect */
   padding-top: calc(var(--section-padding) + var(--header-offset, 0px));
   margin-bottom: 60px;
   display: flex;
