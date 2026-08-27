@@ -1,575 +1,303 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!--
-    - primary meta tags
-  -->
-  <title>Clinique Dialyse Boucenna | Néphrologie, Hémodialyse & Transport Sanitaire à Sétif, Algérie</title>
-  <meta name="title" content="Clinique Dialyse Boucenna | Néphrologie, Hémodialyse & Transport Sanitaire à Sétif, Algérie">
-  <meta name="description" content="Découvrez la Clinique Dialyse Boucenna, votre partenaire de santé pour l'hémodialyse, les consultations en néphrologie et le transport médical. Services experts à Sétif, Algérie pour un bien-être optimal.">
-
-  <!--
-    - favicon
-  -->
+  <title>Réseau de centres d'hémodialyse Boucenna | Accueil</title>
+  <meta name="description" content="Réseau de centres d'hémodialyse Boucenna à Cherchell, Bouira et Aïn Oulmène (Sétif). Soins de qualité, dialyse vacances, transport sanitaire et pharmacie.">
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-
-  <!--
-    - google font link
-  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Rubik:wght@400;500;700&display=swap"
-    rel="stylesheet">
-
-  <!--
-    - custom css link
-  -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
-  <style>
-  .navbar-item .dropdown {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 250px;
-    background-color: var(--rich-black-fogra-29);
-    border-radius: var(--radius-6);
-    box-shadow: 0 4px 16px hsla(0, 0%, 0%, 0.2);
-    transition: var(--transition-1);
-    transform: translateY(10px);
-    z-index: 10;
-  }
-  .navbar-item:hover .dropdown {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0);
-  }
-  .dropdown-item { border-bottom: 1px solid var(--white_a10); }
-  .dropdown-item:last-child { border-bottom: none; }
-  .dropdown-link {
-    color: var(--white);
-    padding: 12px 20px;
-    font-size: 1.4rem;
-    transition: var(--transition-1);
-    display: block;
-  }
-  .dropdown-link:hover { background-color: var(--verdigris); }
-  .navbar-item { position: relative; }
-  </style>
-
-  <!--
-    - preload images
-  -->
-  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
-  <link rel="preload" as="image" href="./assets/images/hero-bg.png">
-
-  <script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "MedicalOrganization",
-  "name": "Clinique Dialyse Boucenna",
-  "url": "https://www.dialyseboucenna.com/",
-  "logo": "https://www.dialyseboucenna.com/assets/images/SVG/new/logo-long-dark.png",
-  "image": "https://www.dialyseboucenna.com/assets/images/clinique.jpg",
-  "description": "Clinique Dialyse Boucenna offre des services experts en néphrologie, hémodialyse, transport sanitaire et pharmacie à Sétif, Algérie.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "CITE KAABOUB COOPERATIVE IMMOBILIERE ESSALEM SECTION 105 I LOT N°151",
-    "addressLocality": "SETIF",
-    "addressRegion": "Setif",
-    "addressCountry": "DZ"
-  },
-  "telephone": "+2130770313136",
-  "email": "transmalades.boucenna@gmail.com",
-  "hasMap": "https://maps.app.goo.gl/xXewNB57cKCSLivw7?g_st=aw",
-  "areaServed": {
-    "@type": "Place",
-    "name": "Sétif, Algérie"
-  },
-  "medicalSpecialty": [
-    { "@type": "MedicalSpecialty", "name": "Nephrology" },
-    { "@type": "MedicalSpecialty", "name": "Hemodialysis" }
-  ],
-  "brand": {
-    "@type": "Brand",
-    "name": "BOUCENNA"
-  },
-  "slogan": "Vos soins rénaux, notre priorité. Transport sanitaire, consultations et pharmacie.",
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Saturday",
-        "Sunday"
-      ],
-      "opens": "00:00",
-      "closes": "23:59"
-    }
-  ]
-}
-</script>
-
 </head>
-
 <body id="top">
 
-  <!--
-    - #PRELOADER
-  -->
+  <!-- PRELOADER -->
+  <div class="preloader" data-preloader><div class="circle"></div></div>
 
-  <div class="preloader" data-preloader>
-    <div class="circle"></div>
-  </div>
-
-
-
-
-
-  <!--
-    - #HEADER
-  -->
-
+  <!-- HEADER -->
   <header class="header" data-header>
     <div class="container">
 
       <a href="index.html" class="logo">
-        <img src="./assets/images/SVG/new/logo-long-dark.png" width="200" height="50" alt="Dialyse BOUCENNA">
+        <img src="./assets/images/SVG/new/logo-long-light.png" alt="Dialyses Boucenna" class="logo-header-img" width="200" height="48">
       </a>
 
       <nav class="navbar" data-navbar>
-
         <div class="navbar-top">
-
           <a href="index.html" class="logo">
-            <img src="./assets/images/SVG/new/logo-long-light.png" width="200" height="50" alt="Dialyse BOUCENNA">
+            <img src="./assets/images/SVG/new/logo-long-light.png" alt="Dialyses Boucenna" class="logo-header-img" width="200" height="48">
           </a>
-
-          <button class="nav-close-btn" aria-label="clsoe menu" data-nav-toggler>
+          <button class="nav-close-btn" aria-label="Fermer menu" data-nav-toggler>
             <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
           </button>
-
         </div>
 
         <ul class="navbar-list">
-          <li class="navbar-item"><a href="index.html" class="navbar-link title-md">ACCUEIL</a></li>
-          <li class="navbar-item"><a href="apropos.html" class="navbar-link title-md">A PROPOS</a></li>
+          <li class="navbar-item"><a href="index.html" class="navbar-link active" data-i18n="nav_home">Accueil</a></li>
           <li class="navbar-item">
-            <a href="departement.html" class="navbar-link title-md">DEPARTEMENTS</a>
+            <a href="index.html#centres" class="navbar-link" data-i18n="nav_centers">Nos centres</a>
             <ul class="dropdown">
-              <li class="dropdown-item"><a href="departement.html#hemodialyse" class="dropdown-link">Séance D'Hémodialyse</a></li>
-              <li class="dropdown-item"><a href="departement.html#nephrologie" class="dropdown-link">Consultation En Néphrologie</a></li>
-              <li class="dropdown-item"><a href="departement.html#occasionnelle" class="dropdown-link">Dialyse Occasionnelle</a></li>
-              <li class="dropdown-item"><a href="departement.html#transport" class="dropdown-link">Transport Sanitaire</a></li>
-              <li class="dropdown-item"><a href="departement.html#pharmacie" class="dropdown-link">La Pharmacie</a></li>
+              <li class="dropdown-item"><a href="centre-cherchell.html" class="dropdown-link" data-i18n="drop_cherchell">Centre Cherchell (Tipaza)</a></li>
+              <li class="dropdown-item"><a href="centre-bouira.html" class="dropdown-link" data-i18n="drop_bouira">Centre Bouira</a></li>
+              <li class="dropdown-item"><a href="centre-ain-oulmene.html" class="dropdown-link" data-i18n="drop_ain_oulmene">Centre Aïn Oulmène (Sétif)</a></li>
             </ul>
           </li>
-          <li class="navbar-item"><a href="conseil.html" class="navbar-link title-md">CONSEILS</a></li>
-          <li class="navbar-item"><a href="contact.html" class="navbar-link title-md">CONTACTEZ NOUS</a></li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-i18n="nav_presentation">Présentation</a>
+            <ul class="dropdown">
+              <li class="dropdown-item"><a href="apropos.html" class="dropdown-link" data-i18n="drop_about">À Propos</a></li>
+              <li class="dropdown-item"><a href="departement.html" class="dropdown-link" data-i18n="drop_depts">Nos Départements</a></li>
+              <li class="dropdown-item"><a href="conseil.html" class="dropdown-link" data-i18n="drop_advice">Guide &amp; Conseils</a></li>
+            </ul>
+          </li>
+          <li class="navbar-item"><a href="equipe.html" class="navbar-link" data-i18n="nav_team">Notre équipe</a></li>
+          <li class="navbar-item"><a href="changer-de-centre.html" class="navbar-link" data-i18n="nav_transfer">Changer de centre</a></li>
+          <li class="navbar-item"><a href="informations-cnas.html" class="navbar-link" data-i18n="nav_cnas">Informations CNAS</a></li>
+          <li class="navbar-item"><a href="dialyse-vacances.html" class="navbar-link" data-i18n="nav_vacation">Dialyse Vacances</a></li>
+          <li class="navbar-item"><a href="contact.html" class="navbar-link" data-i18n="nav_contact">Contact</a></li>
         </ul>
       </nav>
 
-      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
-        <ion-icon name="menu-outline"></ion-icon>
-      </button>
+      <div class="header-actions">
+        <!-- Language Switcher Toggle (FR / EN / AR) -->
+        <div class="lang-selector">
+          <button type="button" class="lang-btn" aria-label="Changer de langue">
+            <ion-icon name="globe-outline"></ion-icon>
+            <span class="current-lang-text">FR</span>
+            <ion-icon name="chevron-down-outline" class="lang-arrow"></ion-icon>
+          </button>
+          <div class="lang-dropdown">
+            <button type="button" class="lang-option active" data-lang="fr">🇫🇷 Français</button>
+            <button type="button" class="lang-option" data-lang="en">🇬🇧 English</button>
+            <button type="button" class="lang-option" data-lang="ar">🇩🇿 العربية</button>
+          </div>
+        </div>
 
-      <a href="#" class="btn has-before title-md" data-rdv data-phone="+213 0770 31 31 36" data-mail="transmalades.boucenna@gmail.com">Prendre Rendez-vous</a>
+        <a href="contact.html" class="btn-blue-solid" style="padding: 9px 18px; font-size: 1.35rem;">
+          <ion-icon name="mail-outline"></ion-icon>
+          <span data-i18n="nav_contact_btn">Nous contacter</span>
+        </a>
+
+        <button class="nav-open-btn" aria-label="Ouvrir menu" data-nav-toggler>
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+      </div>
 
       <div class="overlay" data-nav-toggler data-overlay></div>
 
     </div>
   </header>
 
-
-
-
-
   <main>
     <article>
-
-      <!--
-        - #HERO
-      -->
-
-      <section class="section hero" aria-label="home">
-        <div id="hero-carousel" class="hero-carousel" aria-live="polite"></div>
-        <div class="hero-controls" aria-label="carousel controls">
-          <button class="hero-arrow" id="hero-prev" aria-label="Précédent">
-            <ion-icon name="chevron-back-outline"></ion-icon>
-          </button>
-          <button class="hero-arrow" id="hero-next" aria-label="Suivant">
-            <ion-icon name="chevron-forward-outline"></ion-icon>
-          </button>
-        </div>
-        <div class="hero-dots" id="hero-dots" role="tablist" aria-label="Choisir une clinique"></div>
-      </section>
-
-
-
-
-
-      <!--
-        - #SERVICE
-      -->
-
-      <section class="service" aria-label="service">
+      
+      <!-- SCREEN 1: HERO SITE PRINCIPAL WITH CLINIC BACKGROUND -->
+      <section class="hero-site-principal" aria-label="Réseau Boucenna">
         <div class="container">
-
-          <ul class="service-list">
-
-            <li>
-              <div class="service-card" data-reveal="bottom">
-
-                <div class="card-icon">
-                  <img src="./assets/images/icon-1.png" width="71" height="71" loading="lazy" alt="Icône de transport médical international">
-                </div>
-
-                <h3 class="headline-sm card-title">
-                  <a href="departement.html#transport">Transport Hors Algérie</a>
-                </h3>
-
-                <p class="card-text">
-                  Nos chauffeurs sont engagés 24h / 24h ; 7j / 7j pour vous faire arriver à votre destination Qu’elle soit dans le territoire algérien (inter-wilaya) ou bien hors de l’Algérie (Tunis).
-                </p>
-
-                <button class="btn-circle" aria-label="read more about psychiatry">
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                </button>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="service-card" data-reveal="bottom">
-
-                <div class="card-icon">
-                  <img src="./assets/images/icon-2.png" width="71" height="71" loading="lazy" alt="Icône de dialyse pour vacanciers">
-                </div>
-
-                <h3 class="headline-sm card-title">
-                  <a href="departement.html#occasionnelle">Dialyse pour vacanciers</a>
-                </h3>
-
-                <p class="card-text">
-                  Le centre d’hémodialyse et de néphrologie BOUCENNA,propose un service de dialyse pour vacanciers et voyageurs,avec une prise en charge de courte durée.
-                </p>
-
-                <button class="btn-circle" aria-label="read more about Gynecology">
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                </button>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="service-card" data-reveal="bottom">
-
-                <div class="card-icon">
-                  <img src="./assets/images/icon-3.png" width="71" height="71" loading="lazy" alt="Icône de pharmacie">
-                </div>
-
-                <h3 class="headline-sm card-title">
-                  <a href="departement.html#pharmacie">Pharmacie</a>
-                </h3>
-
-                <p class="card-text">
-                  Nous vous proposons les services de notre pharmacie
-Conventionné avec : LA CAISSE MILITAIRE, CNAS ET CASNOS
-                </p>
-
-                <button class="btn-circle" aria-label="read more about Pulmonology">
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                </button>
-
-              </div>
-            </li>
-
-
-          </ul>
-
-        </div>
-      </section>
-
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <section class="section about" aria-labelledby="about-label">
-        <div class="container">
-
-          <div class="about-content">
-
-            <p class="section-subtitle title-lg has-after" id="about-label" data-reveal="left">About Us</p>
-
-            <h2 class="headline-md" data-reveal="left">BIENVENUS CHEZ BOUCENNA</h2>
-
-            <p class="section-text" data-reveal="left">
-              La clinique de Néphrologie, d’Hémodialyse et de transport sanitaire BOUCENNA, a été crée dans le but d’établir des soins exceptionnels pour les patients atteints d’insuffisance rénale chronique,ainsi que les malades au stade d’hémodialyse  dans la région sétifienne, ainsi que dans tous le territoire national et international, la clinique comprend désormais un néphrologue et trois généralistes, huit infirmières praticiennes.
+          
+          <div data-reveal="left" style="max-width: 620px;">
+            <h1 class="hero-title-modern" data-i18n="hero_title_home">
+              Réseau de centres<br><span>d'hémodialyse Boucenna</span>
+            </h1>
+            <p class="hero-subtitle-modern" data-i18n="hero_sub_home">
+              Un réseau de centres de qualité, humain et innovant à votre service à Cherchell, Bouira et Aïn Oulmène.
             </p>
+            <div class="btn-group" style="margin-bottom: 30px;">
+              <a href="#centres" class="btn-blue-solid">
+                <ion-icon name="business-outline"></ion-icon>
+                <span data-i18n="btn_discover_centers">Découvrir nos centres</span>
+              </a>
+              <a href="dialyse-vacances.html" class="btn-blue-outline">
+                <ion-icon name="airplane-outline"></ion-icon>
+                <span data-i18n="btn_vacation_cta">Dialyse Vacances en Algérie</span>
+              </a>
+            </div>
+          </div>
 
-            <ul class="tab-list" data-reveal="left">
+          <!-- 3 Center Hero Cards (Screen 1 Bottom) -->
+          <div class="center-cards-grid" id="centres" data-reveal="bottom">
+            
+            <!-- Aïn Oulmène -->
+            <div class="modern-center-card">
+              <img src="./assets/images/ain oulmene/am.jpg" alt="Centre Aïn Oulmène" class="modern-center-card-img" loading="eager">
+              <div class="modern-center-card-content" style="text-align: center; align-items: center;">
+                <h3 class="modern-center-card-title" data-i18n="home_c1_title">Aïn Oulmène</h3>
+                <p class="modern-center-card-desc" style="color: #64748b; font-size: 1.35rem; margin-bottom: 14px;" data-i18n="home_c1_sub">
+                  Sétif et sud de Sétif
+                </p>
+                <a href="centre-ain-oulmene.html" class="btn-blue-solid w-100" style="padding: 10px 16px; font-size: 1.4rem;">
+                  <span data-i18n="btn_discover">Découvrir</span>
+                </a>
+              </div>
+            </div>
 
-              <li>
-                <button class="tab-btn active">Vision</button>
-              </li>
+            <!-- Bouira -->
+            <div class="modern-center-card">
+              <img src="./assets/images/bouira/bouira.jpg" alt="Centre Bouira" class="modern-center-card-img" loading="eager">
+              <div class="modern-center-card-content" style="text-align: center; align-items: center;">
+                <h3 class="modern-center-card-title" data-i18n="home_c2_title">Bouira</h3>
+                <p class="modern-center-card-desc" style="color: #64748b; font-size: 1.35rem; margin-bottom: 14px;" data-i18n="home_c2_sub">
+                  Bouira et environs
+                </p>
+                <a href="centre-bouira.html" class="btn-blue-solid w-100" style="padding: 10px 16px; font-size: 1.4rem;">
+                  <span data-i18n="btn_discover">Découvrir</span>
+                </a>
+              </div>
+            </div>
 
-              <li>
-                <button class="tab-btn">Mission</button>
-              </li>
-
-              <li>
-                <button class="tab-btn">Strategy</button>
-              </li>
-
-            </ul>
-
-
-
-            <div class="wrapper">
-
-              <ul class="about-list">
-
-                <li class="about-item" data-reveal="left">
-                  <ion-icon name="checkmark-circle-outline"></ion-icon>
-
-                  <span class="span">Des technologies médicales de pointe</span>
-                </li>
-
-                <li class="about-item" data-reveal="left">
-                  <ion-icon name="checkmark-circle-outline"></ion-icon>
-
-                  <span class="span">Le bien-être et le confort des patients avant tout</span>
-                </li>
-
-                <li class="about-item" data-reveal="left">
-                  <ion-icon name="checkmark-circle-outline"></ion-icon>
-
-                  <span class="span">Conseils et informations pratiques à votre disposition</span>
-                </li>
-
-
-
-              </ul>
-
+            <!-- Cherchell -->
+            <div class="modern-center-card">
+              <img src="./assets/images/cherchcel/chch4.jpg" alt="Centre Cherchell" class="modern-center-card-img" loading="eager">
+              <div class="modern-center-card-content" style="text-align: center; align-items: center;">
+                <h3 class="modern-center-card-title" data-i18n="home_c3_title">Cherchell</h3>
+                <p class="modern-center-card-desc" style="color: #64748b; font-size: 1.35rem; margin-bottom: 14px;" data-i18n="home_c3_sub">
+                  Tipaza / Littoral
+                </p>
+                <a href="centre-cherchell.html" class="btn-blue-solid w-100" style="padding: 10px 16px; font-size: 1.4rem;">
+                  <span data-i18n="btn_discover">Découvrir</span>
+                </a>
+              </div>
             </div>
 
           </div>
 
-          <figure class="about-banner" data-reveal="right">
-            <img src="./assets/images/about-banner.png" width="554" height="678" loading="lazy" alt="Personnel médical de la Clinique Boucenna discutant d'un patient"
-              class="w-100">
-          </figure>
-
         </div>
       </section>
 
-
-
-
-
-      <!--
-        - #LISTING
-      -->
-
-      <section class="section listing" aria-labelledby="listing-label">
+      <!-- REAL VIDEOS SECTION -->
+      <section style="padding-block: 70px; background-color: #ffffff;">
         <div class="container">
+          <div style="text-align: center; max-width: 650px; margin: 0 auto 36px auto;" data-reveal="bottom">
+            <span class="badge-pill-blue" data-i18n="badge_video_immersion">Immersion en vidéo</span>
+            <h2 class="hero-title-modern" style="font-size: clamp(2.6rem, 3.8vw, 3.8rem); margin-bottom: 10px;" data-i18n="title_videos_section">
+              Découvrez nos <span>centres en vidéo</span>
+            </h2>
+            <p style="font-size: 1.5rem; color: #64748b;" data-i18n="sub_videos_section">
+              Visionnez les vidéos réelles filmées au sein de nos cliniques à Cherchell et Bouira.
+            </p>
+          </div>
 
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px;" data-reveal="bottom">
+            
+            <div class="modern-center-card">
+              <div class="center-video-frame" style="border-radius: 0; border: none; aspect-ratio: 16/9;">
+                <video controls muted playsinline poster="./assets/images/cherchcel/chh14.jpg" preload="none">
+                  <source src="./assets/images/cherchcel/videoChh.MP4" type="video/mp4">
+                </video>
+              </div>
+              <div style="padding: 20px;">
+                <h3 style="font-size: 1.8rem; font-weight: 700; color: #0f172a; margin-bottom: 6px;" data-i18n="video_card1_title">Clinique Boucenna Cherchell</h3>
+                <p style="font-size: 1.35rem; color: #64748b; margin-bottom: 14px;" data-i18n="video_card1_desc">Cadre maritime et salles d'hémodialyse haute technologie.</p>
+                <a href="centre-cherchell.html" class="btn-card-action" data-i18n="btn_view_details">Voir les détails →</a>
+              </div>
+            </div>
 
+            <div class="modern-center-card">
+              <div class="center-video-frame" style="border-radius: 0; border: none; aspect-ratio: 16/9;">
+                <video controls muted playsinline poster="./assets/images/bouira/bouira.jpg" preload="none">
+                  <source src="./assets/images/bouira/videoBouira.MP4" type="video/mp4">
+                </video>
+              </div>
+              <div style="padding: 20px;">
+                <h3 style="font-size: 1.8rem; font-weight: 700; color: #0f172a; margin-bottom: 6px;" data-i18n="video_card2_title">Clinique Boucenna Bouira</h3>
+                <p style="font-size: 1.35rem; color: #64748b; margin-bottom: 14px;" data-i18n="video_card2_desc">Installations de pointe et accueil personnalisé au centre de Bouira.</p>
+                <a href="centre-bouira.html" class="btn-card-action" data-i18n="btn_view_details">Voir les détails →</a>
+              </div>
+            </div>
 
+          </div>
         </div>
       </section>
 
-
-
-
-
-      <!--
-        - #BLOG
-      -->
-
-      <section class="section blog" aria-labelledby="blog-label">
+      <!-- SCREEN 7: TÉMOIGNAGES (L'expérience de nos patients) -->
+      <section style="padding-block: 70px; background-color: var(--clr-bg-page);" id="temoignages">
         <div class="container">
+          
+          <div style="text-align: center; max-width: 650px; margin: 0 auto 36px auto;" data-reveal="bottom">
+            <h2 class="hero-title-modern" style="font-size: clamp(2.6rem, 3.8vw, 3.8rem); margin-bottom: 10px;" data-i18n="title_testimonials">
+              L'expérience de <span>nos patients</span>
+            </h2>
+            <p style="font-size: 1.5rem; color: #64748b;" data-i18n="sub_testimonials">
+              Ils nous font confiance et partagent leur expérience.
+            </p>
+          </div>
 
-
-
-          <h2 class="section-title headline-md text-center" data-reveal="bottom">NOS SERVICES</h2>
-
-          <ul class="grid-list">
-
-            <li>
-              <div class="blog-card has-before has-after" data-reveal="bottom">
-
-                <div class="meta-wrapper">
-
-                  <div class="card-meta">
-                    <ion-icon name="person-outline"></ion-icon>
-
-                    <span class="span">By Admin</span>
-                  </div>
-
-                  <div class="card-meta">
-                    <ion-icon name="folder-outline"></ion-icon>
-
-                    <span class="span">Specialist</span>
-                  </div>
-
-                </div>
-
-                <h3 class="headline-sm card-title">Consultaion En Néphrologie</h3>
-
-                <time class="title-sm date" datetime="2022-01-28">28 January, 2022</time>
-
-                <p class="card-text">
-                  la clinique BOUCENNA vous proposent des consultation en Néphrologie et maladies rénale du dimanche au jeudi De 08h00 à 15h30 Avec le Dr. Rabia Chafai
-                </p>
-
-                <a href="departement.html#nephrologie" class="btn-text title-lg">Read More</a>
-
+          <!-- TWO TESTIMONIAL VIDEOS (Old Woman & Man Speaking) -->
+          <div class="testimonial-videos-grid" data-reveal="bottom">
+            
+            <!-- Video 1: Old woman speaking -->
+            <div class="testimonial-video-card">
+              <video class="testimonial-video-player" controls playsinline preload="metadata">
+                <source src="./assets/temo1.MOV" type="video/mp4">
+                <source src="./assets/temo1.MOV" type="video/quicktime">
+                Votre navigateur ne prend pas en charge la lecture de cette vidéo.
+              </video>
+              <div class="testimonial-video-info">
+                <span class="testimonial-video-badge"><ion-icon name="videocam-outline"></ion-icon><span data-i18n="video_testi_1_badge">Patiente en hémodialyse</span></span>
+                <h3 class="testimonial-video-title" data-i18n="video_testi_1_title">Témoignage au Centre Boucenna</h3>
+                <p class="testimonial-video-desc" data-i18n="video_testi_1_desc">Retour d'expérience chaleureux sur la qualité des soins et l'attention du personnel soignant.</p>
               </div>
-            </li>
+            </div>
 
-            <li>
-              <div class="blog-card has-before has-after" data-reveal="bottom">
-
-                <div class="meta-wrapper">
-
-                  <div class="card-meta">
-                    <ion-icon name="person-outline"></ion-icon>
-
-                    <span class="span">By Admin</span>
-                  </div>
-
-                  <div class="card-meta">
-                    <ion-icon name="folder-outline"></ion-icon>
-
-                    <span class="span">Specialist</span>
-                  </div>
-
-                </div>
-
-                <h3 class="headline-sm card-title">Dialyse pour vacanciers</h3>
-
-                <time class="title-sm date" datetime="2022-01-28">28 January, 2022</time>
-
-                <p class="card-text">
-                 Le centre d’hémodialyse et de néphrologie BOUCENNA,prend en charge les  vacanciers pour une courte durée,et  assure les dialyses occasionnelles pour voyageurs de passage dans la région de sétif.
-                </p>
-
-                <a href="departement.html#occasionnelle" class="btn-text title-lg">Read More</a>
-
+            <!-- Video 2: Man speaking -->
+            <div class="testimonial-video-card">
+              <video class="testimonial-video-player" controls playsinline preload="metadata">
+                <source src="./assets/temo2.MOV" type="video/mp4">
+                <source src="./assets/temo2.MOV" type="video/quicktime">
+                Votre navigateur ne prend pas en charge la lecture de cette vidéo.
+              </video>
+              <div class="testimonial-video-info">
+                <span class="testimonial-video-badge"><ion-icon name="videocam-outline"></ion-icon><span data-i18n="video_testi_2_badge">Patient régulier</span></span>
+                <h3 class="testimonial-video-title" data-i18n="video_testi_2_title">Prise en charge et confort</h3>
+                <p class="testimonial-video-desc" data-i18n="video_testi_2_desc">Témoignage sur le suivi médical rigoureux et l'accompagnement personnalisé.</p>
               </div>
-            </li>
+            </div>
 
-            <li>
-              <div class="blog-card has-before has-after" data-reveal="bottom">
+          </div>
 
-                <div class="meta-wrapper">
-
-                  <div class="card-meta">
-                    <ion-icon name="person-outline"></ion-icon>
-
-                    <span class="span">By Admin</span>
-                  </div>
-
-                  <div class="card-meta">
-                    <ion-icon name="folder-outline"></ion-icon>
-
-                    <span class="span">Specialist</span>
-                  </div>
-
-                </div>
-
-                <h3 class="headline-sm card-title">La Pharmacie Nabil Aouabdia</h3>
-
-                <time class="title-sm date" datetime="2022-01-28">28 January, 2022</time>
-
-                <p class="card-text">
-                  Nous vous proposons les services de notre pharmacie
-                </p>
-
-                <a href="departement.html#pharmacie" class="btn-text title-lg">Read More</a>
-
+          <!-- WRITTEN REVIEWS GRID -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;" data-reveal="bottom">
+            
+            <div class="modern-center-card" style="padding: 26px;">
+              <span style="font-size: 4rem; color: var(--clr-blue-primary); line-height: 1; font-family: Georgia, serif;">“</span>
+              <p style="font-size: 1.4rem; color: #334155; line-height: 1.6; font-style: italic; margin-bottom: 16px;" data-i18n="testi_1_quote">
+                Je remercie le centre Boucenna Cherchell. Il y a une équipe très professionnelle et à l'écoute des patients.
+              </p>
+              <div style="border-top: 1px solid #f1f5f9; padding-top: 12px;">
+                <h4 style="font-size: 1.45rem; font-weight: 700; color: #0f172a;" data-i18n="testi_1_author">M. A.</h4>
+                <p style="font-size: 1.25rem; color: #64748b; margin-bottom: 4px;" data-i18n="testi_1_city">Cherchell</p>
+                <div style="color: #f59e0b; font-size: 1.3rem;">★★★★★</div>
               </div>
-            </li>
+            </div>
 
-            <li>
-              <div class="blog-card has-before has-after" data-reveal="bottom">
-
-                <div class="meta-wrapper">
-
-                  <div class="card-meta">
-                    <ion-icon name="person-outline"></ion-icon>
-
-                    <span class="span">By Admin</span>
-                  </div>
-
-                  <div class="card-meta">
-                    <ion-icon name="folder-outline"></ion-icon>
-
-                    <span class="span">Specialist</span>
-                  </div>
-
-                </div>
-
-                <h3 class="headline-sm card-title">Séance D’Hémodialyse</h3>
-
-                <time class="title-sm date" datetime="2022-01-28">28 January, 2022</time>
-
-                <p class="card-text">
-                  Le centre d'hémodialyse et de néphrologie BOUCENNA met à votre disposition 15 poste de dialyse tous le long de la semaine sauf le vendredi pour plus d'information veillez consultez nos horaires de travail
-                </p>
-
-                <a href="departement.html#hemodialyse" class="btn-text title-lg">Read More</a>
-
+            <div class="modern-center-card" style="padding: 26px;">
+              <span style="font-size: 4rem; color: var(--clr-blue-primary); line-height: 1; font-family: Georgia, serif;">“</span>
+              <p style="font-size: 1.4rem; color: #334155; line-height: 1.6; font-style: italic; margin-bottom: 16px;" data-i18n="testi_2_quote">
+                Le cadre est très moderne, propre et bien équipé. Le personnel est très humain. Merci pour votre soutien.
+              </p>
+              <div style="border-top: 1px solid #f1f5f9; padding-top: 12px;">
+                <h4 style="font-size: 1.45rem; font-weight: 700; color: #0f172a;" data-i18n="testi_2_author">F. K.</h4>
+                <p style="font-size: 1.25rem; color: #64748b; margin-bottom: 4px;" data-i18n="testi_2_city">Bouira</p>
+                <div style="color: #f59e0b; font-size: 1.3rem;">★★★★★</div>
               </div>
-            </li>
+            </div>
 
-            <li>
-              <div class="blog-card has-before has-after" data-reveal="bottom">
-
-                <div class="meta-wrapper">
-
-                  <div class="card-meta">
-                    <ion-icon name="person-outline"></ion-icon>
-
-                    <span class="span">By Admin</span>
-                  </div>
-
-                  <div class="card-meta">
-                    <ion-icon name="folder-outline"></ion-icon>
-
-                    <span class="span">Specialist</span>
-                  </div>
-
-                </div>
-
-                <h3 class="headline-sm card-title">Transport Sanitaire</h3>
-
-                <time class="title-sm date" datetime="2022-01-28">28 January, 2022</time>
-
-                <p class="card-text">
-                  La Clinique assure votre transport depuis/vers votre domicile à travers notre réseau de voitures sanitaires légères (VSL).
-                </p>
-
-                <a href="departement.html#transport" class="btn-text title-lg">Read More</a>
-
+            <div class="modern-center-card" style="padding: 26px;">
+              <span style="font-size: 4rem; color: var(--clr-blue-primary); line-height: 1; font-family: Georgia, serif;">“</span>
+              <p style="font-size: 1.4rem; color: #334155; line-height: 1.6; font-style: italic; margin-bottom: 16px;" data-i18n="testi_3_quote">
+                Grâce à Boucenna Cherchell, j'ai bien continué ma dialyse pendant mon séjour en Algérie. Je recommande ce centre.
+              </p>
+              <div style="border-top: 1px solid #f1f5f9; padding-top: 12px;">
+                <h4 style="font-size: 1.45rem; font-weight: 700; color: #0f172a;" data-i18n="testi_3_author">R. B.</h4>
+                <p style="font-size: 1.25rem; color: #64748b; margin-bottom: 4px;" data-i18n="testi_3_city">Cherchell</p>
+                <div style="color: #f59e0b; font-size: 1.3rem;">★★★★★</div>
               </div>
-            </li>
+            </div>
 
-          </ul>
+          </div>
 
         </div>
       </section>
@@ -577,99 +305,86 @@ Conventionné avec : LA CAISSE MILITAIRE, CNAS ET CASNOS
     </article>
   </main>
 
-
-
-
-
-  <!--
-    - #FOOTER
-  -->
-
-  <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
+  <!-- FOOTER (Screen 9 Reference A) -->
+  <footer class="footer-screen9">
     <div class="container">
-      <div class="section footer-top">
-        <div class="footer-brand" data-reveal="bottom">
-                  
+      <div class="footer-screen9-grid">
+        
+        <!-- Col 1: Brand & Info -->
+        <div>
           <a href="index.html" class="logo">
-          <img src="./assets/images/SVG/new/logo-dark.png" width="200" height="70" loading="lazy" alt="Dialyse BOUCENNA">
-        </a>
-          <ul class="contact-list ">
-            <li class="contact-item">
-              <div class="item-icon">
-                <ion-icon name="mail-open-outline"></ion-icon>
-              </div>
-              <div>
-                <p>Main Email : <a href="transmalades.boucenna@gmail.com" class="contact-link"> transmalades.boucenna@gmail.com</a></p>
-               
-              </div>
-            </li>
-            <li class="contact-item">
-              <div class="item-icon">
-                <ion-icon name="call-outline"></ion-icon>
-              </div>
-              <div>
-                <p>Office Telephone : <a href="tel:0770 31 31 36" class="contact-link">0770 31 31 36</a></p>
-                <p>Mobile : <a href="tel:0661 93 53 53" class="contact-link">0661 93 53 53</a></p>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-list" data-reveal="bottom">
-          <p class="headline-sm footer-list-title">About Us</p>
-          <p class="text">
-            La clinique de Néphrologie, d'Hémodialyse et de transport sanitaire est une clinique privée spécialisée dans le traitement de l'insuffisance rénale chronique terminale.
+            <img src="./assets/images/SVG/new/logo-long-light.png" alt="Dialyses Boucenna" class="logo-footer-img" width="180" height="44" loading="lazy">
+          </a>
+          <p style="margin-top: 14px; color: #94a3b8; font-size: 1.35rem; line-height: 1.6;" data-i18n="footer_tagline">
+            Vos soins rénaux, notre priorité.<br>
+            Transport sanitaire, consultations et pharmacie.
           </p>
-          <address class="address">
-            <ion-icon name="map-outline"></ion-icon>
-            <span class="text">
-              CITE KAABOUB COOPERATIVE IMMOBILIERE ESSALEM SECTION 105 I LOT N°151 SETIF
-            </span>
-          </address>
+          <div class="social-list" style="margin-top: 18px;">
+            <a href="https://wa.me/213770313136" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp"><ion-icon name="logo-whatsapp"></ion-icon></a>
+            <a href="tel:+2130770313136" class="social-link" aria-label="Téléphone"><ion-icon name="call-outline"></ion-icon></a>
+            <a href="mailto:transmalades.boucenna@gmail.com" class="social-link" aria-label="Email"><ion-icon name="mail-outline"></ion-icon></a>
+          </div>
         </div>
-        <ul class="footer-list" data-reveal="bottom">
-          <li><p class="headline-sm footer-list-title">Useful Links</p></li>
-          <li><a href="index.html" class="text footer-link">Accueil</a></li>
-          <li><a href="apropos.html" class="text footer-link">A Propos</a></li>
-          <li><a href="departement.html" class="text footer-link">Départements</a></li>
-          <li><a href="conseil.html" class="text footer-link">Conseils</a></li>
-          <li><a href="contact.html" class="text footer-link">Contactez Nous</a></li>
-        </ul>
+
+        <!-- Col 2: Cherchell -->
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_c2_title">Boucenna Cherchell</h4>
+          <p class="footer-col-address" data-i18n="footer_c2_address">Cité Zitouni El Kheir<br>Cherchell, Tipaza</p>
+          <span class="footer-col-phone" dir="ltr"><bdi><span data-i18n="label_phone_whatsapp">Tél / WhatsApp :</span> +213 (0) 770 31 31 36</bdi></span>
+          <a href="https://maps.app.goo.gl/dnBsbRCGPkD7GJVZ9" target="_blank" rel="noopener" class="footer-col-maplink">
+            <ion-icon name="location-outline"></ion-icon>
+            <span data-i18n="footer_maps_link">Itinéraire Google Maps</span>
+          </a>
+        </div>
+
+        <!-- Col 3: Bouira -->
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_c3_title">Boucenna Bouira</h4>
+          <p class="footer-col-address" data-i18n="footer_c3_address">Cité 2000 Logements<br>Bouira</p>
+          <span class="footer-col-phone" dir="ltr"><bdi><span data-i18n="label_phone_whatsapp">Tél / WhatsApp :</span> +213 (0) 770 31 31 36</bdi></span>
+          <a href="https://maps.app.goo.gl/CTBTxc24xgg93dGW8" target="_blank" rel="noopener" class="footer-col-maplink">
+            <ion-icon name="location-outline"></ion-icon>
+            <span data-i18n="footer_maps_link">Itinéraire Google Maps</span>
+          </a>
+        </div>
+
+        <!-- Col 4: Ain Oulmene -->
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_c4_title">Boucenna Aïn Oulmène</h4>
+          <p class="footer-col-address" data-i18n="footer_c4_address">Aïn Oulmène, Sétif<br>(Plateau & Pharmacie)</p>
+          <span class="footer-col-phone" dir="ltr"><bdi><span data-i18n="label_phone_whatsapp">Tél / WhatsApp :</span> +213 (0) 770 31 31 36</bdi></span>
+          <a href="https://maps.app.goo.gl/xXewNB57cKCSLivw7?g_st=aw" target="_blank" rel="noopener" class="footer-col-maplink">
+            <ion-icon name="location-outline"></ion-icon>
+            <span data-i18n="footer_maps_link">Itinéraire Google Maps</span>
+          </a>
+        </div>
 
       </div>
-      <div class="footer-bottom">
-        <p class="text copyright">&copy; CLINIQUE 2025 | DIALYSES BOUCENNA</p>
-        
+
+      <div class="footer-screen9-bottom">
+        <p data-i18n="footer_copyright">© 2025 Clinique Dialyse Boucenna — Tous droits réservés.</p>
+        <div class="footer-legal-links">
+          <a href="apropos.html" data-i18n="nav_about">À Propos</a>
+          <a href="departement.html" data-i18n="nav_depts">Départements</a>
+          <a href="conseil.html" data-i18n="nav_advice">Conseils</a>
+          <a href="contact.html" data-i18n="nav_contact">Contact</a>
+          <a href="sitemap.xml" data-i18n="footer_sitemap">Plan du site</a></div>
       </div>
     </div>
   </footer>
 
-
-
-
-
-  <!--
-    - #BACK TO TOP
-  -->
-
-  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
-    <ion-icon name="chevron-up"></ion-icon>
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/213770313136?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20les%20centres%20de%20dialyse%20Boucenna." target="_blank" rel="noopener" class="floating-whatsapp" aria-label="Discuter sur WhatsApp">
+    <ion-icon name="logo-whatsapp"></ion-icon>
+    <span class="tooltip" data-i18n="whatsapp_tooltip">Besoin d'aide ? Écrivez-nous</span>
   </a>
 
+  <!-- BACK TO TOP -->
+  <a href="#top" class="back-top-btn" aria-label="Haut de page" data-back-top-btn><ion-icon name="chevron-up"></ion-icon></a>
 
-
-
-
-  <!--
-    - custom js link
-  -->
+  <!-- Scripts -->
   <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 </body>
-
 </html>

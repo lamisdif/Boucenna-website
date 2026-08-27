@@ -1,118 +1,87 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!--
-    - primary meta tags
-  -->
-  <title>Contactez-nous - Clinique Dialyse Boucenna | Setif, Algérie</title>
-  <meta name="title" content="Contactez-nous - Clinique Dialyse Boucenna | Setif, Algérie">
-  <meta name="description" content="Contactez la Clinique Dialyse Boucenna à Setif, Algérie pour des consultations en néphrologie, séances d'hémodialyse ou transport sanitaire. Notre équipe est là pour vous aider 24/7.">
-
-  <!--
-    - favicon
-  -->
+  <title>Contactez-nous | Réseau Boucenna</title>
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-
-  <!--
-    - google font link
-  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
-
-  <!--
-    - custom css link
-  -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-  .navbar-item .dropdown {
-    visibility: hidden; opacity: 0; position: absolute; top: 100%; left: 0; width: 250px;
-    background-color: var(--rich-black-fogra-29); border-radius: var(--radius-6);
-    box-shadow: 0 4px 16px hsla(0, 0%, 0%, 0.2); transition: var(--transition-1);
-    transform: translateY(10px); z-index: 10;
-  }
-  .navbar-item { position: relative; }
-  .navbar-item:hover .dropdown { visibility: visible; opacity: 1; transform: translateY(0); }
-  .dropdown-item { border-bottom: 1px solid var(--white_a10); }
-  .dropdown-item:last-child { border-bottom: none; }
-  .dropdown-link { color: var(--white); padding: 12px 20px; font-size: 1.4rem; transition: var(--transition-1); display: block; }
-  .dropdown-link:hover { background-color: var(--verdigris); }
-  </style>
-  <style>
-    body[id="top"] .hero-subtitle {
-      color: white;
-    }
-  </style>
 </head>
-
 <body id="top">
+    <!-- PRELOADER -->
+  <div class="preloader" data-preloader><div class="circle"></div></div>
 
-  <!--
-    - #PRELOADER
-  -->
-  <div class="preloader" data-preloader>
-    <div class="circle"></div>
-  </div>
-
-  <!--
-    - #HEADER
-  -->
+  <!-- HEADER -->
   <header class="header" data-header>
     <div class="container">
 
       <a href="index.html" class="logo">
-        <img src="./assets/images/SVG/new/logo-long-dark.png" width="200" height="50" alt="Dialyse BOUCENNA">
+        <img src="./assets/images/SVG/new/logo-long-light.png" alt="Dialyses Boucenna" class="logo-header-img" width="200" height="48">
       </a>
 
       <nav class="navbar" data-navbar>
-
         <div class="navbar-top">
           <a href="index.html" class="logo">
-            <img src="./assets/images/SVG/new/logo-long-light.png" width="200" height="50" alt="Dialyse BOUCENNA">
+            <img src="./assets/images/SVG/new/logo-long-light.png" alt="Dialyses Boucenna" class="logo-header-img" width="200" height="48">
           </a>
-          <button class="nav-close-btn" aria-label="clsoe menu" data-nav-toggler>
+          <button class="nav-close-btn" aria-label="Fermer menu" data-nav-toggler>
             <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
           </button>
         </div>
 
         <ul class="navbar-list">
-          <li class="navbar-item"><a href="index.html" class="navbar-link title-md">ACCUEIL</a></li>
-          <li class="navbar-item"><a href="apropos.html" class="navbar-link title-md">A PROPOS</a></li>
+          <li class="navbar-item"><a href="index.html" class="navbar-link " data-i18n="nav_home">Accueil</a></li>
           <li class="navbar-item">
-            <a href="departement.html" class="navbar-link title-md">DEPARTEMENTS</a>
+            <a href="index.html#centres" class="navbar-link" data-i18n="nav_centers">Nos centres</a>
             <ul class="dropdown">
-              <li class="dropdown-item"><a href="departement.html#hemodialyse" class="dropdown-link">Séance D'Hémodialyse</a></li>
-              <li class="dropdown-item"><a href="departement.html#nephrologie" class="dropdown-link">Consultation En Néphrologie</a></li>
-              <li class="dropdown-item"><a href="departement.html#occasionnelle" class="dropdown-link">Dialyse Occasionnelle</a></li>
-              <li class="dropdown-item"><a href="departement.html#transport" class="dropdown-link">Transport Sanitaire</a></li>
-              <li class="dropdown-item"><a href="departement.html#pharmacie" class="dropdown-link">La Pharmacie</a></li>
+              <li class="dropdown-item"><a href="centre-cherchell.html" class="dropdown-link" data-i18n="drop_cherchell">Centre Cherchell (Tipaza)</a></li>
+              <li class="dropdown-item"><a href="centre-bouira.html" class="dropdown-link" data-i18n="drop_bouira">Centre Bouira</a></li>
+              <li class="dropdown-item"><a href="centre-ain-oulmene.html" class="dropdown-link" data-i18n="drop_ain_oulmene">Centre Aïn Oulmène (Sétif)</a></li>
             </ul>
           </li>
-          <li class="navbar-item"><a href="conseil.html" class="navbar-link title-md">CONSEILS</a></li>
-          <li class="navbar-item"><a href="contact.html" class="navbar-link title-md active">CONTACTEZ NOUS</a></li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-i18n="nav_presentation">Présentation</a>
+            <ul class="dropdown">
+              <li class="dropdown-item"><a href="apropos.html" class="dropdown-link" data-i18n="drop_about">À Propos</a></li>
+              <li class="dropdown-item"><a href="departement.html" class="dropdown-link" data-i18n="drop_depts">Nos Départements</a></li>
+              <li class="dropdown-item"><a href="conseil.html" class="dropdown-link" data-i18n="drop_advice">Guide &amp; Conseils</a></li>
+            </ul>
+          </li>
+          <li class="navbar-item"><a href="equipe.html" class="navbar-link " data-i18n="nav_team">Notre équipe</a></li>
+          <li class="navbar-item"><a href="changer-de-centre.html" class="navbar-link " data-i18n="nav_transfer">Changer de centre</a></li>
+          <li class="navbar-item"><a href="informations-cnas.html" class="navbar-link " data-i18n="nav_cnas">Informations CNAS</a></li>
+          <li class="navbar-item"><a href="dialyse-vacances.html" class="navbar-link " data-i18n="nav_vacation">Dialyse Vacances</a></li>
+          <li class="navbar-item"><a href="contact.html" class="navbar-link active" data-i18n="nav_contact">Contact</a></li>
         </ul>
-
-        <ul class="social-list">
-          <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
-          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
-          <li><a href="#" class="social-link"><ion-icon name="logo-pinterest"></ion-icon></a></li>
-          <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
-          <li><a href="#" class="social-link"><ion-icon name="logo-youtube"></ion-icon></a></li>
-        </ul>
-
       </nav>
 
-      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
-        <ion-icon name="menu-outline"></ion-icon>
-      </button>
+      <div class="header-actions">
+        <!-- Language Switcher Toggle (FR / EN / AR) -->
+        <div class="lang-selector">
+          <button type="button" class="lang-btn" aria-label="Changer de langue">
+            <ion-icon name="globe-outline"></ion-icon>
+            <span class="current-lang-text">FR</span>
+            <ion-icon name="chevron-down-outline" class="lang-arrow"></ion-icon>
+          </button>
+          <div class="lang-dropdown">
+            <button type="button" class="lang-option active" data-lang="fr">🇫🇷 Français</button>
+            <button type="button" class="lang-option" data-lang="en">🇬🇧 English</button>
+            <button type="button" class="lang-option" data-lang="ar">🇩🇿 العربية</button>
+          </div>
+        </div>
 
-      <a href="contact.html" class="btn has-before title-md">Prendre Rendez-vous</a>
+        <a href="contact.html" class="btn-blue-solid" style="padding: 9px 18px; font-size: 1.35rem;">
+          <ion-icon name="mail-outline"></ion-icon>
+          <span data-i18n="nav_contact_btn">Nous contacter</span>
+        </a>
+
+        <button class="nav-open-btn" aria-label="Ouvrir menu" data-nav-toggler>
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+      </div>
 
       <div class="overlay" data-nav-toggler data-overlay></div>
 
@@ -121,210 +90,181 @@
 
   <main>
     <article>
-
-      <!--
-        - #HERO
-      -->
-      <section class="section hero" style="background-image: url('./assets/images/Enfermaria.jpg'); background-size: cover; background-position: center; padding-top: 150px; padding-bottom: 80px; margin-top: 100px;" aria-label="departments hero">
+      
+      <!-- SCREEN 8: CONTACTEZ-NOUS -->
+      <section style="padding-top: 130px; padding-bottom: 70px; background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);">
         <div class="container">
-          <div class="hero-content">
-            <p class="hero-subtitle has-before"> Contactez-nous </p>
-            <h1 class="headline-lg hero-title">N'hésitez pas à nous contacter </h1>
+          
+          <div style="text-align: center; max-width: 680px; margin: 0 auto 40px auto;" data-reveal="bottom">
+            <h1 class="hero-title-modern" style="font-size: clamp(2.8rem, 4.2vw, 4.2rem); margin-bottom: 12px;">
+              <span data-i18n="contact_page_title">Contactez-<span>nous</span></span>
+            </h1>
+            <p style="font-size: 1.55rem; color: #475569; line-height: 1.6;">
+              <span data-i18n="contact_page_sub">Notre équipe est à votre écoute pour répondre à toutes vos questions.</span>
+            </p>
           </div>
-        </div>
-      </section>
 
-      <!--
-        - #CONTACT CONTENT
-      -->
-      <section class="section contact-section">
-        <div class="container">
-          <h2 class="section-title" data-reveal="bottom">Nos Cliniques et Zones de Service</h2>
-
-          <div class="clinics-container">
-            <div class="clinic-card" data-reveal="bottom">
-              <div class="clinic-icon">
-                <i class="fas fa-hospital"></i>
+          <!-- 3 Columns Contact Grid (Screen 8) -->
+          <div class="contact-screen8-grid" data-reveal="bottom">
+            
+            <!-- Col 1: Direct Coordonnées -->
+            <div class="contact-info-panel">
+              <div class="contact-info-row">
+                <ion-icon name="call-outline"></ion-icon>
+                <div>
+                  <strong data-i18n="label_phone">Téléphone</strong>
+                  <a href="tel:+2130770313136" dir="ltr"><bdi>+213 (0) 770 31 31 36</bdi></a><br>
+                  <a href="tel:0661935353" dir="ltr"><bdi>+213 (0) 661 93 53 53</bdi></a>
+                </div>
               </div>
-              <div class="clinic-content">
-                <h3 class="clinic-title">Zone médicale principale </h3>
-                <p class="clinic-address">Lotissement 711, Lot 79, Classe 80, Aïn Oulmene 19002</p>
-                <span class="clinic-type">
-                  <a href="https://maps.app.goo.gl/xXewNB57cKCSLivw7?g_st=aw" target="_blank" style="color:inherit;text-decoration:none;">
-                    Voir sur Google Maps
-                  </a>
-                </span>
+
+              <div class="contact-info-row">
+                <ion-icon name="logo-whatsapp" style="color: #25d366;"></ion-icon>
+                <div>
+                  <strong data-i18n="label_whatsapp">WhatsApp</strong>
+                  <a href="https://wa.me/213770313136" target="_blank" rel="noopener" dir="ltr"><bdi>+213 (0) 770 31 31 36</bdi></a>
+                </div>
+              </div>
+
+              <div class="contact-info-row">
+                <ion-icon name="location-outline"></ion-icon>
+                <div>
+                  <strong data-i18n="label_address">Adresse</strong>
+                  <span data-i18n="contact_address_val">Cité Kaaboub Coopérative Immobilière Essalam Section 105/Lot N°151 Sétif, Algérie</span>
+                </div>
+              </div>
+
+              <div class="contact-info-row">
+                <ion-icon name="time-outline"></ion-icon>
+                <div>
+                  <strong data-i18n="label_hours">Horaires</strong>
+                  <span data-i18n="contact_hours_val">Tous les jours – 24h/24</span>
+                </div>
               </div>
             </div>
 
-            <div class="clinic-card" data-reveal="bottom">
-              <div class="clinic-icon">
-                <i class="fas fa-clinic-medical"></i>
-              </div>
-              <div class="clinic-content">
-                <h3 class="clinic-title">Unité de soins secondaires et consultations </h3>
-                <p class="clinic-address">H5VV+97G Cherchell</p>
-                <span class="clinic-type">
-                  <a href="https://maps.app.goo.gl/dnBsbRCGPkD7GJVZ9" target="_blank" style="color:inherit;text-decoration:none;">
-                    Voir sur Google Maps
-                  </a>
-                </span>
-              </div>
+            <!-- Col 2: Contact Form -->
+            <div class="contact-form-panel">
+              <form id="general-contact-form">
+                <div class="form-group">
+                  <label class="form-label" data-i18n="label_fullname">Nom complet *</label>
+                  <input type="text" class="form-control-custom" placeholder="Votre nom" data-i18n="placeholder_name" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" data-i18n="label_phone_req">Téléphone *</label>
+                  <input type="tel" class="form-control-custom" placeholder="+213..." data-i18n="placeholder_phone" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" data-i18n="label_email">Email</label>
+                  <input type="email" class="form-control-custom" placeholder="email@domaine.com" data-i18n="placeholder_email">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" data-i18n="label_your_message">Votre message *</label>
+                  <textarea class="form-control-custom" rows="3" placeholder="Écrivez votre message..." data-i18n="placeholder_message" required></textarea>
+                </div>
+                <button type="submit" class="btn-blue-solid w-100" style="padding: 12px;">
+                  <span data-i18n="btn_send_msg">Envoyer le message</span>
+                </button>
+              </form>
             </div>
 
-
-             <div class="clinic-card" data-reveal="bottom">
-              <div class="clinic-icon">
-                <i class="fas fa-clinic-medical"></i>
-              </div>
-              <div class="clinic-content">
-                <h3 class="clinic-title">Unité de soins secondaires et consultations</h3>
-                <p class="clinic-address">9V8V+WRR Bouira</p>
-                <span class="clinic-type">
-                  <a href="https://maps.app.goo.gl/CTBTxc24xgg93dGW8" target="_blank" style="color:inherit;text-decoration:none;">
-                    Voir sur Google Maps
-                  </a>
-                </span>
-              </div>
-            </div> 
-
-            <div class="clinic-card" data-reveal="bottom">
-              <div class="clinic-icon">
-                <i class="fas fa-first-aid"></i>
-              </div>
-              <div class="clinic-content">
-                <h3 class="clinic-title">Pharmacie</h3>
-                <p class="clinic-address">XVMG+6C8, Belimour</p>
-                <span class="clinic-type">
-                  <a href="https://maps.app.goo.gl/7qUifzcvvgeNnRYE9?g_st=aw" target="_blank" style="color:inherit;text-decoration:none;">
-                    Voir sur Google Maps
-                  </a>
-                </span>
-              </div>
+            <!-- Col 3: Map -->
+            <div class="contact-map-panel">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3221.782483863486!2d5.4055276!3d36.1478144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12f315a6cf9e2cb9%3A0x8e83fa3e2efd256!2sClinique%20Boucenna!5e0!3m2!1sfr!2sdz!4v1700000000000!5m2!1sfr!2sdz"
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade" 
+                title="Localisation Clinique Boucenna">
+              </iframe>
             </div>
+
           </div>
 
-          <div class="contact-info">
-            <h2 class="section-title" data-reveal="bottom">Nos Coordonnées</h2>
-
-            <div class="contact-grid">
-              <div class="contact-item" data-reveal="bottom">
-                <div class="contact-icon">
-                  <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <div class="contact-details">
-                  <h3>Adresses</h3>
-                  <p>Promotion bessa-Ouled Fayet, Bouira</p>
-                  <p>Cité zerouki, Bouira</p>
-                  <p>Cité711 ainoulmene, Setif</p>
-                  <p>Cherchell</p>
-                </div>
-              </div>
-
-              <div class="contact-item" data-reveal="bottom">
-                <div class="contact-icon">
-                  <i class="fas fa-phone"></i>
-                </div>
-                <div class="contact-details">
-                  <h3>Téléphones</h3>
-                  <p><a href="tel:0770313136">0770 31 31 36</a></p>
-                  <p><a href="tel:0661935353">0661 93 53 53</a></p>
-                </div>
-              </div>
-
-              <div class="contact-item" data-reveal="bottom">
-                <div class="contact-icon">
-                  <i class="fas fa-envelope"></i>
-                </div>
-                <div class="contact-details">
-                  <h3>Email</h3>
-                  <p><a href="mailto:transmalades.boucenna@gmail.com">transmalades.boucenna@gmail.com</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="mission-section" data-reveal="bottom">
-            <h2>N'hésitez pas à nous contacter</h2>
-            <p>Notre but est d'assurer une liaison et un acheminement aérien ou terrestre de patients. Notre équipe est disponible 24/7 pour toute demande d'information ou de devis.</p>
-          </div>
         </div>
       </section>
 
     </article>
   </main>
-
-  <!--
-    - #FOOTER
-  -->
-  <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
+    <!-- FOOTER (Screen 9 Reference A) -->
+  <footer class="footer-screen9">
     <div class="container">
-      <div class="section footer-top">
-        <div class="footer-brand" data-reveal="bottom">
-                  <a href="index.html" class="logo">
-          <img src="./assets/images/SVG/new/logo-dark.png" width="200" height="70" loading="lazy" alt="Dialyse BOUCENNA">
-        </a>
-          <ul class="contact-list ">
-            <li class="contact-item">
-              <div class="item-icon">
-                <ion-icon name="mail-open-outline"></ion-icon>
-              </div>
-              <div>
-                <p>Main Email : <a href="transmalades.boucenna@gmail.com" class="contact-link"> transmalades.boucenna@gmail.com</a></p>
-               
-              </div>
-            </li>
-            <li class="contact-item">
-              <div class="item-icon">
-                <ion-icon name="call-outline"></ion-icon>
-              </div>
-              <div>
-                <p>Office Telephone : <a href="tel:0770 31 31 36" class="contact-link">0770 31 31 36</a></p>
-                <p>Mobile : <a href="tel:0661 93 53 53" class="contact-link">0661 93 53 53</a></p>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-list" data-reveal="bottom">
-          <p class="headline-sm footer-list-title">About Us</p>
-          <p class="text">
-            La clinique de Néphrologie, d'Hémodialyse et de transport sanitaire est une clinique privée spécialisée dans le traitement de l'insuffisance rénale chronique terminale.
+      <div class="footer-screen9-grid">
+        
+        <!-- Col 1: Brand & Info -->
+        <div>
+          <a href="index.html" class="logo">
+            <img src="./assets/images/SVG/new/logo-long-light.png" alt="Dialyses Boucenna" class="logo-footer-img" width="180" height="44" loading="lazy">
+          </a>
+          <p style="margin-top: 14px; color: #94a3b8; font-size: 1.35rem; line-height: 1.6;" data-i18n="footer_tagline">
+            Vos soins rénaux, notre priorité.<br>
+            Transport sanitaire, consultations et pharmacie.
           </p>
-          <address class="address">
-            <ion-icon name="map-outline"></ion-icon>
-            <span class="text">
-              CITE KAABOUB COOPERATIVE IMMOBILIERE ESSALEM SECTION 105 I LOT N°151 SETIF
-            </span>
-          </address>
+          <div class="social-list" style="margin-top: 18px;">
+            <a href="https://wa.me/213770313136" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp"><ion-icon name="logo-whatsapp"></ion-icon></a>
+            <a href="tel:+2130770313136" class="social-link" aria-label="Téléphone"><ion-icon name="call-outline"></ion-icon></a>
+            <a href="mailto:transmalades.boucenna@gmail.com" class="social-link" aria-label="Email"><ion-icon name="mail-outline"></ion-icon></a>
+          </div>
         </div>
-        <ul class="footer-list" data-reveal="bottom">
-          <li><p class="headline-sm footer-list-title">Useful Links</p></li>
-          <li><a href="index.html" class="text footer-link">Accueil</a></li>
-          <li><a href="apropos.html" class="text footer-link">A Propos</a></li>
-          <li><a href="departement.html" class="text footer-link">Départements</a></li>
-          <li><a href="conseil.html" class="text footer-link">Conseils</a></li>
-          <li><a href="contact.html" class="text footer-link">Contactez Nous</a></li>
-        </ul>
+
+        <!-- Col 2: Cherchell -->
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_c2_title">Boucenna Cherchell</h4>
+          <p class="footer-col-address" data-i18n="footer_c2_address">Cité Zitouni El Kheir<br>Cherchell, Tipaza</p>
+          <span class="footer-col-phone" dir="ltr"><bdi><span data-i18n="label_phone_whatsapp">Tél / WhatsApp :</span> +213 (0) 770 31 31 36</bdi></span>
+          <a href="https://maps.app.goo.gl/dnBsbRCGPkD7GJVZ9" target="_blank" rel="noopener" class="footer-col-maplink">
+            <ion-icon name="location-outline"></ion-icon>
+            <span data-i18n="footer_maps_link">Itinéraire Google Maps</span>
+          </a>
+        </div>
+
+        <!-- Col 3: Bouira -->
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_c3_title">Boucenna Bouira</h4>
+          <p class="footer-col-address" data-i18n="footer_c3_address">Cité 2000 Logements<br>Bouira</p>
+          <span class="footer-col-phone" dir="ltr"><bdi><span data-i18n="label_phone_whatsapp">Tél / WhatsApp :</span> +213 (0) 770 31 31 36</bdi></span>
+          <a href="https://maps.app.goo.gl/CTBTxc24xgg93dGW8" target="_blank" rel="noopener" class="footer-col-maplink">
+            <ion-icon name="location-outline"></ion-icon>
+            <span data-i18n="footer_maps_link">Itinéraire Google Maps</span>
+          </a>
+        </div>
+
+        <!-- Col 4: Ain Oulmene -->
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_c4_title">Boucenna Aïn Oulmène</h4>
+          <p class="footer-col-address" data-i18n="footer_c4_address">Aïn Oulmène, Sétif<br>(Plateau & Pharmacie)</p>
+          <span class="footer-col-phone" dir="ltr"><bdi><span data-i18n="label_phone_whatsapp">Tél / WhatsApp :</span> +213 (0) 770 31 31 36</bdi></span>
+          <a href="https://maps.app.goo.gl/xXewNB57cKCSLivw7?g_st=aw" target="_blank" rel="noopener" class="footer-col-maplink">
+            <ion-icon name="location-outline"></ion-icon>
+            <span data-i18n="footer_maps_link">Itinéraire Google Maps</span>
+          </a>
+        </div>
 
       </div>
-      <div class="footer-bottom">
-        <p class="text copyright">&copy; CLINIQUE 2025 | DIALYSES BOUCENNA</p>
-        
+
+      <div class="footer-screen9-bottom">
+        <p data-i18n="footer_copyright">© 2025 Clinique Dialyse Boucenna — Tous droits réservés.</p>
+        <div class="footer-legal-links">
+          <a href="apropos.html" data-i18n="nav_about">À Propos</a>
+          <a href="departement.html" data-i18n="nav_depts">Départements</a>
+          <a href="conseil.html" data-i18n="nav_advice">Conseils</a>
+          <a href="contact.html" data-i18n="nav_contact">Contact</a>
+          <a href="sitemap.xml" data-i18n="footer_sitemap">Plan du site</a></div>
       </div>
     </div>
   </footer>
 
-  <!-- back to top -->
-  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
-    <ion-icon name="chevron-up"></ion-icon>
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/213770313136?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20les%20centres%20de%20dialyse%20Boucenna." target="_blank" rel="noopener" class="floating-whatsapp" aria-label="Discuter sur WhatsApp">
+    <ion-icon name="logo-whatsapp"></ion-icon>
+    <span class="tooltip" data-i18n="whatsapp_tooltip">Besoin d'aide ? Écrivez-nous</span>
   </a>
 
-  <!-- custom js -->
-  <script src="./assets/js/script.js"></script>
+  <!-- BACK TO TOP -->
+  <a href="#top" class="back-top-btn" aria-label="Haut de page" data-back-top-btn><ion-icon name="chevron-up"></ion-icon></a>
 
-  <!-- ionicons -->
+  <!-- Scripts -->
+  <script src="./assets/js/script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 </body>
 </html>

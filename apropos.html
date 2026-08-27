@@ -2,652 +2,233 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>À Propos - Clinique Boucenna : Néphrologie & Hémodialyse en Algérie</title>
-  <meta name="description" content="Découvrez la Clinique Boucenna, leader en néphrologie et hémodialyse en Algérie. Apprenez-en plus sur notre mission, notre équipe médicale experte et nos services dédiés au bien-être des patients.">
+  <title>À Propos — Réseau de centres d'hémodialyse Boucenna</title>
+  <meta name="description" content="Découvrez le Réseau Boucenna, leader en hémodialyse en Algérie. Notre mission, notre équipe médicale et nos engagements pour votre bien-être.">
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
-  <style>
-  .navbar-item .dropdown {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 250px;
-    background-color: var(--rich-black-fogra-29);
-    border-radius: var(--radius-6);
-    box-shadow: 0 4px 16px hsla(0, 0%, 0%, 0.2);
-    transition: var(--transition-1);
-    transform: translateY(10px);
-    z-index: 10;
-  }
-  .navbar-item:hover .dropdown {
-    visibility: visible;
-    opacity: 1;
-    transform: translateY(0);
-  }
-  .dropdown-item { border-bottom: 1px solid var(--white_a10); }
-  .dropdown-item:last-child { border-bottom: none; }
-  .dropdown-link {
-    color: var(--white);
-    padding: 12px 20px;
-    font-size: 1.4rem;
-    transition: var(--transition-1);
-    display: block;
-  }
-  .dropdown-link:hover { background-color: var(--verdigris); }
-  .navbar-item { position: relative; }
-  </style>
-  <style>
-    /* Styles existants portés uniquement pour la page A propos */
-    body[data-page="apropos"] {
-      font-family: "Segoe UI", sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    body[data-page="apropos"] .section:not(.footer-top) {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 60px 10%;
-      gap: 40px;
-    }
-
-    body[data-page="apropos"] .section:not(.footer-top):nth-child(even) {
-      flex-direction: row-reverse;
-      background: #f0f4f7;
-    }
-
-    body[data-page="apropos"] .section:not(.footer-top) img {
-      width: 45%;
-      border-radius: 15px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-      object-fit: cover;
-    }
-
-    body[data-page="apropos"] .content {
-      width: 50%;
-    }
-
-    body[data-page="apropos"] .content h2 {
-      font-size: 28px;
-      color: #1d3557;
-      margin-bottom: 20px;
-      position: relative;
-    }
-
-    body[data-page="apropos"] .content h2::after {
-      content: "";
-      display: block;
-      width: 60px;
-      height: 3px;
-      background: #e63946;
-      margin-top: 8px;
-      border-radius: 5px;
-    }
-
-    body[data-page="apropos"] .content p {
-      line-height: 1.7;
-      font-size: 16px;
-      margin-bottom: 15px;
-      color: #444;
-    }
-
-    body[data-page="apropos"] .info-box {
-      background: #fff;
-      padding: 25px;
-      border-radius: 20px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-      margin-top: 25px;
-    }
-
-    body[data-page="apropos"] .info-box p {
-      font-size: 15px;
-      line-height: 1.7;
-      color: #1d3557;
-      margin-bottom: 18px;
-      position: relative;
-      padding-left: 28px;
-    }
-
-    body[data-page="apropos"] .dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      display: inline-block;
-      position: absolute;
-      left: 0;
-      top: 8px;
-    }
-
-    body[data-page="apropos"] .blue { background: #2196f3; }
-    body[data-page="apropos"] .green { background: #4caf50; }
-    body[data-page="apropos"] .orange { background: #ff9800; }
-
-    body[data-page="apropos"] .services {
-      text-align: center;
-      padding: 80px 20px;
-      background: #f9fbfd;
-    }
-
-    body[data-page="apropos"] .services h2 {
-      font-size: 32px;
-      color: #1d3557;
-      margin-bottom: 10px;
-    }
-
-    body[data-page="apropos"] .services .subtitle {
-      font-size: 16px;
-      color: #555;
-      margin-bottom: 50px;
-    }
-
-    body[data-page="apropos"] .service-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
-
-    body[data-page="apropos"] .service-card {
-      background: #fff;
-      padding: 25px;
-      border-radius: 20px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    body[data-page="apropos"] .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-    }
-
-    body[data-page="apropos"] .service-card .icon {
-      font-size: 35px;
-      margin-bottom: 15px;
-    }
-
-    body[data-page="apropos"] .service-card h3 {
-      font-size: 20px;
-      color: #1d3557;
-      margin-bottom: 10px;
-    }
-
-    body[data-page="apropos"] .service-card p {
-      font-size: 15px;
-      color: #444;
-      line-height: 1.6;
-    }
-
-    /* Styles pour les nouvelles boîtes */
-    body[data-page="apropos"] .features-section {
-      padding: 80px 10%;
-      background: linear-gradient(135deg, #f0f4f7 0%, #e6eef7 100%);
-      
-
-      
-    }
-
-    body[data-page="apropos"] .features-container {
-      display: flex;
-      justify-content: space-between;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-
-    body[data-page="apropos"] .feature-box {
-      flex: 1;
-      min-width: 300px;
-      background: white;
-      border-radius: 20px;
-      padding: 35px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-    }
-
-    body[data-page="apropos"] .feature-box:hover {
-      transform: translateY(-5px);
-    }
-
-    body[data-page="apropos"] .feature-box h3 {
-      color: #1d3557;
-      font-size: 24px;
-      margin-bottom: 25px;
-      position: relative;
-      padding-bottom: 15px;
-    }
-
-    body[data-page="apropos"] .feature-box h3::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 50px;
-      height: 3px;
-      background: #e63946;
-      border-radius: 3px;
-    }
-
-    body[data-page="apropos"] .feature-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    body[data-page="apropos"] .feature-list li {
-      padding: 12px 0;
-      padding-left: 30px;
-      position: relative;
-      margin-bottom: 10px;
-      border-bottom: 1px solid #f0f0f0;
-    }
-
-    body[data-page="apropos"] .feature-list li:last-child {
-      border-bottom: none;
-    }
-
-    body[data-page="apropos"] .feature-list li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 22px;
-      height: 22px;
-      background: #e6f7ff;
-      border-radius: 50%;
-      color: #2196f3;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-    }
-
-    body[data-page="apropos"] .engagement-list li::before {
-      background: #fff0e6;
-      color: #ff9800;
-    }
-
-    body[data-page="apropos"] .website-link {
-      display: block;
-      margin-top: 25px;
-      padding: 12px 20px;
-      background: hsla(186, 100%, 19%, 0.699);;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      text-align: center;
-      font-weight: 600;
-      transition: background 0.3s ease;
-    }
-
-    body[data-page="apropos"] .website-link:hover {
-      background: hsl(186, 100%, 19%);
-    }
-
-    /* Nouveaux styles pour les séparateurs */
-    body[data-page="apropos"] .section-divider {
-      position: relative;
-      padding: 2px 0;
-      text-align: center;
-      overflow: hidden;
-    }
-
-    body[data-page="apropos"] .divider-title {
-      font-size: 32px;
-      color: #1d3557;
-      margin-bottom: 20px;
-      position: relative;
-      display: inline-block;
-      padding: 0 20px;
-      background: #f9f9f9;
-      z-index: 2;
-    }
-
-
-
-    body[data-page="apropos"] .divider-icon {
-      display: inline-block;
-      width: 60px;
-      height: 60px;
-      line-height: 60px;
-      border-radius: 50%;
-      background: #1d3557;
-      color: white;
-      font-size: 24px;
-      margin-top: 20px;
-      box-shadow: 0 5px 15px rgba(29, 53, 87, 0.3);
-    }
-
-    body[data-page="apropos"] .divider-with-bg {
-      background: linear-gradient(135deg, #1d3557 0%, #2a4a7e 100%);
-      color: white;
-    }
-
-    body[data-page="apropos"] .divider-with-bg .divider-title {
-      background: transparent;
-      color: white;
-    }
-
-    body[data-page="apropos"] .divider-with-bg .divider-line {
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
-    }
-
-    body[data-page="apropos"] .divider-with-bg .divider-icon {
-      background: white;
-      color: #1d3557;
-    }
-
-    body[data-page="apropos"] .wave-divider {
-      position: relative;
-      height: 100px;
-      background: #f0f4f7;
-      overflow: hidden;
-    }
-
-    body[data-page="apropos"] .wave-divider::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 15px;
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%23ffffff'%3E%3C/path%3E%3C/svg%3E");
-      background-size: cover;
-      transform: rotate(180deg);
-    }
-
-    body[data-page="apropos"] .wave-divider-bottom {
-      position: relative;
-      height: 100px;
-      background: #f0f4f7;
-      overflow: hidden;
-    }
-
-    body[data-page="apropos"] .wave-divider-bottom::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 15px;
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%23ffffff'%3E%3C/path%3E%3C/svg%3E");
-      background-size: cover;
-    }
-
-    body[data-page="apropos"] .hero-subtitle {
-      color: white;
-      margin-left: 0px;
-    }
-
-    @media (max-width: 900px) {
-      body[data-page="apropos"] .section {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px 5%;
-      }
-
-      body[data-page="apropos"] .section img,
-      body[data-page="apropos"] .content {
-        width: 100%;
-      }
-
-      body[data-page="apropos"] .features-container {
-        flex-direction: column;
-      }
-
-      body[data-page="apropos"] .feature-box {
-        min-width: 100%;
-        margin-bottom: 30px;
-      }
-
-      body[data-page="apropos"] .divider-title {
-        font-size: 26px;
-      }
-    }
-
- 
-
-  </style>
 </head>
-<body data-page="apropos" id="top">
-
+<body id="top">
+  <div class="preloader" data-preloader><div class="circle"></div></div>
+  <!-- HEADER -->
   <header class="header" data-header>
     <div class="container">
-
-      <a href="index.html" class="logo">
-        <img src="./assets/images/SVG/new/logo-long-dark.png" width="200" height="50" alt="Dialyse BOUCENNA">
-      </a>
-
+      <a href="index.html" class="logo"><img src="./assets/images/SVG/new/logo-long-light.png" alt="Dialyses Boucenna" class="logo-header-img" width="200" height="48"></a>
       <nav class="navbar" data-navbar>
-
         <div class="navbar-top">
-
-          <a href="index.html" class="logo">
-            <img src="./assets/images/SVG/new/logo-dark.png" width="200" height="50" alt="Dialyse BOUCENNA">
-          </a>
-
-          <button class="nav-close-btn" aria-label="clsoe menu" data-nav-toggler>
-            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
-          </button>
-
+          <a href="index.html" class="logo"><img src="./assets/images/SVG/new/logo-long-light.png" alt="Dialyses Boucenna" class="logo-header-img" width="200" height="48"></a>
+          <button class="nav-close-btn" aria-label="Fermer menu" data-nav-toggler><ion-icon name="close-outline" aria-hidden="true"></ion-icon></button>
         </div>
-
         <ul class="navbar-list">
-          <li class="navbar-item"><a href="index.html" class="navbar-link title-md">ACCUEIL</a></li>
-          <li class="navbar-item"><a href="apropos.html" class="navbar-link title-md active">A PROPOS</a></li>
+          <li class="navbar-item"><a href="index.html" class="navbar-link" data-i18n="nav_home">Accueil</a></li>
           <li class="navbar-item">
-            <a href="departement.html" class="navbar-link title-md">DEPARTEMENTS</a>
+            <a href="index.html#centres" class="navbar-link" data-i18n="nav_centers">Nos centres</a>
             <ul class="dropdown">
-              <li class="dropdown-item"><a href="departement.html#hemodialyse" class="dropdown-link">Séance D'Hémodialyse</a></li>
-              <li class="dropdown-item"><a href="departement.html#nephrologie" class="dropdown-link">Consultation En Néphrologie</a></li>
-              <li class="dropdown-item"><a href="departement.html#occasionnelle" class="dropdown-link">Dialyse Occasionnelle</a></li>
-              <li class="dropdown-item"><a href="departement.html#transport" class="dropdown-link">Transport Sanitaire</a></li>
-              <li class="dropdown-item"><a href="departement.html#pharmacie" class="dropdown-link">La Pharmacie</a></li>
+              <li class="dropdown-item"><a href="centre-cherchell.html" class="dropdown-link" data-i18n="drop_cherchell">Centre Cherchell (Tipaza)</a></li>
+              <li class="dropdown-item"><a href="centre-bouira.html" class="dropdown-link" data-i18n="drop_bouira">Centre Bouira</a></li>
+              <li class="dropdown-item"><a href="centre-ain-oulmene.html" class="dropdown-link" data-i18n="drop_ain_oulmene">Centre Aïn Oulmène (Sétif)</a></li>
             </ul>
           </li>
-          <li class="navbar-item"><a href="conseil.html" class="navbar-link title-md">CONSEILS</a></li>
-          <li class="navbar-item"><a href="contact.html" class="navbar-link title-md">CONTACTEZ NOUS</a></li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-i18n="nav_presentation">Présentation</a>
+            <ul class="dropdown">
+              <li class="dropdown-item"><a href="apropos.html" class="dropdown-link" data-i18n="drop_about">À Propos</a></li>
+              <li class="dropdown-item"><a href="departement.html" class="dropdown-link" data-i18n="drop_depts">Nos Départements</a></li>
+              <li class="dropdown-item"><a href="conseil.html" class="dropdown-link" data-i18n="drop_advice">Guide &amp; Conseils</a></li>
+            </ul>
+          </li>
+          <li class="navbar-item"><a href="equipe.html" class="navbar-link" data-i18n="nav_team">Notre équipe</a></li>
+          <li class="navbar-item"><a href="changer-de-centre.html" class="navbar-link" data-i18n="nav_transfer">Changer de centre</a></li>
+          <li class="navbar-item"><a href="informations-cnas.html" class="navbar-link" data-i18n="nav_cnas">Informations CNAS</a></li>
+          <li class="navbar-item"><a href="dialyse-vacances.html" class="navbar-link" data-i18n="nav_vacation">Dialyse Vacances</a></li>
+          <li class="navbar-item"><a href="contact.html" class="navbar-link" data-i18n="nav_contact">Contact</a></li>
         </ul>
-
-        <ul class="social-list">
-
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-pinterest"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" class="social-link">
-              <ion-icon name="logo-youtube"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
       </nav>
-
-      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
-        <ion-icon name="menu-outline"></ion-icon>
-      </button>
-
-      <a href="#" class="btn has-before title-md" data-rdv data-phone="+213661935353" data-mail="contact@website.com">Prendre Rendez-vous</a>
-
+      <div class="header-actions">
+        <div class="lang-selector">
+          <button type="button" class="lang-btn" aria-label="Changer de langue">
+            <ion-icon name="globe-outline"></ion-icon>
+            <span class="current-lang-text">FR</span>
+            <ion-icon name="chevron-down-outline" class="lang-arrow"></ion-icon>
+          </button>
+          <div class="lang-dropdown">
+            <button type="button" class="lang-option active" data-lang="fr">🇫🇷 Français</button>
+            <button type="button" class="lang-option" data-lang="en">🇬🇧 English</button>
+            <button type="button" class="lang-option" data-lang="ar">🇩🇿 العربية</button>
+          </div>
+        </div>
+        <a href="contact.html" class="btn-blue-solid" style="padding: 9px 18px; font-size: 1.35rem;">
+          <ion-icon name="mail-outline"></ion-icon>
+          <span data-i18n="nav_contact_btn">Nous contacter</span>
+        </a>
+        <button class="nav-open-btn" aria-label="Ouvrir menu" data-nav-toggler><ion-icon name="menu-outline"></ion-icon></button>
+      </div>
       <div class="overlay" data-nav-toggler data-overlay></div>
-
     </div>
   </header>
-
   <main>
     <article>
-      <!-- HERO SECTION -->
-       
-      <section class="section hero" style="background-image: url('./assets/images/Enfermaria.jpg'); background-size: cover; background-position: center; padding-top: 150px; padding-bottom: 80px; margin-top: 100px;" aria-label="departments hero">
+
+      <!-- HERO -->
+      <section style="padding-top: 130px; padding-bottom: 60px; background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);">
         <div class="container">
-          <div class="hero-content">
-            <p class="hero-subtitle has-before"> Apropos de nous  </p>
-            <h1 class="headline-lg hero-title">Une expertise médicale de votre bien-être à votre service</h1>
+          <div data-reveal="left" style="max-width: 800px;">
+            <span class="badge-pill-blue" data-i18n="about_badge">À Propos de nous</span>
+            <h1 class="hero-title-modern" style="font-size: clamp(2.8rem, 4vw, 4.2rem);" data-i18n="about_hero_title">Une expertise médicale<br><span>à votre service</span></h1>
+            <p class="hero-subtitle-modern" style="font-size: 1.55rem; margin-bottom: 24px;" data-i18n="about_hero_sub">Le Réseau Boucenna, leader en hémodialyse en Algérie, s'engage à vous offrir des soins de qualité, humains et innovants.</p>
+            <div class="center-pills-row" style="max-width: 600px;">
+              <div class="center-pill-item">
+                <ion-icon name="people-outline"></ion-icon>
+                <span data-i18n="pill_team">Équipe expérimentée</span>
+              </div>
+              <div class="center-pill-item">
+                <ion-icon name="hardware-chip-outline"></ion-icon>
+                <span data-i18n="pill_tech">Matériel de pointe</span>
+              </div>
+              <div class="center-pill-item">
+                <ion-icon name="shield-checkmark-outline"></ion-icon>
+                <span data-i18n="pill_hygiene">Hygiène et sécurité</span>
+              </div>
+              <div class="center-pill-item">
+                <ion-icon name="person-outline"></ion-icon>
+                <span data-i18n="pill_care">Prise en charge personnalisée</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-  
-  <section class="features-section">
-    <div class="features-container">
-      <!-- Boîte 1: Pourquoi nous choisir -->
-      <div class="feature-box">
-        <h3>Pourquoi nous choisir ?</h3>
-        <ul class="feature-list">
-          <li>Professionnels aguerris</li>
-          <li>Meilleures conditions de prise en charge</li>
-          <li>Équipements de pointe</li>
-          <li>Certifications internationales</li>
-        </ul>
-      </div>
 
-      <!-- Boîte 2: Notre Engagement -->
-      <div class="feature-box">
-        <h3>Notre transport</h3>
-        <ul class="feature-list engagement-list">
-          <li>Disponibilité 24/7</li>
-          <li>Intervention rapide</li>
-          <li>Suivi personnalisé</li>
-        </ul>
-        <a href="https://medicairdz.com" class="website-link">medicairdz.com</a>
-      </div>
-    </div>
-  </section>
+      <!-- QUI SOMMES-NOUS -->
+      <section style="padding-block: 70px; background-color: #ffffff;">
+        <div class="container">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: center;" data-reveal="bottom">
+            <div><img src="./assets/images/cherchcel/chch4.jpg" alt="Clinique Boucenna Cherchell" style="width: 100%; border-radius: 16px; object-fit: cover; max-height: 400px;"></div>
+            <div>
+              <span class="badge-pill-blue" data-i18n="about_section1_badge">Notre réseau</span>
+              <h2 class="hero-title-modern" style="font-size: clamp(2.4rem, 3.2vw, 3.4rem); margin-bottom: 16px;" data-i18n="about_section1_title">Leader de l'Assistance<br><span>Médicale en Algérie</span></h2>
+              <p style="font-size: 1.5rem; color: #475569; line-height: 1.75; margin-bottom: 16px;" data-i18n="about_section1_p1">Le Réseau Boucenna s'est imposé comme l'un des leaders de l'hémodialyse en Algérie, grâce à une équipe de professionnels aguerris et des moyens matériels de premier plan pour offrir les meilleures conditions de prise en charge.</p>
+              <p style="font-size: 1.5rem; color: #475569; line-height: 1.75;" data-i18n="about_section1_p2">Notre réseau comprend aujourd'hui un néphrologue spécialiste, des médecins généralistes et une équipe de soins infirmiers dédiée dans nos 3 centres de Cherchell, Bouira et Aïn Oulmène.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <!-- Section 1 -->
-  <div class="section">
-    <img src="assets/images/cherchcel/chch4.jpg" alt="Vue extérieure de la Clinique Dialyse Boucenna, symbole d'assistance médicale">
-    <div class="content">
-      <h2>Leader de l'Assistance Médicale en Algérie</h2>
-      <p>BOUCENNA MEDICAIR a réussi à se positionner comme un des leaders de l'assistance médicale en Algérie. Ce succès repose sur un staff de professionnels aguerris et la gestion de moyens matériels et humains aptes à offrir les meilleures conditions de prise en charge pour notre clientèle.</p>
-      <p>La clinique comprend désormais un néphrologue, trois généralistes et huit infirmières praticiennes.</p>
-    </div>
-  </div>
+      <!-- DR NASSIM BOUCENNA -->
+      <section style="padding-block: 70px; background-color: var(--clr-bg-page);">
+        <div class="container">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: center;" data-reveal="bottom">
+            <div>
+              <span class="badge-pill-blue" data-i18n="about_doctor_badge">Direction Médicale</span>
+              <h2 class="hero-title-modern" style="font-size: clamp(2.4rem, 3.2vw, 3.4rem); margin-bottom: 16px;" data-i18n="about_doctor_title">Dr Nassim Boucenna</h2>
+              <p style="font-size: 1.5rem; color: #475569; line-height: 1.75; margin-bottom: 14px;" data-i18n="about_doctor_sub">Fondateur &amp; Leader en santé et innovation médicale.</p>
+              <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 14px;">
+                <li style="display: flex; align-items: flex-start; gap: 12px; font-size: 1.45rem; color: #334155;"><span style="width:10px;height:10px;border-radius:50%;background:var(--clr-blue-primary);flex-shrink:0;margin-top:6px;"></span><span data-i18n="about_doctor_b1">Fort de plus de 12 ans d'expérience dans le secteur de la santé, il pilote un réseau de cliniques spécialisées en hémodialyse, une entreprise de transport médical et une officine.</span></li>
+                <li style="display: flex; align-items: flex-start; gap: 12px; font-size: 1.45rem; color: #334155;"><span style="width:10px;height:10px;border-radius:50%;background:#10b981;flex-shrink:0;margin-top:6px;"></span><span data-i18n="about_doctor_b2">DPharm et MSc en Biochimie, il mène des projets alliant biologie moléculaire et intégration de l'intelligence artificielle pour optimiser les soins médicaux.</span></li>
+                <li style="display: flex; align-items: flex-start; gap: 12px; font-size: 1.45rem; color: #334155;"><span style="width:10px;height:10px;border-radius:50%;background:#f59e0b;flex-shrink:0;margin-top:6px;"></span><span data-i18n="about_doctor_b3">Passionné par l'innovation et l'amélioration du bien-être des patients, il conçoit et déploie des solutions de santé avancées alignées sur les besoins réels du terrain.</span></li>
+              </ul>
+            </div>
+            <div><img src="./assets/images/DrNassim.jpg" alt="Dr Nassim Boucenna, Néphrologue et Directeur Médical" style="width: 100%; border-radius: 16px; object-fit: cover; max-height: 480px;"></div>
+          </div>
+        </div>
+      </section>
 
+      <!-- ENGAGEMENTS -->
+      <section style="padding-block: 70px; background-color: #ffffff;">
+        <div class="container">
+          <div style="text-align: center; max-width: 620px; margin: 0 auto 44px auto;" data-reveal="bottom">
+            <span class="badge-pill-blue" data-i18n="about_commit_badge">Nos engagements</span>
+            <h2 class="hero-title-modern" style="font-size: clamp(2.4rem, 3.2vw, 3.4rem);" data-i18n="about_commit_title">Pourquoi choisir<br><span>Boucenna ?</span></h2>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;" data-reveal="bottom">
+            <div class="modern-center-card" style="padding: 28px;">
+              <div style="width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,#1e40af,#3b82f6);display:flex;align-items:center;justify-content:center;margin-bottom:16px;"><ion-icon name="people-outline" style="font-size:2.4rem;color:#fff;"></ion-icon></div>
+              <h3 style="font-size: 1.7rem; font-weight: 700; color: #0f172a; margin-bottom: 8px;" data-i18n="why_1_title">Équipe expérimentée</h3>
+              <p style="font-size: 1.35rem; color: #64748b; line-height: 1.6;" data-i18n="why_1_desc">Des néphrologues et infirmiers spécialisés, à votre écoute, pour vous offrir les meilleurs soins.</p>
+            </div>
+            <div class="modern-center-card" style="padding: 28px;">
+              <div style="width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,#1e40af,#3b82f6);display:flex;align-items:center;justify-content:center;margin-bottom:16px;"><ion-icon name="business-outline" style="font-size:2.4rem;color:#fff;"></ion-icon></div>
+              <h3 style="font-size: 1.7rem; font-weight: 700; color: #0f172a; margin-bottom: 8px;" data-i18n="why_2_title">Centres modernes</h3>
+              <p style="font-size: 1.35rem; color: #64748b; line-height: 1.6;" data-i18n="why_2_desc">Des centres de dialyse équipés des dernières technologies, conformes aux normes internationales.</p>
+            </div>
+            <div class="modern-center-card" style="padding: 28px;">
+              <div style="width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,#1e40af,#3b82f6);display:flex;align-items:center;justify-content:center;margin-bottom:16px;"><ion-icon name="car-outline" style="font-size:2.4rem;color:#fff;"></ion-icon></div>
+              <h3 style="font-size: 1.7rem; font-weight: 700; color: #0f172a; margin-bottom: 8px;" data-i18n="about_transport_title">Transport sanitaire</h3>
+              <p style="font-size: 1.35rem; color: #64748b; line-height: 1.6;" data-i18n="about_transport_desc">Disponibilité 24h/24 et 7j/7 avec ambulances et VSL équipées pour votre confort et sécurité.</p>
+            </div>
+            <div class="modern-center-card" style="padding: 28px;">
+              <div style="width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,#1e40af,#3b82f6);display:flex;align-items:center;justify-content:center;margin-bottom:16px;"><ion-icon name="medkit-outline" style="font-size:2.4rem;color:#fff;"></ion-icon></div>
+              <h3 style="font-size: 1.7rem; font-weight: 700; color: #0f172a; margin-bottom: 8px;" data-i18n="why_5_title">Confort pendant les séances</h3>
+              <p style="font-size: 1.35rem; color: #64748b; line-height: 1.6;" data-i18n="why_5_desc">Un environnement propre, confortable et sécurisé pour votre bien-être tout au long de vos traitements.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <!-- CTA -->
+      <section style="padding-block: 60px; background: linear-gradient(135deg, #0f172a, #1e40af);">
+        <div class="container" style="text-align: center;">
+          <h2 style="font-size: clamp(2.4rem, 3.5vw, 3.8rem); font-weight: 800; color: #ffffff; margin-bottom: 14px;" data-i18n="about_cta_title">Vous souhaitez en savoir plus ?</h2>
+          <p style="font-size: 1.55rem; color: #94a3b8; margin-bottom: 28px;" data-i18n="about_cta_sub">Notre équipe est disponible pour répondre à toutes vos questions.</p>
+          <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <a href="contact.html" class="btn-blue-solid" data-i18n="nav_contact_btn">Nous contacter</a>
+            <a href="dialyse-vacances.html" class="btn-blue-outline" data-i18n="nav_vacation">Dialyse Vacances</a>
+          </div>
+        </div>
+      </section>
 
-  <!-- Section 2 -->
-  <div class="section">
-    <img src="assets/images/cherchcel/chh3.jpg" alt="Dr Nassim Boucenna, fondateur de la clinique, présentant les équipements">
-    <div class="content">
-      <h2>Dr Nassim Boucenna</h2>
-      <p>Fondateur & Leader en santé et innovation médicale.</p>
-
-      <div class="info-box">
-        <p><span class="dot blue"></span> Fort de plus de 12 ans d'expérience dans le secteur de la santé,
-           je pilote un réseau de cliniques spécialisées en hémodialyse,
-           une entreprise de transport médical terrestre et aérien, ainsi qu'une officine.</p>
-
-        <p><span class="dot green"></span> DPharm et MSc en Biochimie, je mène des projets alliant
-           biologie moléculaire, biologie du cancer et intégration de l'intelligence artificielle
-           pour optimiser les soins et la logistique médicale.</p>
-
-        <p><span class="dot orange"></span> Passionné par l'innovation et l'amélioration du bien-être des patients,
-           je conçois et déploie des solutions de santé avancées, alignées sur les besoins réels du terrain et les valeurs.</p>
-      </div>
-    </div>
-  </div>
-
-  
-
-
-</article>
-</main>
-
-  <!-- Nouvelles boîtes - Pourquoi nous choisir et Notre Engagement -->
-  
-  
-  <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
+    </article>
+  </main>
+  <!-- FOOTER -->
+  <footer class="footer-screen9">
     <div class="container">
-      <div class="section footer-top">
-        <div class="footer-brand" data-reveal="bottom">
-                  <a href="index.html" class="logo">
-          <img src="./assets/images/SVG/new/logo-dark.png" width="200" height="70" loading="lazy" alt="Dialyse BOUCENNA">
-        </a>
-          <ul class="contact-list ">
-            <li class="contact-item">
-              <div class="item-icon">
-                <ion-icon name="mail-open-outline"></ion-icon>
-              </div>
-              <div>
-                <p>Main Email : <a href="transmalades.boucenna@gmail.com" class="contact-link"> transmalades.boucenna@gmail.com</a></p>
-               
-              </div>
-            </li>
-            <li class="contact-item">
-              <div class="item-icon">
-                <ion-icon name="call-outline"></ion-icon>
-              </div>
-              <div>
-                <p>Office Telephone : <a href="tel:0770 31 31 36" class="contact-link">0770 31 31 36</a></p>
-                <p>Mobile : <a href="tel:0661 93 53 53" class="contact-link">0661 93 53 53</a></p>
-              </div>
-            </li>
-          </ul>
+      <div class="footer-screen9-grid">
+        <div>
+          <a href="index.html" class="logo"><img src="./assets/images/SVG/new/logo-long-light.png" alt="Dialyses Boucenna" class="logo-footer-img" width="180" height="44" loading="lazy"></a>
+          <p style="margin-top: 14px; color: #94a3b8; font-size: 1.35rem; line-height: 1.6;" data-i18n="footer_tagline">Vos soins rénaux, notre priorité.<br>Transport sanitaire, consultations et pharmacie.</p>
+          <div class="social-list" style="margin-top: 18px;">
+            <a href="https://wa.me/213770313136" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp"><ion-icon name="logo-whatsapp"></ion-icon></a>
+            <a href="tel:+2130770313136" class="social-link" aria-label="Téléphone"><ion-icon name="call-outline"></ion-icon></a>
+            <a href="mailto:transmalades.boucenna@gmail.com" class="social-link" aria-label="Email"><ion-icon name="mail-outline"></ion-icon></a>
+          </div>
         </div>
-        <div class="footer-list" data-reveal="bottom">
-          <p class="headline-sm footer-list-title">About Us</p>
-          <p class="text">
-            La clinique de Néphrologie, d'Hémodialyse et de transport sanitaire est une clinique privée spécialisée dans le traitement de l'insuffisance rénale chronique terminale.
-          </p>
-          <address class="address">
-            <ion-icon name="map-outline"></ion-icon>
-            <span class="text">
-              CITE KAABOUB COOPERATIVE IMMOBILIERE ESSALEM SECTION 105 I LOT N°151 SETIF
-            </span>
-          </address>
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_c2_title">Boucenna Cherchell</h4>
+          <p class="footer-col-address" data-i18n="footer_c2_address">Cité Zitouni El Kheir<br>Cherchell, Tipaza</p>
+          <span class="footer-col-phone" dir="ltr"><bdi><span data-i18n="label_phone_whatsapp">Tél / WhatsApp :</span> +213 (0) 770 31 31 36</bdi></span>
+          <a href="https://maps.app.goo.gl/dnBsbRCGPkD7GJVZ9" target="_blank" rel="noopener" class="footer-col-maplink"><ion-icon name="location-outline"></ion-icon> <span data-i18n="footer_maps_link">Itinéraire Google Maps</span></a>
         </div>
-        <ul class="footer-list" data-reveal="bottom">
-          <li><p class="headline-sm footer-list-title">Useful Links</p></li>
-          <li><a href="index.html" class="text footer-link">Accueil</a></li>
-          <li><a href="apropos.html" class="text footer-link">A Propos</a></li>
-          <li><a href="departement.html" class="text footer-link">Départements</a></li>
-          <li><a href="conseil.html" class="text footer-link">Conseils</a></li>
-          <li><a href="contact.html" class="text footer-link">Contactez Nous</a></li>
-        </ul>
-
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_c3_title">Boucenna Bouira</h4>
+          <p class="footer-col-address" data-i18n="footer_c3_address">Cité 2000 Logements<br>Bouira</p>
+          <span class="footer-col-phone" dir="ltr"><bdi><span data-i18n="label_phone_whatsapp">Tél / WhatsApp :</span> +213 (0) 770 31 31 36</bdi></span>
+          <a href="https://maps.app.goo.gl/CTBTxc24xgg93dGW8" target="_blank" rel="noopener" class="footer-col-maplink"><ion-icon name="location-outline"></ion-icon> <span data-i18n="footer_maps_link">Itinéraire Google Maps</span></a>
+        </div>
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_c4_title">Boucenna Aïn Oulmène</h4>
+          <p class="footer-col-address" data-i18n="footer_c4_address">Aïn Oulmène, Sétif<br>(Plateau &amp; Pharmacie)</p>
+          <span class="footer-col-phone" dir="ltr"><bdi><span data-i18n="label_phone_whatsapp">Tél / WhatsApp :</span> +213 (0) 770 31 31 36</bdi></span>
+          <a href="https://maps.app.goo.gl/xXewNB57cKCSLivw7?g_st=aw" target="_blank" rel="noopener" class="footer-col-maplink"><ion-icon name="location-outline"></ion-icon> <span data-i18n="footer_maps_link">Itinéraire Google Maps</span></a>
+        </div>
       </div>
-      <div class="footer-bottom">
-        <p class="text copyright">&copy; CLINIQUE 2025 | DIALYSES BOUCENNA</p>
-        
+      <div class="footer-screen9-bottom">
+        <p data-i18n="footer_copyright">© 2025 Clinique Dialyse Boucenna — Tous droits réservés.</p>
+        <div class="footer-legal-links">
+          <a href="apropos.html" data-i18n="nav_about">À Propos</a>
+          <a href="departement.html" data-i18n="nav_depts">Départements</a>
+          <a href="conseil.html" data-i18n="nav_advice">Conseils</a>
+          <a href="contact.html" data-i18n="nav_contact">Contact</a>
+          <a href="sitemap.xml" data-i18n="footer_sitemap">Plan du site</a></div>
       </div>
     </div>
   </footer>
-
-
-  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
-    <ion-icon name="chevron-up"></ion-icon>
-  </a>
-
+  <a href="https://wa.me/213770313136" target="_blank" rel="noopener" class="floating-whatsapp" aria-label="WhatsApp"><ion-icon name="logo-whatsapp"></ion-icon><span class="tooltip" data-i18n="whatsapp_tooltip">Besoin d'aide ? Écrivez-nous</span></a>
+  <a href="#top" class="back-top-btn" aria-label="Haut de page" data-back-top-btn><ion-icon name="chevron-up"></ion-icon></a>
   <script src="./assets/js/script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
 </body>
 </html>

@@ -1,435 +1,266 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!--
-    - primary meta tags
-  -->
-  <title>Conseils & Guide Pratique - Patients en Hémodialyse | Clinique Boucenna Algérie</title>
-  <meta name="title" content="Conseils & Guide Pratique - Patients en Hémodialyse | Clinique Boucenna Algérie">
-  <meta name="description" content="Trouvez des conseils essentiels sur la prise en charge financière, les documents nécessaires, le transport, la nutrition et la fistule pour les patients en hémodialyse. Offert par la Clinique Dialyse Boucenna en Algérie.">
-
-  <!--
-    - favicon
-  -->
+  <title>Conseils Pratiques pour Patients en Hémodialyse — Boucenna</title>
+  <meta name="description" content="Conseils essentiels pour les patients en hémodialyse : prise en charge CNAS, documents, transport sanitaire, nutrition et fistule. Clinique Boucenna Algérie.">
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-
-  <!--
-    - google font link
-  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
-
-  <!--
-    - custom css link
-  -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!-- Navbar dropdown helper (copied from index.html) -->
-  <style>
-  .navbar-item .dropdown {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 250px;
-    background-color: var(--rich-black-fogra-29);
-    border-radius: var(--radius-6);
-    box-shadow: 0 4px 16px hsla(0, 0%, 0%, 0.2);
-    transition: var(--transition-1);
-    transform: translateY(10px);
-    z-index: 10;
-  }
-  .navbar-item:hover .dropdown { visibility: visible; opacity: 1; transform: translateY(0); }
-  .dropdown-item { border-bottom: 1px solid var(--white_a10); }
-  .dropdown-item:last-child { border-bottom: none; }
-  .dropdown-link {
-    color: var(--white);
-    padding: 12px 20px;
-    font-size: 1.4rem;
-    transition: var(--transition-1);
-    display: block;
-  }
-  .dropdown-link:hover { background-color: var(--verdigris); }
-  .navbar-item { position: relative; }
-  </style>
-
-  <!-- Page-scoped, brand-new styles for conseil content -->
-  <style>
-  /* Conseil page unique styles (scoped) */
-  #conseil-content { padding-block: var(--section-padding); background: var(--alice-blue); }
-  .conseil-container { max-width: 1200px; margin: 0 auto; padding-inline: 24px; }
-
-  .conseil-hero { position: relative; overflow: hidden; background: linear-gradient(135deg, var(--midnight-green), var(--verdigris)); color: var(--white); border-radius: var(--radius-12); padding: 44px 36px; box-shadow: var(--shadow-1); margin-bottom: 24px; }
-  .conseil-hero::after { content:""; position:absolute; inset:-40%; background: radial-gradient(60% 60% at 20% 20%, hsla(182,100%,35%,0.25) 0%, transparent 60%), radial-gradient(50% 50% at 80% 30%, hsla(186,100%,19%,0.25) 0%, transparent 55%), radial-gradient(40% 40% at 50% 80%, hsla(182,100%,35%,0.2) 0%, transparent 60%); animation: heroFloat 14s linear infinite; z-index:0; }
-  @keyframes heroFloat { 0% { transform: translate3d(0,0,0) scale(1); } 50% { transform: translate3d(3%,2%,0) scale(1.02); } 100% { transform: translate3d(0,0,0) scale(1); } }
-
-  .breadcrumb { position: relative; z-index:1; font-size: 1rem; opacity: 0.9; margin-bottom: 12px; }
-  .breadcrumb a { color: var(--white); text-decoration: none; opacity: 0.95; }
-  .breadcrumb a:hover { text-decoration: underline; }
-
-  .conseil-hero h1 { position: relative; z-index:1; font-family: var(--ff-oswald); margin: 0 0 12px 0; letter-spacing: 0.5px; }
-  .conseil-hero p { position: relative; z-index:1; margin: 0; opacity: 1; max-width: 70ch; font-size: 1.18rem; line-height: 1.75; }
-
-  .hero-actions { position: relative; z-index:1; margin-top: 22px; display: flex; gap: 14px; flex-wrap: wrap; }
-  .btn-solid { background: var(--verdigris); color: var(--white); padding: 14px 22px; border-radius: var(--radius-6); text-decoration: none; box-shadow: var(--shadow-2); transition: var(--transition-1); font-weight: var(--fw-700); }
-  .btn-solid:hover { filter: brightness(1.05); transform: translateY(-2px); }
-  .btn-ghost { background: transparent; color: var(--white); border: 1px solid var(--white_a20); padding: 14px 22px; border-radius: var(--radius-6); text-decoration: none; backdrop-filter: blur(2px); transition: var(--transition-1); font-weight: var(--fw-700); }
-  .btn-ghost:hover { background: var(--white_a10); }
-
-  /* Sticky toolbar */
-  .chip-toolbar { position: sticky; top: 100px; z-index: 2; margin-bottom: 28px; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); background: hsla(0,0%,100%,0.45); border: 1px solid var(--gainsboro); border-radius: 999px; padding: 10px 12px; box-shadow: var(--shadow-2); display: flex; gap: 8px; flex-wrap: wrap; }
-  .chip-toolbar .chip { background: var(--middle-blue-green_40); color: var(--midnight-green); }
-  .chip.active { box-shadow: 0 0 0 2px var(--verdigris); background: hsla(182,100%,35%,0.2); }
-  @media (max-width: 768px){ .chip-toolbar { top: 84px; overflow-x:auto; white-space: nowrap; border-radius: 14px; } }
-
-  .conseil-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px; align-items: start; }
-  @media (max-width: 980px) { .conseil-grid { grid-template-columns: 1fr; } }
-
-  .conseil-card { background: var(--white); border: none; border-radius: var(--radius-12); padding: 26px 24px; box-shadow: var(--shadow-2); transition: transform var(--transition-1), box-shadow var(--transition-1); }
-  .conseil-card + .conseil-card { margin-top: 22px; }
-  .conseil-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-1); }
-
-  .conseil-toggle { color: var(--midnight-green); font-family: var(--ff-oswald); margin: 0; margin-bottom: 12px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-  .conseil-caret { font-size: 20px; color: var(--independece); transition: transform 0.25s ease; }
-  .conseil-card.collapsed .conseil-caret { transform: rotate(-90deg); }
-
-  .conseil-body { margin-top: 6px; overflow: hidden; max-height: 1200px; opacity: 1; transition: max-height 0.35s ease, opacity 0.25s ease; }
-  .conseil-card.collapsed .conseil-body { max-height: 0; opacity: 0; }
-
-  .conseil-box { background: var(--alice-blue); border: 1px dashed var(--verdigris); border-radius: var(--radius-12); padding: 16px 18px; margin: 12px 0 18px 0; }
-  .conseil-list { margin: 0; padding-left: 18px; }
-  .conseil-list li { margin: 6px 0; }
-
-  .conseil-widget { background: var(--white); border: none; border-radius: var(--radius-12); padding: 22px; box-shadow: var(--shadow-2); position: sticky; top: 120px; }
-  .conseil-widget h3 { color: var(--midnight-green); margin-top: 0; font-family: var(--ff-oswald); }
-  .conseil-widget p { color: var(--independece); margin-bottom: 12px; }
-
-  .chip { display: inline-block; background: var(--middle-blue-green_40); color: var(--midnight-green); padding: 8px 14px; border-radius: 999px; font-size: 0.95rem; margin: 8px 10px 0 0; text-decoration: none; }
-  .chip:hover { filter: brightness(0.95); }
-
-  .underline { width: 80px; height: 3px; background: var(--verdigris); border: none; border-radius: 4px; margin: 12px 0 18px 0; }
-
-  @media (max-width: 768px) { #conseil-content { padding-block: 80px; } .conseil-hero { padding: 28px 20px; } .conseil-hero p { font-size: 1.05rem; } .conseil-card { padding: 20px; } .chip { font-size: 0.9rem; padding: 6px 12px; } .conseil-widget { position: static; top: auto; } }
-  </style>
 </head>
-
 <body id="top">
-
-  <!--
-    - #PRELOADER
-  -->
-  <div class="preloader" data-preloader>
-    <div class="circle"></div>
-  </div>
-
-  <!--
-    - #HEADER
-  -->
+  <div class="preloader" data-preloader><div class="circle"></div></div>
+  <!-- HEADER -->
   <header class="header" data-header>
     <div class="container">
-
-      <a href="index.html" class="logo">
-        <img src="./assets/images/SVG/new/logo-long-dark.png" width="200" height="50" alt="Dialyse BOUCENNA">
-      </a>
-
+      <a href="index.html" class="logo"><img src="./assets/images/SVG/new/logo-long-light.png" alt="Dialyses Boucenna" class="logo-header-img" width="200" height="48"></a>
       <nav class="navbar" data-navbar>
-
         <div class="navbar-top">
-          <a href="index.html" class="logo">
-            <img src="./assets/images/SVG/new/logo-long-light.png" width="200" height="50" alt="Dialyse BOUCENNA">
-          </a>
-          <button class="nav-close-btn" aria-label="clsoe menu" data-nav-toggler>
-            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
-          </button>
+          <a href="index.html" class="logo"><img src="./assets/images/SVG/new/logo-long-light.png" alt="Dialyses Boucenna" class="logo-header-img" width="200" height="48"></a>
+          <button class="nav-close-btn" aria-label="Fermer menu" data-nav-toggler><ion-icon name="close-outline" aria-hidden="true"></ion-icon></button>
         </div>
-
         <ul class="navbar-list">
-          <li class="navbar-item"><a href="index.html" class="navbar-link title-md">ACCUEIL</a></li>
-          <li class="navbar-item"><a href="apropos.html" class="navbar-link title-md">A PROPOS</a></li>
+          <li class="navbar-item"><a href="index.html" class="navbar-link" data-i18n="nav_home">Accueil</a></li>
           <li class="navbar-item">
-            <a href="departement.html" class="navbar-link title-md">DEPARTEMENTS</a>
+            <a href="index.html#centres" class="navbar-link" data-i18n="nav_centers">Nos centres</a>
             <ul class="dropdown">
-              <li class="dropdown-item"><a href="departement.html#hemodialyse" class="dropdown-link">Séance D'Hémodialyse</a></li>
-              <li class="dropdown-item"><a href="departement.html#nephrologie" class="dropdown-link">Consultation En Néphrologie</a></li>
-              <li class="dropdown-item"><a href="departement.html#occasionnelle" class="dropdown-link">Dialyse Occasionnelle</a></li>
-              <li class="dropdown-item"><a href="departement.html#transport" class="dropdown-link">Transport Sanitaire</a></li>
-              <li class="dropdown-item"><a href="departement.html#pharmacie" class="dropdown-link">La Pharmacie</a></li>
+              <li class="dropdown-item"><a href="centre-cherchell.html" class="dropdown-link" data-i18n="drop_cherchell">Centre Cherchell (Tipaza)</a></li>
+              <li class="dropdown-item"><a href="centre-bouira.html" class="dropdown-link" data-i18n="drop_bouira">Centre Bouira</a></li>
+              <li class="dropdown-item"><a href="centre-ain-oulmene.html" class="dropdown-link" data-i18n="drop_ain_oulmene">Centre Aïn Oulmène (Sétif)</a></li>
             </ul>
           </li>
-          <li class="navbar-item"><a href="conseil.html" class="navbar-link title-md active">CONSEILS</a></li>
-          <li class="navbar-item"><a href="contact.html" class="navbar-link title-md">CONTACTEZ NOUS</a></li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-i18n="nav_presentation">Présentation</a>
+            <ul class="dropdown">
+              <li class="dropdown-item"><a href="apropos.html" class="dropdown-link" data-i18n="drop_about">À Propos</a></li>
+              <li class="dropdown-item"><a href="departement.html" class="dropdown-link" data-i18n="drop_depts">Nos Départements</a></li>
+              <li class="dropdown-item"><a href="conseil.html" class="dropdown-link" data-i18n="drop_advice">Guide &amp; Conseils</a></li>
+            </ul>
+          </li>
+          <li class="navbar-item"><a href="equipe.html" class="navbar-link" data-i18n="nav_team">Notre équipe</a></li>
+          <li class="navbar-item"><a href="changer-de-centre.html" class="navbar-link" data-i18n="nav_transfer">Changer de centre</a></li>
+          <li class="navbar-item"><a href="informations-cnas.html" class="navbar-link" data-i18n="nav_cnas">Informations CNAS</a></li>
+          <li class="navbar-item"><a href="dialyse-vacances.html" class="navbar-link" data-i18n="nav_vacation">Dialyse Vacances</a></li>
+          <li class="navbar-item"><a href="contact.html" class="navbar-link" data-i18n="nav_contact">Contact</a></li>
         </ul>
-
-        <ul class="social-list">
-          <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
-          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
-          <li><a href="#" class="social-link"><ion-icon name="logo-pinterest"></ion-icon></a></li>
-          <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
-          <li><a href="#" class="social-link"><ion-icon name="logo-youtube"></ion-icon></a></li>
-        </ul>
-
       </nav>
-
-      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
-        <ion-icon name="menu-outline"></ion-icon>
-      </button>
-
-      <a href="contact.html" class="btn has-before title-md">Prendre Rendez-vous</a>
-
+      <div class="header-actions">
+        <div class="lang-selector">
+          <button type="button" class="lang-btn" aria-label="Changer de langue">
+            <ion-icon name="globe-outline"></ion-icon>
+            <span class="current-lang-text">FR</span>
+            <ion-icon name="chevron-down-outline" class="lang-arrow"></ion-icon>
+          </button>
+          <div class="lang-dropdown">
+            <button type="button" class="lang-option active" data-lang="fr">🇫🇷 Français</button>
+            <button type="button" class="lang-option" data-lang="en">🇬🇧 English</button>
+            <button type="button" class="lang-option" data-lang="ar">🇩🇿 العربية</button>
+          </div>
+        </div>
+        <a href="contact.html" class="btn-blue-solid" style="padding: 9px 18px; font-size: 1.35rem;">
+          <ion-icon name="mail-outline"></ion-icon>
+          <span data-i18n="nav_contact_btn">Nous contacter</span>
+        </a>
+        <button class="nav-open-btn" aria-label="Ouvrir menu" data-nav-toggler><ion-icon name="menu-outline"></ion-icon></button>
+      </div>
       <div class="overlay" data-nav-toggler data-overlay></div>
-
     </div>
   </header>
+  <main>
+    <article>
 
-  <main id="conseil-content">
-    <div class="conseil-container">
-
-      <section class="conseil-hero" data-reveal="bottom">
-        <nav class="breadcrumb"><a href="index.html">Accueil</a> / <span>Conseils</span></nav>
-        <h1>Conseils et Guide Pratique pour Patients en Hémodialyse</h1>
-        <p>Toutes les informations sur la prise en charge, les documents nécessaires et les conseils pratiques.</p>
-        <div class="hero-actions">
-          <a href="#documents" class="btn-solid">Télécharger la checklist</a>
-          <a href="contact.html" class="btn-ghost">Prendre contact</a>
+      <!-- HERO -->
+      <section style="padding-top: 130px; padding-bottom: 60px; background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);">
+        <div class="container">
+          <div data-reveal="left" style="max-width: 800px;">
+            <span class="badge-pill-blue" data-i18n="advice_badge">Guide pratique</span>
+            <h1 class="hero-title-modern" style="font-size: clamp(2.8rem, 4vw, 4.2rem);" data-i18n="advice_hero_title">Conseils &amp; Guide<br><span>pour Patients en Dialyse</span></h1>
+            <p class="hero-subtitle-modern" style="font-size: 1.55rem; margin-bottom: 24px;" data-i18n="advice_hero_sub">Toutes les informations essentielles sur la prise en charge, les documents nécessaires et les conseils pratiques pour votre quotidien en dialyse.</p>
+          </div>
         </div>
       </section>
 
-      <nav class="chip-toolbar" aria-label="Sections de la page">
-        <a class="chip" href="#prise-en-charge">Prise en charge</a>
-        <a class="chip" href="#documents">Documents</a>
-        <a class="chip" href="#transport">Transport</a>
-        <a class="chip" href="#fistule">Fistule</a>
-        <a class="chip" href="#nutrition">Nutrition</a>
-      </nav>
-
-      <div class="conseil-grid">
-        <div>
-          <article id="prise-en-charge" class="conseil-card card-elev" data-reveal="bottom">
-            <h2 class="conseil-toggle" tabindex="0" aria-expanded="true">Prise en charge financière <span class="conseil-caret">▾</span></h2>
-            <div class="conseil-body">
-              <p>L’insuffisance rénale chronique est prise en charge à <strong>100% par la sécurité sociale</strong>.</p>
-            </div>
-          </article>
-
-          <article id="documents" class="conseil-card card-elev" data-reveal="bottom">
-            <h2 class="conseil-toggle" tabindex="0" aria-expanded="true">Documents à présenter <span class="conseil-caret">▾</span></h2>
-            <div class="conseil-body">
-              <h3>Vacanciers étrangers / locaux</h3>
-              <div class="conseil-box">
-                <ul class="conseil-list">
-                  <li>Protocole de dialyse / Fiche de liaison</li>
-                  <li>Bilan récent (Sérologie)</li>
-                  <li>Compte rendu médical</li>
-                </ul>
-              </div>
-
-              <h3>Permanents et occasionnels</h3>
-              <p>Cette catégorie concerne les patients affiliés à une caisse de sécurité sociale (<strong>CNAS, CASNOS</strong>).</p>
-
-              <h3 id="cnas">CNAS</h3>
-              <div class="conseil-box">
-                <ul class="conseil-list">
-                  <li>Ouverture de droit originale et récente</li>
-                  <li>Bilan récent (Sérologie)</li>
-                  <li>Carte de groupage</li>
-                  <li>Dossier médical et/ou fiche de liaison</li>
-                  <li>02 photos</li>
-                  <li>01 certificat de résidence</li>
-                </ul>
-              </div>
-
-              <h3 id="casnos">CASNOS</h3>
-              <div class="conseil-box">
-                <ul class="conseil-list">
-                  <li>Prise en charge valide</li>
-                  <li>Bilan récent (Sérologie)</li>
-                  <li>Carte de groupage</li>
-                  <li>Dossier médical et/ou fiche de liaison</li>
-                  <li>02 photos</li>
-                  <li>01 certificat de résidence</li>
-                </ul>
-              </div>
-            </div>
-          </article>
-
-          <article id="transport" class="conseil-card card-elev" data-reveal="bottom">
-            <h2 class="conseil-toggle" tabindex="0" aria-expanded="true">Transport <span class="conseil-caret">▾</span></h2>
-            <div class="conseil-body">
-              <p>La clinique Néphrose vous propose son service de transport sanitaire à l’aide de notre ambulance et de nos nombreuses VSL.</p>
-              <p>Nos chauffeurs sont engagés <strong>24h/24 et 7j/7</strong> pour vous faire arriver à destination, que ce soit en Algérie (inter-wilaya) ou à l’étranger (Tunisie).</p>
-            </div>
-          </article>
-
-          <article id="fistule" class="conseil-card card-elev" data-reveal="bottom">
-            <h2 class="conseil-toggle" tabindex="0" aria-expanded="true">Fistule <span class="conseil-caret">▾</span></h2>
-            <div class="conseil-body">
-              <ul class="conseil-list">
-                <li>Une fistule doit être créée avant le début de l’hémodialyse.</li>
-                <li>Surveiller son bon fonctionnement (battements caractéristiques).</li>
-                <li>Évitez montres, bijoux ou pansements serrés.</li>
-                <li>Protégez-la lors d’activités physiques.</li>
-                <li>N’utilisez pas de produits sans avis médical.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article id="tenue" class="conseil-card card-elev" data-reveal="bottom">
-            <h2 class="conseil-toggle" tabindex="0" aria-expanded="true">Tenue <span class="conseil-caret">▾</span></h2>
-            <div class="conseil-body">
-              <p>Une tenue adaptée à la dialyse est recommandée (jogging ou pyjama).</p>
-            </div>
-          </article>
-
-          <article id="nutrition" class="conseil-card card-elev" data-reveal="bottom">
-            <h2 class="conseil-toggle" tabindex="0" aria-expanded="true">Nutrition <span class="conseil-caret">▾</span></h2>
-            <div class="conseil-body">
-              <ul class="conseil-list">
-                <li>Une alimentation équilibrée est essentielle.</li>
-                <li>La prise de poids entre deux séances ne doit pas dépasser 5% du poids du corps.</li>
-                <li>Contrôler les apports en sel, potassium et phosphore.</li>
-                <li>Limiter les aliments riches en potassium (bananes, chocolat, légumes secs, potages...).</li>
-              </ul>
-            </div>
-          </article>
+      <!-- QUICK LINKS -->
+      <section style="padding-block: 30px 0; background: #fff;">
+        <div class="container">
+          <div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; padding-bottom: 8px;">
+            <a href="#prise-en-charge" class="badge-pill-blue" style="text-decoration:none;" data-i18n="advice_tab_coverage">Prise en charge</a>
+            <a href="#documents" class="badge-pill-blue" style="text-decoration:none;" data-i18n="advice_tab_docs">Documents</a>
+            <a href="#transport" class="badge-pill-blue" style="text-decoration:none;" data-i18n="advice_tab_transport">Transport</a>
+            <a href="#fistule" class="badge-pill-blue" style="text-decoration:none;" data-i18n="advice_tab_fistula">Fistule</a>
+            <a href="#nutrition" class="badge-pill-blue" style="text-decoration:none;" data-i18n="advice_tab_nutrition">Nutrition</a>
+          </div>
         </div>
+      </section>
 
-        <aside>
-          <div class="conseil-widget card-elev" data-reveal="left">
-            <h3>Raccourcis utiles</h3>
-            <p>Accédez rapidement aux informations clés et aux documents nécessaires.</p>
-            <div>
-              <a class="chip" href="#cnas">CNAS</a>
-              <a class="chip" href="#casnos">CASNOS</a>
-              <a class="chip" href="#transport">Transport</a>
-              <a class="chip" href="#fistule">Fistule</a>
-              <a class="chip" href="#nutrition">Nutrition</a>
+      <!-- PRISE EN CHARGE -->
+      <section id="prise-en-charge" style="padding-block: 60px; background: #fff;">
+        <div class="container" data-reveal="bottom">
+          <span class="badge-pill-blue" data-i18n="advice_tab_coverage">Prise en charge</span>
+          <h2 class="hero-title-modern" style="font-size: clamp(2.4rem,3.2vw,3.4rem); margin-bottom: 20px;" data-i18n="advice_coverage_title">Prise en charge financière</h2>
+          <div class="modern-center-card" style="padding: 32px; max-width: 800px;">
+            <p style="font-size: 1.55rem; color: #334155; line-height: 1.75;" data-i18n="advice_coverage_p">L'insuffisance rénale chronique terminale est prise en charge à <strong>100% par la sécurité sociale (CNAS / CASNOS)</strong>. Les séances d'hémodialyse, les médicaments liés au traitement et le transport sanitaire sont couverts dans le cadre de la convention.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- DOCUMENTS -->
+      <section id="documents" style="padding-block: 60px; background: var(--clr-bg-page);">
+        <div class="container" data-reveal="bottom">
+          <span class="badge-pill-blue" data-i18n="advice_tab_docs">Documents</span>
+          <h2 class="hero-title-modern" style="font-size: clamp(2.4rem,3.2vw,3.4rem); margin-bottom: 30px;" data-i18n="advice_docs_title">Documents à présenter</h2>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+            <div class="modern-center-card" style="padding: 28px;">
+              <div style="width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#1e40af,#3b82f6);display:flex;align-items:center;justify-content:center;margin-bottom:16px;"><ion-icon name="airplane-outline" style="font-size:2rem;color:#fff;"></ion-icon></div>
+              <h3 style="font-size: 1.65rem; font-weight: 700; color: #0f172a; margin-bottom: 12px;" data-i18n="advice_docs_tourists_title">Vacanciers (étrangers/locaux)</h3>
+              <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px;">
+                <li style="display:flex;gap:10px;font-size:1.4rem;color:#475569;"><ion-icon name="checkmark-circle-outline" style="color:#10b981;flex-shrink:0;font-size:1.8rem;"></ion-icon> <span data-i18n="advice_docs_t1">Protocole de dialyse / Fiche de liaison</span></li>
+                <li style="display:flex;gap:10px;font-size:1.4rem;color:#475569;"><ion-icon name="checkmark-circle-outline" style="color:#10b981;flex-shrink:0;font-size:1.8rem;"></ion-icon> <span data-i18n="advice_docs_t2">Bilan récent (Sérologie)</span></li>
+                <li style="display:flex;gap:10px;font-size:1.4rem;color:#475569;"><ion-icon name="checkmark-circle-outline" style="color:#10b981;flex-shrink:0;font-size:1.8rem;"></ion-icon> <span data-i18n="advice_docs_t3">Compte rendu médical récent</span></li>
+              </ul>
+            </div>
+            <div class="modern-center-card" style="padding: 28px;">
+              <div style="width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#1e40af,#3b82f6);display:flex;align-items:center;justify-content:center;margin-bottom:16px;"><ion-icon name="card-outline" style="font-size:2rem;color:#fff;"></ion-icon></div>
+              <h3 style="font-size: 1.65rem; font-weight: 700; color: #0f172a; margin-bottom: 12px;" data-i18n="advice_cnas_title">CNAS</h3>
+              <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px;">
+                <li style="display:flex;gap:10px;font-size:1.4rem;color:#475569;"><ion-icon name="checkmark-circle-outline" style="color:#10b981;flex-shrink:0;font-size:1.8rem;"></ion-icon> <span data-i18n="advice_cnas_1">Ouverture de droit originale et récente</span></li>
+                <li style="display:flex;gap:10px;font-size:1.4rem;color:#475569;"><ion-icon name="checkmark-circle-outline" style="color:#10b981;flex-shrink:0;font-size:1.8rem;"></ion-icon> <span data-i18n="advice_cnas_2">Bilan récent (Sérologie)</span></li>
+                <li style="display:flex;gap:10px;font-size:1.4rem;color:#475569;"><ion-icon name="checkmark-circle-outline" style="color:#10b981;flex-shrink:0;font-size:1.8rem;"></ion-icon> <span data-i18n="advice_cnas_3">Carte de groupage sanguin</span></li>
+                <li style="display:flex;gap:10px;font-size:1.4rem;color:#475569;"><ion-icon name="checkmark-circle-outline" style="color:#10b981;flex-shrink:0;font-size:1.8rem;"></ion-icon> <span data-i18n="advice_cnas_4">Dossier médical et/ou fiche de liaison</span></li>
+                <li style="display:flex;gap:10px;font-size:1.4rem;color:#475569;"><ion-icon name="checkmark-circle-outline" style="color:#10b981;flex-shrink:0;font-size:1.8rem;"></ion-icon> <span data-i18n="advice_cnas_5">02 photos d'identité</span></li>
+                <li style="display:flex;gap:10px;font-size:1.4rem;color:#475569;"><ion-icon name="checkmark-circle-outline" style="color:#10b981;flex-shrink:0;font-size:1.8rem;"></ion-icon> <span data-i18n="advice_cnas_6">01 certificat de résidence</span></li>
+              </ul>
+            </div>
+            <div class="modern-center-card" style="padding: 28px;">
+              <div style="width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#1e40af,#3b82f6);display:flex;align-items:center;justify-content:center;margin-bottom:16px;"><ion-icon name="briefcase-outline" style="font-size:2rem;color:#fff;"></ion-icon></div>
+              <h3 style="font-size: 1.65rem; font-weight: 700; color: #0f172a; margin-bottom: 12px;" data-i18n="advice_casnos_title">CASNOS</h3>
+              <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px;">
+                <li style="display:flex;gap:10px;font-size:1.4rem;color:#475569;"><ion-icon name="checkmark-circle-outline" style="color:#10b981;flex-shrink:0;font-size:1.8rem;"></ion-icon> <span data-i18n="advice_casnos_1">Prise en charge CASNOS valide</span></li>
+                <li style="display:flex;gap:10px;font-size:1.4rem;color:#475569;"><ion-icon name="checkmark-circle-outline" style="color:#10b981;flex-shrink:0;font-size:1.8rem;"></ion-icon> <span data-i18n="advice_casnos_2">Bilan récent (Sérologie)</span></li>
+                <li style="display:flex;gap:10px;font-size:1.4rem;color:#475569;"><ion-icon name="checkmark-circle-outline" style="color:#10b981;flex-shrink:0;font-size:1.8rem;"></ion-icon> <span data-i18n="advice_casnos_3">Carte de groupage sanguin</span></li>
+                <li style="display:flex;gap:10px;font-size:1.4rem;color:#475569;"><ion-icon name="checkmark-circle-outline" style="color:#10b981;flex-shrink:0;font-size:1.8rem;"></ion-icon> <span data-i18n="advice_casnos_4">Dossier médical et/ou fiche de liaison</span></li>
+                <li style="display:flex;gap:10px;font-size:1.4rem;color:#475569;"><ion-icon name="checkmark-circle-outline" style="color:#10b981;flex-shrink:0;font-size:1.8rem;"></ion-icon> <span data-i18n="advice_casnos_5">02 photos d'identité</span></li>
+                <li style="display:flex;gap:10px;font-size:1.4rem;color:#475569;"><ion-icon name="checkmark-circle-outline" style="color:#10b981;flex-shrink:0;font-size:1.8rem;"></ion-icon> <span data-i18n="advice_casnos_6">01 certificat de résidence</span></li>
+              </ul>
             </div>
           </div>
-        </aside>
-      </div>
+        </div>
+      </section>
 
-    </div>
+      <!-- TRANSPORT -->
+      <section id="transport" style="padding-block: 60px; background: #fff;">
+        <div class="container" data-reveal="bottom">
+          <span class="badge-pill-blue" data-i18n="advice_tab_transport">Transport</span>
+          <h2 class="hero-title-modern" style="font-size: clamp(2.4rem,3.2vw,3.4rem); margin-bottom: 20px;" data-i18n="advice_transport_title">Transport sanitaire</h2>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: center;">
+            <div class="modern-center-card" style="padding: 32px;">
+              <div style="width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,#1e40af,#3b82f6);display:flex;align-items:center;justify-content:center;margin-bottom:18px;"><ion-icon name="car-outline" style="font-size:2.6rem;color:#fff;"></ion-icon></div>
+              <p style="font-size: 1.5rem; color: #334155; line-height: 1.75; margin-bottom: 14px;" data-i18n="advice_transport_p1">Le Réseau Boucenna met à votre disposition son service de transport sanitaire avec des ambulances médicalisées et des Véhicules Sanitaires Légers (VSL).</p>
+              <p style="font-size: 1.5rem; color: #334155; line-height: 1.75;" data-i18n="advice_transport_p2">Nos chauffeurs sont disponibles <strong>24h/24 et 7j/7</strong> pour vous prendre en charge entre votre domicile et le centre de dialyse, en toute sécurité et confort.</p>
+            </div>
+            <div><img src="./assets/images/cherchcel/chh1.jpg" alt="Transport sanitaire Boucenna" style="width:100%;border-radius:16px;object-fit:cover;max-height:360px;"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FISTULE -->
+      <section id="fistule" style="padding-block: 60px; background: var(--clr-bg-page);">
+        <div class="container" data-reveal="bottom">
+          <span class="badge-pill-blue" data-i18n="advice_tab_fistula">Fistule</span>
+          <h2 class="hero-title-modern" style="font-size: clamp(2.4rem,3.2vw,3.4rem); margin-bottom: 20px;" data-i18n="advice_fistula_title">Conseils sur la Fistule</h2>
+          <div class="modern-center-card" style="padding: 32px; max-width: 800px;">
+            <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px;">
+              <li style="display:flex;gap:12px;font-size:1.45rem;color:#334155;"><ion-icon name="information-circle-outline" style="color:var(--clr-blue-primary);flex-shrink:0;font-size:2rem;"></ion-icon><span data-i18n="advice_fistula_1">Une fistule artério-veineuse doit être créée avant le début de l'hémodialyse pour assurer un accès vasculaire de qualité.</span></li>
+              <li style="display:flex;gap:12px;font-size:1.45rem;color:#334155;"><ion-icon name="information-circle-outline" style="color:var(--clr-blue-primary);flex-shrink:0;font-size:2rem;"></ion-icon><span data-i18n="advice_fistula_2">Surveillez quotidiennement son bon fonctionnement en ressentant les battements caractéristiques (thrill).</span></li>
+              <li style="display:flex;gap:12px;font-size:1.45rem;color:#334155;"><ion-icon name="information-circle-outline" style="color:var(--clr-blue-primary);flex-shrink:0;font-size:2rem;"></ion-icon><span data-i18n="advice_fistula_3">Évitez le port de montres, bracelets, bijoux ou de tout pansement trop serré sur le bras porteur de la fistule.</span></li>
+              <li style="display:flex;gap:12px;font-size:1.45rem;color:#334155;"><ion-icon name="information-circle-outline" style="color:var(--clr-blue-primary);flex-shrink:0;font-size:2rem;"></ion-icon><span data-i18n="advice_fistula_4">Protégez-la lors d'activités physiques et ne dormez pas sur ce bras.</span></li>
+              <li style="display:flex;gap:12px;font-size:1.45rem;color:#334155;"><ion-icon name="information-circle-outline" style="color:var(--clr-blue-primary);flex-shrink:0;font-size:2rem;"></ion-icon><span data-i18n="advice_fistula_5">N'utilisez jamais de produits ou crèmes sur la fistule sans avis médical préalable.</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- NUTRITION -->
+      <section id="nutrition" style="padding-block: 60px; background: #fff;">
+        <div class="container" data-reveal="bottom">
+          <span class="badge-pill-blue" data-i18n="advice_tab_nutrition">Nutrition</span>
+          <h2 class="hero-title-modern" style="font-size: clamp(2.4rem,3.2vw,3.4rem); margin-bottom: 20px;" data-i18n="advice_nutrition_title">Alimentation & Nutrition</h2>
+          <div class="modern-center-card" style="padding: 32px; max-width: 800px;">
+            <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px;">
+              <li style="display:flex;gap:12px;font-size:1.45rem;color:#334155;"><ion-icon name="leaf-outline" style="color:#10b981;flex-shrink:0;font-size:2rem;"></ion-icon><span data-i18n="advice_nutrition_1">Une alimentation équilibrée et adaptée est essentielle pour les patients en hémodialyse.</span></li>
+              <li style="display:flex;gap:12px;font-size:1.45rem;color:#334155;"><ion-icon name="leaf-outline" style="color:#10b981;flex-shrink:0;font-size:2rem;"></ion-icon><span data-i18n="advice_nutrition_2">La prise de poids entre deux séances ne doit pas dépasser 5% du poids du corps.</span></li>
+              <li style="display:flex;gap:12px;font-size:1.45rem;color:#334155;"><ion-icon name="leaf-outline" style="color:#10b981;flex-shrink:0;font-size:2rem;"></ion-icon><span data-i18n="advice_nutrition_3">Contrôlez vos apports en sel, potassium et phosphore selon les recommandations de votre médecin.</span></li>
+              <li style="display:flex;gap:12px;font-size:1.45rem;color:#334155;"><ion-icon name="leaf-outline" style="color:#10b981;flex-shrink:0;font-size:2rem;"></ion-icon><span data-i18n="advice_nutrition_4">Limitez les aliments riches en potassium : bananes, chocolat, légumes secs, potages concentrés, fruits secs.</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section style="padding-block: 60px; background: linear-gradient(135deg, #0f172a, #1e40af);">
+        <div class="container" style="text-align: center;">
+          <h2 style="font-size: clamp(2.4rem, 3.5vw, 3.8rem); font-weight: 800; color: #ffffff; margin-bottom: 14px;" data-i18n="faq_side_title">Besoin d'aide personnalisée ?</h2>
+          <p style="font-size: 1.55rem; color: #94a3b8; margin-bottom: 28px;" data-i18n="faq_side_desc">Notre équipe est à votre écoute pour répondre à toutes vos questions et vous accompagner.</p>
+          <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <a href="https://wa.me/213770313136" target="_blank" class="btn-blue-solid"><ion-icon name="logo-whatsapp"></ion-icon> <span data-i18n="faq_btn_whatsapp">Nous contacter sur WhatsApp</span></a>
+            <a href="contact.html" class="btn-blue-outline" data-i18n="nav_contact_btn">Nous contacter</a>
+          </div>
+        </div>
+      </section>
+
+    </article>
   </main>
-
-  <!--
-    - #FOOTER (copied and normalized like index.html)
-  -->
-
-  <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
+  <!-- FOOTER -->
+  <footer class="footer-screen9">
     <div class="container">
-      <div class="section footer-top">
-        <div class="footer-brand" data-reveal="bottom">
-                  <a href="index.html" class="logo">
-          <img src="./assets/images/SVG/new/logo-dark.png" width="200" height="70" loading="lazy" alt="Dialyse BOUCENNA">
-        </a>
-          <ul class="contact-list ">
-            <li class="contact-item">
-              <div class="item-icon">
-                <ion-icon name="mail-open-outline"></ion-icon>
-              </div>
-              <div>
-                <p>Main Email : <a href="transmalades.boucenna@gmail.com" class="contact-link"> transmalades.boucenna@gmail.com</a></p>
-               
-              </div>
-            </li>
-            <li class="contact-item">
-              <div class="item-icon">
-                <ion-icon name="call-outline"></ion-icon>
-              </div>
-              <div>
-                <p>Office Telephone : <a href="tel:0770 31 31 36" class="contact-link">0770 31 31 36</a></p>
-                <p>Mobile : <a href="tel:0661 93 53 53" class="contact-link">0661 93 53 53</a></p>
-              </div>
-            </li>
-          </ul>
+      <div class="footer-screen9-grid">
+        <div>
+          <a href="index.html" class="logo"><img src="./assets/images/SVG/new/logo-long-light.png" alt="Dialyses Boucenna" class="logo-footer-img" width="180" height="44" loading="lazy"></a>
+          <p style="margin-top: 14px; color: #94a3b8; font-size: 1.35rem; line-height: 1.6;" data-i18n="footer_tagline">Vos soins rénaux, notre priorité.<br>Transport sanitaire, consultations et pharmacie.</p>
+          <div class="social-list" style="margin-top: 18px;">
+            <a href="https://wa.me/213770313136" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp"><ion-icon name="logo-whatsapp"></ion-icon></a>
+            <a href="tel:+2130770313136" class="social-link" aria-label="Téléphone"><ion-icon name="call-outline"></ion-icon></a>
+            <a href="mailto:transmalades.boucenna@gmail.com" class="social-link" aria-label="Email"><ion-icon name="mail-outline"></ion-icon></a>
+          </div>
         </div>
-        <div class="footer-list" data-reveal="bottom">
-          <p class="headline-sm footer-list-title">About Us</p>
-          <p class="text">
-            La clinique de Néphrologie, d'Hémodialyse et de transport sanitaire est une clinique privée spécialisée dans le traitement de l'insuffisance rénale chronique terminale.
-          </p>
-          <address class="address">
-            <ion-icon name="map-outline"></ion-icon>
-            <span class="text">
-              CITE KAABOUB COOPERATIVE IMMOBILIERE ESSALEM SECTION 105 I LOT N°151 SETIF
-            </span>
-          </address>
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_c2_title">Boucenna Cherchell</h4>
+          <p class="footer-col-address" data-i18n="footer_c2_address">Cité Zitouni El Kheir<br>Cherchell, Tipaza</p>
+          <span class="footer-col-phone" dir="ltr"><bdi><span data-i18n="label_phone_whatsapp">Tél / WhatsApp :</span> +213 (0) 770 31 31 36</bdi></span>
+          <a href="https://maps.app.goo.gl/dnBsbRCGPkD7GJVZ9" target="_blank" rel="noopener" class="footer-col-maplink"><ion-icon name="location-outline"></ion-icon> <span data-i18n="footer_maps_link">Itinéraire Google Maps</span></a>
         </div>
-        <ul class="footer-list" data-reveal="bottom">
-          <li><p class="headline-sm footer-list-title">Useful Links</p></li>
-          <li><a href="index.html" class="text footer-link">Accueil</a></li>
-          <li><a href="apropos.html" class="text footer-link">A Propos</a></li>
-          <li><a href="departement.html" class="text footer-link">Départements</a></li>
-          <li><a href="conseil.html" class="text footer-link">Conseils</a></li>
-          <li><a href="contact.html" class="text footer-link">Contactez Nous</a></li>
-        </ul>
-
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_c3_title">Boucenna Bouira</h4>
+          <p class="footer-col-address" data-i18n="footer_c3_address">Cité 2000 Logements<br>Bouira</p>
+          <span class="footer-col-phone" dir="ltr"><bdi><span data-i18n="label_phone_whatsapp">Tél / WhatsApp :</span> +213 (0) 770 31 31 36</bdi></span>
+          <a href="https://maps.app.goo.gl/CTBTxc24xgg93dGW8" target="_blank" rel="noopener" class="footer-col-maplink"><ion-icon name="location-outline"></ion-icon> <span data-i18n="footer_maps_link">Itinéraire Google Maps</span></a>
+        </div>
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_c4_title">Boucenna Aïn Oulmène</h4>
+          <p class="footer-col-address" data-i18n="footer_c4_address">Aïn Oulmène, Sétif<br>(Plateau &amp; Pharmacie)</p>
+          <span class="footer-col-phone" dir="ltr"><bdi><span data-i18n="label_phone_whatsapp">Tél / WhatsApp :</span> +213 (0) 770 31 31 36</bdi></span>
+          <a href="https://maps.app.goo.gl/xXewNB57cKCSLivw7?g_st=aw" target="_blank" rel="noopener" class="footer-col-maplink"><ion-icon name="location-outline"></ion-icon> <span data-i18n="footer_maps_link">Itinéraire Google Maps</span></a>
+        </div>
       </div>
-      <div class="footer-bottom">
-        <p class="text copyright">&copy; CLINIQUE 2025 | DIALYSES BOUCENNA</p>
-        
+      <div class="footer-screen9-bottom">
+        <p data-i18n="footer_copyright">© 2025 Clinique Dialyse Boucenna — Tous droits réservés.</p>
+        <div class="footer-legal-links">
+          <a href="apropos.html" data-i18n="nav_about">À Propos</a>
+          <a href="departement.html" data-i18n="nav_depts">Départements</a>
+          <a href="conseil.html" data-i18n="nav_advice">Conseils</a>
+          <a href="contact.html" data-i18n="nav_contact">Contact</a>
+          <a href="sitemap.xml" data-i18n="footer_sitemap">Plan du site</a></div>
       </div>
     </div>
   </footer>
-
-
-  <!-- back to top -->
-  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
-    <ion-icon name="chevron-up"></ion-icon>
-  </a>
-
-  <!-- custom js -->
+  <a href="https://wa.me/213770313136" target="_blank" rel="noopener" class="floating-whatsapp" aria-label="WhatsApp"><ion-icon name="logo-whatsapp"></ion-icon><span class="tooltip" data-i18n="whatsapp_tooltip">Besoin d'aide ? Écrivez-nous</span></a>
+  <a href="#top" class="back-top-btn" aria-label="Haut de page" data-back-top-btn><ion-icon name="chevron-up"></ion-icon></a>
   <script src="./assets/js/script.js"></script>
-
-  <!-- ionicons -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-  <script>
-  // Smooth scroll for all in-page anchors
-  document.addEventListener('click', function(e){
-    const link = e.target.closest('a[href^="#"]');
-    if(!link) return;
-    const id = link.getAttribute('href');
-    const target = document.querySelector(id);
-    if(target){
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      history.replaceState(null, '', id);
-    }
-  });
-
-  // Collapsible cards with animated caret and body
-  const toggles = document.querySelectorAll('.conseil-toggle');
-  toggles.forEach((tg, idx) => {
-    const card = tg.closest('.conseil-card');
-    if(idx > 0) { card.classList.add('collapsed'); tg.setAttribute('aria-expanded','false'); }
-    tg.addEventListener('click', () => toggleCard(card, tg));
-    tg.addEventListener('keydown', (ev) => { if(ev.key==='Enter' || ev.key===' '){ ev.preventDefault(); toggleCard(card, tg); } });
-  });
-  function toggleCard(card, tg){ const collapsed = card.classList.toggle('collapsed'); tg.setAttribute('aria-expanded', collapsed ? 'false' : 'true'); }
-
-  // Active chip highlighting based on section visibility
-  const sectionIds = ['#prise-en-charge','#documents','#transport','#fistule','#nutrition'];
-  const chips = Array.from(document.querySelectorAll('.chip-toolbar .chip, .conseil-hero .chip, .conseil-widget .chip'));
-  const map = new Map(sectionIds.map(id => [id, chips.filter(c => c.getAttribute('href')===id)]));
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        const id = '#' + entry.target.id;
-        chips.forEach(c=>c.classList.remove('active'));
-        (map.get(id)||[]).forEach(c=>c.classList.add('active'));
-      }
-    });
-  }, { rootMargin: '-30% 0px -60% 0px', threshold: [0, 0.3, 1] });
-  sectionIds.forEach(id => { const el = document.querySelector(id); if(el) io.observe(el); });
-  </script>
 </body>
 </html>

@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dialyse Vacances en Algérie | Réseau Boucenna</title>
+  <meta name="title" content="Dialyse Vacances en Algérie | Réseau Boucenna">
+  <meta name="description" content="Organisez vos séances de dialyse avant votre arrivée dans l'un de nos trois centres à Cherchell, Bouira et Aïn Oulmène. Soins d'excellence, assistance dédiée et sérénité.">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body id="top">
+
+    <!-- PRELOADER -->
+  <div class="preloader" data-preloader><div class="circle"></div></div>
+
+  <!-- HEADER -->
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="index.html" class="logo">
+        <img src="./assets/images/SVG/new/logo-long-light.png" alt="Dialyses Boucenna" class="logo-header-img" width="200" height="48">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <a href="index.html" class="logo">
+            <img src="./assets/images/SVG/new/logo-long-light.png" alt="Dialyses Boucenna" class="logo-header-img" width="200" height="48">
+          </a>
+          <button class="nav-close-btn" aria-label="Fermer menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+          <li class="navbar-item"><a href="index.html" class="navbar-link " data-i18n="nav_home">Accueil</a></li>
+          <li class="navbar-item">
+            <a href="index.html#centres" class="navbar-link" data-i18n="nav_centers">Nos centres</a>
+            <ul class="dropdown">
+              <li class="dropdown-item"><a href="centre-cherchell.html" class="dropdown-link" data-i18n="drop_cherchell">Centre Cherchell (Tipaza)</a></li>
+              <li class="dropdown-item"><a href="centre-bouira.html" class="dropdown-link" data-i18n="drop_bouira">Centre Bouira</a></li>
+              <li class="dropdown-item"><a href="centre-ain-oulmene.html" class="dropdown-link" data-i18n="drop_ain_oulmene">Centre Aïn Oulmène (Sétif)</a></li>
+            </ul>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-i18n="nav_presentation">Présentation</a>
+            <ul class="dropdown">
+              <li class="dropdown-item"><a href="apropos.html" class="dropdown-link" data-i18n="drop_about">À Propos</a></li>
+              <li class="dropdown-item"><a href="departement.html" class="dropdown-link" data-i18n="drop_depts">Nos Départements</a></li>
+              <li class="dropdown-item"><a href="conseil.html" class="dropdown-link" data-i18n="drop_advice">Guide &amp; Conseils</a></li>
+            </ul>
+          </li>
+          <li class="navbar-item"><a href="equipe.html" class="navbar-link " data-i18n="nav_team">Notre équipe</a></li>
+          <li class="navbar-item"><a href="changer-de-centre.html" class="navbar-link " data-i18n="nav_transfer">Changer de centre</a></li>
+          <li class="navbar-item"><a href="informations-cnas.html" class="navbar-link " data-i18n="nav_cnas">Informations CNAS</a></li>
+          <li class="navbar-item"><a href="dialyse-vacances.html" class="navbar-link active" data-i18n="nav_vacation">Dialyse Vacances</a></li>
+          <li class="navbar-item"><a href="contact.html" class="navbar-link " data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Language Switcher Toggle (FR / EN / AR) -->
+        <div class="lang-selector">
+          <button type="button" class="lang-btn" aria-label="Changer de langue">
+            <ion-icon name="globe-outline"></ion-icon>
+            <span class="current-lang-text">FR</span>
+            <ion-icon name="chevron-down-outline" class="lang-arrow"></ion-icon>
+          </button>
+          <div class="lang-dropdown">
+            <button type="button" class="lang-option active" data-lang="fr">🇫🇷 Français</button>
+            <button type="button" class="lang-option" data-lang="en">🇬🇧 English</button>
+            <button type="button" class="lang-option" data-lang="ar">🇩🇿 العربية</button>
+          </div>
+        </div>
+
+        <a href="contact.html" class="btn-blue-solid" style="padding: 9px 18px; font-size: 1.35rem;">
+          <ion-icon name="mail-outline"></ion-icon>
+          <span data-i18n="nav_contact_btn">Nous contacter</span>
+        </a>
+
+        <button class="nav-open-btn" aria-label="Ouvrir menu" data-nav-toggler>
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+      </div>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+  <main>
+    <article>
+
+      <!-- =========================================================================
+           1. HERO DIALYSE VACANCES EN ALGÉRIE (Screenshot 3 / DyalyseEnAlgerie HERO)
+           ========================================================================= -->
+      <section class="vacances-hero-section" aria-label="Dialyse Vacances en Algérie">
+        <div class="container">
+          
+          <div data-reveal="left">
+            <span class="badge-pill-blue"><ion-icon name="medkit-outline"></ion-icon><span data-i18n="badge_boucenna_network">Réseau Boucenna</span></span>
+            <h1 class="hero-title-modern" data-i18n="hero_title_vacances">Dialyse Vacances<br><span>en Algérie</span></h1>
+            <p class="hero-subtitle-modern" data-i18n="hero_sub_vacances">Organisez vos séances de dialyse avant votre arrivée dans l'un de nos trois centres.</p>
+
+            <div class="btn-group">
+              <a href="#formulaire-vacances" class="btn-blue-solid">
+                <ion-icon name="calendar-outline"></ion-icon>
+                <span data-i18n="btn_organize_sessions">Organiser mes séances</span>
+              </a>
+              <a href="https://wa.me/213770313136?text=Bonjour%2C%20je%20souhaite%20organiser%20mes%20s%C3%A9ances%20de%20dialyse%20vacances%20en%20Alg%C3%A9rie." target="_blank" rel="noopener" class="btn-blue-outline">
+                <ion-icon name="logo-whatsapp" style="color: #25d366;"></ion-icon>
+                <span data-i18n="btn_whatsapp">WhatsApp</span>
+              </a>
+              <a href="tel:+2130770313136" class="btn-blue-outline">
+                <ion-icon name="call-outline"></ion-icon>
+                <span data-i18n="btn_call">Appeler</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 3 Center Preview Cards (Hero) -->
+          <div class="center-cards-grid" data-reveal="bottom">
+            
+            <!-- Cherchell -->
+            <div class="modern-center-card">
+              <img src="./assets/images/cherchcel/chh14.jpg" alt="Centre Cherchell - Tipaza" class="modern-center-card-img" loading="eager">
+              <div class="modern-center-card-content">
+                <h3 class="modern-center-card-title" style="justify-content: center; text-align: center;"><ion-icon name="location-sharp"></ion-icon><span data-i18n="card_cherchell_title">Cherchell – Tipaza</span></h3>
+                <a href="#formulaire-vacances" data-choose-center="Cherchell" class="btn-card-action" style="margin-top: auto;">
+                  <span data-i18n="btn_choose_center">Choisir ce centre</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Bouira -->
+            <div class="modern-center-card">
+              <img src="./assets/images/bouira/bouira.jpg" alt="Centre Bouira" class="modern-center-card-img" loading="eager">
+              <div class="modern-center-card-content">
+                <h3 class="modern-center-card-title" style="justify-content: center; text-align: center;"><ion-icon name="location-sharp"></ion-icon><span data-i18n="card_bouira_title">Bouira</span></h3>
+                <a href="#formulaire-vacances" data-choose-center="Bouira" class="btn-card-action" style="margin-top: auto;">
+                  <span data-i18n="btn_choose_center">Choisir ce centre</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Aïn Oulmène -->
+            <div class="modern-center-card">
+              <img src="./assets/images/ain oulmene/am.jpg" alt="Centre Aïn Oulmène - Sétif" class="modern-center-card-img" loading="eager">
+              <div class="modern-center-card-content">
+                <h3 class="modern-center-card-title" style="justify-content: center; text-align: center;"><ion-icon name="location-sharp"></ion-icon><span data-i18n="card_ain_oulmene_title">Aïn Oulmène – Sétif</span></h3>
+                <a href="#formulaire-vacances" data-choose-center="Aïn Oulmène" class="btn-card-action" style="margin-top: auto;">
+                  <span data-i18n="btn_choose_center">Choisir ce centre</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom 3 Pillars (Hero Bottom) -->
+          <div class="modern-value-props-bar" data-reveal="bottom">
+            <div class="modern-prop-item">
+              <ion-icon name="shield-checkmark-outline" class="modern-prop-icon"></ion-icon>
+              <div>
+                <h4 class="modern-prop-title" data-i18n="prop_quality_care">Soins de qualité</h4><p class="modern-prop-desc" data-i18n="prop_quality_care_desc">Prise en charge par des équipes médicales expérimentées.</p>
+              </div>
+            </div>
+
+            <div class="modern-prop-item">
+              <ion-icon name="heart-outline" class="modern-prop-icon"></ion-icon>
+              <div>
+                <h4 class="modern-prop-title" data-i18n="prop_peaceful_trip">Voyage en toute sérénité</h4><p class="modern-prop-desc" data-i18n="prop_peaceful_trip_desc">Nous organisons vos séances selon votre planning.</p>
+              </div>
+            </div>
+
+            <div class="modern-prop-item">
+              <ion-icon name="headset-outline" class="modern-prop-icon"></ion-icon>
+              <div>
+                <h4 class="modern-prop-title" data-i18n="prop_dedicated_help">Assistance dédiée</h4><p class="modern-prop-desc" data-i18n="prop_dedicated_help_desc">Notre équipe est à votre écoute avant, pendant et après votre séjour.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =========================================================================
+           2. DÉCOUVREZ NOS CENTRES DE DIALYSE (Screenshot 1 / DécouvrezNosCentres)
+           ========================================================================= -->
+      <section class="discover-section" id="centres">
+        <div class="container">
+          
+          <div style="position: relative; margin-bottom: 36px;" data-reveal="left">
+            <span class="badge-pill-blue" data-i18n="badge_our_centers">Nos centres</span>
+            <h2 class="hero-title-modern" style="font-size: clamp(2.8rem, 4.2vw, 4.2rem); margin-bottom: 12px;" data-i18n="title_discover_centers">Découvrez nos<br>centres de dialyse</h2>
+            <p style="font-size: 1.55rem; color: #475569; line-height: 1.6; max-width: 540px; margin-bottom: 10px;" data-i18n="sub_discover_centers">Le Réseau Boucenna vous accueille dans 3 centres de dialyse modernes et confortables.</p>
+            <p style="font-size: 1.45rem; font-weight: 600; color: #0066cc; display: flex; align-items: center; gap: 6px;"><ion-icon name="location-sharp"></ion-icon><span data-i18n="pin_3centers">3 centres à votre service en Algérie</span></p>
+
+            <!-- Algeria Map Shape Decoration -->
+            <svg class="algeria-map-decoration" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M70 20 C 110 25, 150 15, 170 40 C 180 60, 160 90, 150 120 C 140 150, 100 175, 75 160 C 50 145, 30 110, 35 70 C 40 40, 50 20, 70 20 Z" stroke="#0066cc" stroke-width="2" stroke-dasharray="4 4" fill="rgba(0, 102, 204, 0.03)" />
+              <circle cx="95" cy="50" r="7" fill="#0066cc" />
+              <circle cx="120" cy="58" r="7" fill="#0066cc" />
+              <circle cx="138" cy="72" r="7" fill="#0066cc" />
+            </svg>
+          </div>
+
+          <!-- 3 Center Detailed Cards -->
+          <div class="center-cards-grid" data-reveal="bottom">
+            
+            <!-- Cherchell -->
+            <div class="modern-center-card">
+              <img src="./assets/images/cherchcel/chch4.jpg" alt="Clinique Boucenna Cherchell" class="modern-center-card-img" loading="lazy">
+              <div class="modern-center-card-content">
+                <h3 class="modern-center-card-title" style="justify-content: center; text-align: center;"><ion-icon name="location-sharp"></ion-icon><span data-i18n="card_cherchell_title">Cherchell – Tipaza</span></h3>
+                <p class="modern-center-card-desc" data-i18n="cherchell_desc">Un cadre apaisant en bord de mer, équipé des dernières technologies pour votre confort et votre sécurité.</p>
+                <a href="centre-cherchell.html" class="btn-card-action" style="margin-top: auto;">
+                  <span data-i18n="btn_view_details">Voir les détails →</span>
+                  <ion-icon name="arrow-forward-outline" class="dir-flip"></ion-icon>
+                </a>
+              </div>
+            </div>
+
+            <!-- Bouira -->
+            <div class="modern-center-card">
+              <img src="./assets/images/bouira/bouira.jpg" alt="Clinique Boucenna Bouira" class="modern-center-card-img" loading="lazy">
+              <div class="modern-center-card-content">
+                <h3 class="modern-center-card-title" style="justify-content: center; text-align: center;"><ion-icon name="location-sharp"></ion-icon><span data-i18n="card_bouira_title">Bouira</span></h3>
+                <p class="modern-center-card-desc" data-i18n="bouira_desc">Un centre moderne au cœur de Bouira, pensé pour vous offrir des soins de qualité dans un environnement serein.</p>
+                <a href="centre-bouira.html" class="btn-card-action" style="margin-top: auto;">
+                  <span data-i18n="btn_view_details">Voir les détails →</span>
+                  <ion-icon name="arrow-forward-outline" class="dir-flip"></ion-icon>
+                </a>
+              </div>
+            </div>
+
+            <!-- Aïn Oulmène -->
+            <div class="modern-center-card">
+              <img src="./assets/images/ain oulmene/am.jpg" alt="Clinique Boucenna Aïn Oulmène" class="modern-center-card-img" loading="lazy">
+              <div class="modern-center-card-content">
+                <h3 class="modern-center-card-title" style="justify-content: center; text-align: center;"><ion-icon name="location-sharp"></ion-icon><span data-i18n="card_ain_oulmene_title">Aïn Oulmène – Sétif</span></h3>
+                <p class="modern-center-card-desc" data-i18n="ain_oulmene_desc">Des installations de haut standing et une équipe dédiée à votre bien-être, proche de chez vous.</p>
+                <a href="centre-ain-oulmene.html" class="btn-card-action" style="margin-top: auto;">
+                  <span data-i18n="btn_view_details">Voir les détails →</span>
+                  <ion-icon name="arrow-forward-outline" class="dir-flip"></ion-icon>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom 4 Pillars -->
+          <div class="modern-value-props-bar" data-reveal="bottom">
+            <div class="modern-prop-item">
+              <ion-icon name="shield-checkmark-outline" class="modern-prop-icon"></ion-icon>
+              <div>
+                <h4 class="modern-prop-title" data-i18n="prop_safety">Qualité & Sécurité</h4><p class="modern-prop-desc" data-i18n="prop_safety_desc">Des protocoles stricts et du matériel de pointe pour votre sécurité.</p>
+              </div>
+            </div>
+
+            <div class="modern-prop-item">
+              <ion-icon name="heart-outline" class="modern-prop-icon"></ion-icon>
+              <div>
+                <h4 class="modern-prop-title" data-i18n="prop_devoted_team">Équipe dévouée</h4><p class="modern-prop-desc" data-i18n="prop_devoted_team_desc">Des professionnels expérimentés à votre écoute à chaque séance.</p>
+              </div>
+            </div>
+
+            <div class="modern-prop-item">
+              <ion-icon name="easel-outline" class="modern-prop-icon"></ion-icon>
+              <div>
+                <h4 class="modern-prop-title" data-i18n="prop_optimal_comfort">Confort optimal</h4><p class="modern-prop-desc" data-i18n="prop_optimal_comfort_desc">Des espaces modernes et chaleureux pensés pour votre bien-être.</p>
+              </div>
+            </div>
+
+            <div class="modern-prop-item">
+              <ion-icon name="people-outline" class="modern-prop-icon"></ion-icon>
+              <div>
+                <h4 class="modern-prop-title" data-i18n="prop_proximity">Proximité & Accessibilité</h4><p class="modern-prop-desc" data-i18n="prop_proximity_desc">Trois centres idéalement situés pour vous simplifier le quotidien.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =========================================================================
+           3. POURQUOI CHOISIR BOUCENNA ? (Screenshot 2 / PQBoucenna)
+           ========================================================================= -->
+      <section class="why-boucenna-section">
+        <div class="container">
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-bottom: 40px;">
+            <div data-reveal="left">
+              <span class="badge-pill-blue" data-i18n="badge_why_us">Pourquoi nous choisir</span>
+              <h2 class="hero-title-modern" style="font-size: clamp(2.8rem, 4.2vw, 4.2rem); margin-bottom: 12px;" data-i18n="title_why_boucenna">Pourquoi choisir<br><span>Boucenna ?</span></h2>
+              <p style="font-size: 1.55rem; color: #475569; line-height: 1.65;" data-i18n="sub_why_boucenna">Notre mission est de vous offrir une prise en charge de qualité, en toute sécurité et en toute sérénité, où que vous soyez en Algérie.</p>
+            </div>
+
+            <div data-reveal="right">
+              <div style="border-radius: 20px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.06);">
+                <img src="./assets/images/about-banner.png" alt="Accueil moderne de la clinique Boucenna" style="width: 100%; height: 240px; object-fit: cover;">
+              </div>
+            </div>
+          </div>
+
+          <!-- 6 Feature Cards Grid -->
+          <div class="modern-why-grid" data-reveal="bottom">
+            
+            <div class="modern-why-card">
+              <div class="modern-why-icon-bubble">
+                <ion-icon name="people-outline"></ion-icon>
+              </div>
+              <h3 class="modern-why-title" data-i18n="why_1_title">Équipe expérimentée</h3><p class="modern-why-desc" data-i18n="why_1_desc">Des néphrologues et infirmiers spécialisés, à votre écoute, pour vous offrir les meilleurs soins.</p>
+            </div>
+
+            <div class="modern-why-card">
+              <div class="modern-why-icon-bubble">
+                <ion-icon name="business-outline"></ion-icon>
+              </div>
+              <h3 class="modern-why-title" data-i18n="why_2_title">Centres modernes</h3><p class="modern-why-desc" data-i18n="why_2_desc">Des centres de dialyse équipés des dernières technologies, conformes aux normes internationales.</p>
+            </div>
+
+            <div class="modern-why-card">
+              <div class="modern-why-icon-bubble">
+                <ion-icon name="person-outline"></ion-icon>
+              </div>
+              <h3 class="modern-why-title" data-i18n="why_3_title">Accompagnement personnalisé</h3><p class="modern-why-desc" data-i18n="why_3_desc">Un suivi adapté à vos besoins et à votre état de santé, avec une attention particulière à chaque patient.</p>
+            </div>
+
+            <div class="modern-why-card">
+              <div class="modern-why-icon-bubble">
+                <ion-icon name="calendar-outline"></ion-icon>
+              </div>
+              <h3 class="modern-why-title" data-i18n="why_4_title">Prise en charge organisée</h3><p class="modern-why-desc" data-i18n="why_4_desc">Nous planifions et coordonnons vos séances pour un séjour médical sans stress.</p>
+            </div>
+
+            <div class="modern-why-card">
+              <div class="modern-why-icon-bubble">
+                <ion-icon name="easel-outline"></ion-icon>
+              </div>
+              <h3 class="modern-why-title" data-i18n="why_5_title">Confort pendant les séances</h3><p class="modern-why-desc" data-i18n="why_5_desc">Un environnement propre, confortable et sécurisé pour votre bien-être tout au long de vos traitements.</p>
+            </div>
+
+            <div class="modern-why-card">
+              <div class="modern-why-icon-bubble">
+                <ion-icon name="headset-outline"></ion-icon>
+              </div>
+              <h3 class="modern-why-title" data-i18n="why_6_title">Assistance avant votre arrivée</h3><p class="modern-why-desc" data-i18n="why_6_desc">Notre équipe vous accompagne à distance pour préparer votre séjour en toute sérénité.</p>
+            </div>
+
+          </div>
+
+          <!-- Bottom Priority Banner -->
+          <div class="modern-priority-banner" data-reveal="bottom">
+            <div class="modern-priority-content">
+              <ion-icon name="heart-outline" class="modern-priority-icon"></ion-icon>
+              <div>
+                <h4 class="modern-priority-title" data-i18n="priority_health_title">Votre santé, notre priorité</h4><p class="modern-priority-desc" data-i18n="priority_health_desc">Avec Boucenna, vous bénéficiez d'un réseau de confiance engagé à vos côtés pour des soins de qualité, où que vous soyez.</p>
+              </div>
+            </div>
+            <a href="#formulaire-vacances" class="btn-blue-solid" style="white-space: nowrap;">
+              <ion-icon name="calendar-outline"></ion-icon>
+              <span data-i18n="btn_organize_sessions">Organiser mes séances</span>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =========================================================================
+           4. VOTRE PARCOURS DE DIALYSE EN 4 ÉTAPES (Screenshot 4 / 4StepsDyalyse)
+           ========================================================================= -->
+      <section class="timeline-section" id="parcours">
+        <div class="container">
+          
+          <div style="text-align: center; max-width: 680px; margin: 0 auto 36px auto;" data-reveal="bottom">
+            <span class="badge-pill-blue" data-i18n="vac_commitment_badge">Réseau Boucenna</span>
+            <h2 class="hero-title-modern" style="font-size: clamp(2.8rem, 4.2vw, 4.2rem); margin-bottom: 12px;" data-i18n="title_4steps">Votre parcours<br><span>de dialyse en 4 étapes</span></h2>
+            <p style="font-size: 1.55rem; color: #475569; line-height: 1.65;" data-i18n="sub_4steps">Nous vous accompagnons à chaque étape pour organiser vos séances de dialyse en toute sérénité.</p>
+          </div>
+
+          <div class="journey-track" data-reveal="bottom">
+            
+            <div class="journey-step-card">
+              <div class="step-badge">1</div>
+              <div class="step-icon-wrap">
+                <ion-icon name="calendar-outline"></ion-icon>
+              </div>
+              <h3 style="font-size: 1.65rem; font-weight: 700; color: #0f172a; margin-bottom: 8px;" data-i18n="step1_title">1. Envoyez vos dates de séjour</h3><p style="font-size: 1.35rem; color: #64748b; line-height: 1.6;" data-i18n="step1_desc">Indiquez vos dates de séjour, la destination souhaitée et vos coordonnées via notre formulaire ou par téléphone.</p>
+            </div>
+
+            <div class="journey-step-card">
+              <div class="step-badge">2</div>
+              <div class="step-icon-wrap">
+                <ion-icon name="people-outline"></ion-icon>
+              </div>
+              <h3 style="font-size: 1.65rem; font-weight: 700; color: #0f172a; margin-bottom: 8px;" data-i18n="step2_title">2. Vérification des disponibilités</h3><p style="font-size: 1.35rem; color: #64748b; line-height: 1.6;" data-i18n="step2_desc">Nous recherchons le centre Boucenna le plus proche de votre lieu de séjour et vérifions les créneaux disponibles.</p>
+            </div>
+
+            <div class="journey-step-card">
+              <div class="step-badge">3</div>
+              <div class="step-icon-wrap">
+                <ion-icon name="document-text-outline"></ion-icon>
+              </div>
+              <h3 style="font-size: 1.65rem; font-weight: 700; color: #0f172a; margin-bottom: 8px;" data-i18n="step3_title">3. Votre dossier est étudié</h3><p style="font-size: 1.35rem; color: #64748b; line-height: 1.6;" data-i18n="step3_desc">Nous analysons votre dossier médical en toute confidentialité pour garantir la continuité et la sécurité de vos soins.</p>
+            </div>
+
+            <div class="journey-step-card">
+              <div class="step-badge">4</div>
+              <div class="step-icon-wrap">
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+              </div>
+              <h3 style="font-size: 1.65rem; font-weight: 700; color: #0f172a; margin-bottom: 8px;" data-i18n="step4_title">4. Confirmation de vos séances</h3><p style="font-size: 1.35rem; color: #64748b; line-height: 1.6;" data-i18n="step4_desc">Une confirmation vous est envoyée avec toutes les informations pratiques pour le bon déroulement de vos séances.</p>
+            </div>
+
+          </div>
+
+          <div class="modern-priority-banner" data-reveal="bottom">
+            <div class="modern-priority-content">
+              <ion-icon name="shield-checkmark-outline" class="modern-priority-icon"></ion-icon>
+              <div>
+                <h4 class="modern-priority-title" data-i18n="steps_banner_title">Un accompagnement humain et réactif</h4><p class="modern-priority-desc" data-i18n="steps_banner_desc">Notre équipe dédiée est à votre écoute avant, pendant et après votre séjour. Votre tranquillité d'esprit est notre priorité.</p>
+              </div>
+            </div>
+            <a href="contact.html" class="btn-blue-outline" style="white-space: nowrap;">
+              <ion-icon name="headset-outline"></ion-icon>
+              <span>Nous contacter</span>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =========================================================================
+           5. PRÉPAREZ VOTRE SÉJOUR (WhatsApp Request Workflow - No Database)
+           ========================================================================= -->
+      <section style="padding-block: 80px; background-color: var(--clr-bg-page);" id="formulaire-vacances">
+        <div class="container">
+          
+          <div class="form-layout-wrapper">
+            
+            <div class="vacation-form-card" data-reveal="left">
+              <h2 style="font-size: 2.5rem; font-weight: 800; color: #0f172a; margin-bottom: 8px;" data-i18n="form_title">
+                Préparez votre séjour de dialyse
+              </h2>
+              <p style="font-size: 1.45rem; color: #64748b; line-height: 1.6; margin-bottom: 24px;" data-i18n="form_subtitle">
+                Remplissez ce formulaire et notre équipe vous accompagnera pour organiser un séjour de dialyse sûr, confortable et adapté à vos besoins.
+              </p>
+
+              <!-- Informative WhatsApp Alert -->
+              <div id="form-alert-success" class="form-alert success" style="display: none;">
+                <ion-icon name="logo-whatsapp" style="font-size: 2.4rem; color: #25d366; flex-shrink: 0;"></ion-icon>
+                <div>
+                  <strong data-i18n="vac_form_alert_success_title">Votre demande est prête !</strong><br>
+                  <span data-i18n="vac_form_alert_success_desc">WhatsApp va s'ouvrir avec votre message prérempli. Vérifiez les informations puis appuyez sur <strong>Envoyer</strong> pour transmettre votre demande à l'équipe Boucenna.</span>
+                </div>
+              </div>
+
+              <!-- Error Alert -->
+              <div id="form-alert-error" class="form-alert error" style="display: none;">
+                <ion-icon name="alert-circle" style="font-size: 2.2rem; flex-shrink: 0;"></ion-icon>
+                <div id="form-error-msg" data-i18n="vac_form_error_required">Veuillez renseigner tous les champs obligatoires (*).</div>
+              </div>
+
+              <form id="vacation-request-form">
+                
+                <div class="form-group">
+                  <label class="form-label" for="vacation-name" data-i18n="form_name_label">Nom et prénom <span class="req">*</span></label>
+                  <div class="form-input-icon-wrap"><ion-icon name="person-outline" aria-hidden="true"></ion-icon><input type="text" id="vacation-name" name="full_name" class="form-control-custom" placeholder="Ex. : Jean Dupont" required></div>
+                </div>
+
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label class="form-label" for="vacation-country" data-i18n="form_country_label">Pays de résidence <span class="req">*</span></label>
+                    <div class="form-input-icon-wrap"><ion-icon name="globe-outline" aria-hidden="true"></ion-icon><select id="vacation-country" name="country" class="form-control-custom" required>
+                      <option value="" disabled selected data-i18n="opt_select_country">Sélectionnez votre pays</option>
+                      <option value="France" data-i18n="opt_france">France</option>
+                      <option value="Algérie" data-i18n="opt_algeria">Algérie (inter-wilaya)</option>
+                      <option value="Canada" data-i18n="opt_canada">Canada</option>
+                      <option value="Belgique" data-i18n="opt_belgium">Belgique</option>
+                      <option value="Suisse" data-i18n="opt_switzerland">Suisse</option>
+                      <option value="Autre" data-i18n="opt_other">Autre</option>
+                    </select></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="vacation-phone" data-i18n="form_phone_label">Téléphone / WhatsApp <span class="req">*</span></label>
+                    <div class="form-input-icon-wrap"><ion-icon name="call-outline" aria-hidden="true"></ion-icon><input type="tel" id="vacation-phone" name="phone" class="form-control-custom" placeholder="+33 6 12 34 56 78" required></div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="vacation-stay-city" data-i18n="form_city_label">Ville de séjour en Algérie <span class="req">*</span></label>
+                  <div class="form-input-icon-wrap"><ion-icon name="location-outline" aria-hidden="true"></ion-icon><input type="text" id="vacation-stay-city" name="stay_city" class="form-control-custom" placeholder="Ex. : Cherchell, Bouira, Sétif..." required></div>
+                </div>
+
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label class="form-label" for="vacation-arrival" data-i18n="form_arrival_label">Date d'arrivée <span class="req">*</span></label>
+                    <div class="form-input-icon-wrap"><ion-icon name="calendar-outline" aria-hidden="true"></ion-icon><input type="date" id="vacation-arrival" name="arrival_date" class="form-control-custom" required></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="vacation-departure" data-i18n="form_departure_label">Date de départ <span class="req">*</span></label>
+                    <div class="form-input-icon-wrap"><ion-icon name="calendar-outline" aria-hidden="true"></ion-icon><input type="date" id="vacation-departure" name="departure_date" class="form-control-custom" required></div>
+                  </div>
+                </div>
+
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label class="form-label" for="vacation-center-select" data-i18n="form_center_label">Centre souhaité <span class="req">*</span></label>
+                    <div class="form-input-icon-wrap"><ion-icon name="business-outline" aria-hidden="true"></ion-icon><select id="vacation-center-select" name="center" class="form-control-custom" required>
+                      <option value="" disabled selected data-i18n="opt_choose_center">Choisir un centre</option>
+                      <option value="Cherchell" data-i18n="opt_cherchell">Cherchell (Tipaza)</option>
+                      <option value="Bouira" data-i18n="opt_bouira">Bouira</option>
+                      <option value="Aïn Oulmène" data-i18n="opt_ain_oulmene">Aïn Oulmène (Sétif)</option>
+                    </select></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="vacation-sessions" data-i18n="form_sessions_label">Nombre approximatif de séances <span class="req">*</span></label>
+                    <div class="form-input-icon-wrap"><ion-icon name="medical-outline" aria-hidden="true"></ion-icon><input type="text" id="vacation-sessions" name="sessions_count" class="form-control-custom" placeholder="Ex. : 6, 12, 18..." required></div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="vacation-pref-contact" data-i18n="form_contact_pref_label">Moyen de contact préféré <span class="req">*</span></label>
+                  <div class="form-input-icon-wrap"><ion-icon name="chatbubble-outline" aria-hidden="true"></ion-icon><select id="vacation-pref-contact" name="preferred_contact" class="form-control-custom" required>
+                    <option value="WhatsApp" selected data-i18n="opt_whatsapp">WhatsApp</option>
+                    <option value="Téléphone" data-i18n="opt_phone">Téléphone</option>
+                    <option value="Email" data-i18n="opt_email">Email</option>
+                  </select></div>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="vacation-notes" data-i18n="form_notes_label">Informations complémentaires (facultatif)</label>
+                  <div class="form-input-icon-wrap textarea-wrap"><ion-icon name="document-text-outline" aria-hidden="true"></ion-icon><textarea id="vacation-notes" name="additional_notes" class="form-control-custom" placeholder="Précisez vos besoins particuliers, préférences d'hébergement..."></textarea></div>
+                </div>
+
+                <div class="form-security-note">
+                  <ion-icon name="shield-checkmark-outline"></ion-icon>
+                  <span data-i18n="form_security_text">Vos informations sont confidentielles et utilisées uniquement pour préparer votre séjour.</span>
+                </div>
+
+                <button type="submit" id="vacation-submit-btn" class="btn-blue-solid w-100" style="padding: 14px; font-size: 1.55rem; display: inline-flex; align-items: center; justify-content: center; gap: 8px; background-color: #25d366; border-color: #25d366; color: #ffffff;">
+                  <ion-icon name="logo-whatsapp" style="font-size: 2rem;"></ion-icon>
+                  <span data-i18n="form_btn_submit">Envoyer ma demande via WhatsApp</span>
+                </button>
+
+              </form>
+            </div>
+
+            <div class="form-side-panel" data-reveal="right" style="display: flex; flex-direction: column; gap: 20px;">
+              
+              <div class="reassurance-card">
+                <div class="reassurance-image">
+                  <img src="./assets/images/about-banner.png" alt="Accompagnement patient Boucenna">
+                </div>
+                
+                <h3 style="font-size: 1.8rem; font-weight: 700; color: #0f172a; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;"><ion-icon name="shield-checkmark-outline" style="color: #0066cc; font-size: 2.2rem;"></ion-icon><span data-i18n="reassure_title">Vous êtes entre de bonnes mains</span></h3>
+                
+                <p style="font-size: 1.38rem; color: #64748b; line-height: 1.6;" data-i18n="reassure_desc">Notre équipe de coordonnateurs patients vous accompagne à chaque étape : planification des séances, accueil, transport et suivi médical personnalisé.</p>
+
+                <ul class="reassurance-list">
+                  <li><ion-icon name="checkmark-circle"></ion-icon><span data-i18n="reassure_1">Prise en charge complète et sécurisée</span></li>
+                  <li><ion-icon name="checkmark-circle"></ion-icon><span data-i18n="reassure_2">Équipes médicales expérimentées</span></li>
+                  <li><ion-icon name="checkmark-circle"></ion-icon><span data-i18n="reassure_3">Centres modernes et confortables</span></li>
+                </ul>
+              </div>
+
+              <div class="modern-faq-side-card" style="text-align: left; padding: 22px;">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                  <ion-icon name="headset-outline" style="font-size: 2.6rem; color: #0066cc;"></ion-icon>
+                  <h4 style="font-size: 1.65rem; font-weight: 700; color: #0f172a; margin: 0;" data-i18n="faq_side_title">Besoin d'aide personnalisée ?</h4>
+                </div>
+                <p style="font-size: 1.32rem; color: #64748b; margin-bottom: 14px;" data-i18n="faq_side_desc">
+                  Notre équipe est à votre écoute pour répondre à toutes vos questions et vous accompagner dans l'organisation de votre dialyse en voyage.
+                </p>
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                  <a href="https://wa.me/213770313136" target="_blank" rel="noopener" class="btn-green-whatsapp" style="width: 100%; justify-content: center; padding: 10px;">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                    <span data-i18n="faq_btn_whatsapp">Nous contacter sur WhatsApp</span>
+                  </a>
+                  <a href="tel:+2130770313136" class="btn-blue-outline" style="width: 100%; justify-content: center; padding: 10px;">
+                    <ion-icon name="call-outline"></ion-icon>
+                    <span data-i18n="faq_btn_call">Nous appeler</span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =========================================================================
+           6. QUESTIONS FRÉQUENTES SUR LA DIALYSE EN VOYAGE (Screenshot 5 / QuestionsFréquentes)
+           ========================================================================= -->
+      <section style="padding-block: 80px; background-color: #ffffff;" id="faq">
+        <div class="container">
+          
+          <div style="margin-bottom: 36px;" data-reveal="left">
+            <span class="badge-pill-blue" data-i18n="badge_faq">FAQ</span>
+            <h2 class="hero-title-modern" style="font-size: clamp(2.8rem, 4.2vw, 4.2rem); margin-bottom: 12px;" data-i18n="title_faq">Questions fréquentes<br><span>sur la dialyse en voyage</span></h2>
+            <p style="font-size: 1.55rem; color: #475569; line-height: 1.65; max-width: 650px;" data-i18n="sub_faq">Retrouvez les réponses aux questions les plus courantes pour organiser votre prise en charge en dialyse lors de vos déplacements en toute sérénité.</p>
+          </div>
+
+          <div class="faq-layout">
+            
+            <div class="faq-list" data-reveal="left">
+              
+              <!-- Q1 -->
+              <div class="modern-faq-item active">
+                <button type="button" class="modern-faq-btn faq-btn-trigger">
+                  <span class="modern-faq-q-text"><ion-icon name="document-text-outline"></ion-icon><span data-i18n="faq_q1">Quels documents dois-je envoyer ?</span></span>
+                  <ion-icon name="chevron-down-outline" class="modern-faq-arrow"></ion-icon>
+                </button>
+                <div class="modern-faq-answer"><p data-i18n="faq_a1">Nous avons besoin de votre lettre de demande, de votre dernière ordonnance de dialyse et de vos résultats médicaux récents. Une fois ces documents reçus, nous pourrons organiser votre prise en charge dans le centre le plus adapté à vos besoins.</p></div>
+              </div>
+
+              <!-- Q2 -->
+              <div class="modern-faq-item">
+                <button type="button" class="modern-faq-btn faq-btn-trigger">
+                  <span class="modern-faq-q-text"><ion-icon name="calendar-outline"></ion-icon><span data-i18n="faq_q2">Combien de temps avant mon voyage dois-je réserver ?</span></span>
+                  <ion-icon name="chevron-down-outline" class="modern-faq-arrow"></ion-icon>
+                </button>
+                <div class="modern-faq-answer"><p data-i18n="faq_a2">Nous vous recommandons de réserver entre 2 et 4 semaines avant votre arrivée pour vous assurer de la disponibilité des créneaux souhaités dans le centre Boucenna de votre choix.</p></div>
+              </div>
+
+              <!-- Q3 -->
+              <div class="modern-faq-item">
+                <button type="button" class="modern-faq-btn faq-btn-trigger">
+                  <span class="modern-faq-q-text"><ion-icon name="shield-checkmark-outline"></ion-icon><span data-i18n="faq_q3">Comment fonctionne la confirmation de mes séances ?</span></span>
+                  <ion-icon name="chevron-down-outline" class="modern-faq-arrow"></ion-icon>
+                </button>
+                <div class="modern-faq-answer"><p data-i18n="faq_a3">Après étude et validation de votre dossier par notre équipe médicale, vous recevez une confirmation officielle par email ou WhatsApp avec le planning complet de vos séances.</p></div>
+              </div>
+
+              <!-- Q4 -->
+              <div class="modern-faq-item">
+                <button type="button" class="modern-faq-btn faq-btn-trigger">
+                  <span class="modern-faq-q-text"><ion-icon name="location-outline"></ion-icon><span data-i18n="faq_q4">Puis-je choisir mon centre Boucenna ?</span></span>
+                  <ion-icon name="chevron-down-outline" class="modern-faq-arrow"></ion-icon>
+                </button>
+                <div class="modern-faq-answer"><p data-i18n="faq_a4">Absolument. Vous pouvez choisir librement entre Cherchell (Tipaza/Bord de mer), Bouira (Kabylie/Centre) et Aïn Oulmène (Sétif/Hauts-Plateaux).</p></div>
+              </div>
+
+              <!-- Q5 -->
+              <div class="modern-faq-item">
+                <button type="button" class="modern-faq-btn faq-btn-trigger">
+                  <span class="modern-faq-q-text"><ion-icon name="call-outline"></ion-icon><span data-i18n="faq_q5">Comment vous contacter ?</span></span>
+                  <ion-icon name="chevron-down-outline" class="modern-faq-arrow"></ion-icon>
+                </button>
+                <div class="modern-faq-answer"><p data-i18n="faq_a5">Vous pouvez nous joindre directement au 0770 31 31 36 ou 0661 93 53 53, par WhatsApp avec réponse immédiate, ou par email à transmalades.boucenna@gmail.com.</p></div>
+              </div>
+
+            </div>
+
+            <!-- Right FAQ Assistance Card -->
+            <div class="modern-faq-side-card" data-reveal="right">
+              <div class="modern-faq-side-icon-bubble">
+                <ion-icon name="headset-outline"></ion-icon>
+              </div>
+              <h3 class="modern-why-title" style="font-size: 1.9rem; margin-bottom: 8px;" data-i18n="faq_side_title">Besoin d'aide personnalisée ?</h3>
+              <p style="font-size: 1.35rem; color: #64748b; line-height: 1.6; margin-bottom: 20px;" data-i18n="faq_side_desc">Notre équipe est à votre écoute pour répondre à toutes vos questions et vous accompagner dans l'organisation de votre dialyse en voyage.</p>
+              <div style="display: flex; flex-direction: column; gap: 10px;">
+                <a href="https://wa.me/213770313136" target="_blank" rel="noopener" class="btn-blue-solid w-100" style="padding: 12px;">
+                  <ion-icon name="logo-whatsapp"></ion-icon>
+                  <span data-i18n="faq_btn_whatsapp">Nous contacter sur WhatsApp</span>
+                </a>
+                <a href="tel:+2130770313136" class="btn-blue-outline w-100" style="padding: 12px;">
+                  <ion-icon name="call-outline"></ion-icon>
+                  <span data-i18n="faq_btn_call">Nous appeler</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom Engagement Banner (Screenshot 5 Bottom) -->
+          <div class="modern-priority-banner" data-reveal="bottom" style="margin-top: 40px;">
+            <div class="modern-priority-content">
+              <ion-icon name="shield-checkmark-outline" class="modern-priority-icon"></ion-icon>
+              <div>
+                <h4 class="modern-priority-title" data-i18n="vac_commitment_title">Notre engagement à vos côtés</h4><p class="modern-priority-desc" data-i18n="vac_commitment_sub">Nous mettons tout en œuvre pour vous offrir une prise en charge de qualité, où que vous soyez.</p>
+              </div>
+            </div>
+            
+            <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+              <div style="display: flex; align-items: center; gap: 6px;">
+                <ion-icon name="heart-outline" style="color: #0066cc; font-size: 1.9rem;"></ion-icon>
+                <span style="font-size: 1.32rem; font-weight: 600; color: #0f172a;" data-i18n="vac_c1_title">Écoute & bienveillance</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 6px;">
+                <ion-icon name="shield-checkmark-outline" style="color: #0066cc; font-size: 1.9rem;"></ion-icon>
+                <span style="font-size: 1.32rem; font-weight: 600; color: #0f172a;" data-i18n="vac_c2_title">Qualité & sécurité</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 6px;">
+                <ion-icon name="people-outline" style="color: #0066cc; font-size: 1.9rem;"></ion-icon>
+                <span style="font-size: 1.32rem; font-weight: 600; color: #0f172a;" data-i18n="vac_c3_title">Accompagnement personnalisé</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =========================================================================
+           7. BESOIN D'AIDE ? NOTRE ÉQUIPE EST À VOTRE ÉCOUTE (Screenshot 7 / BesoinD'aide)
+           ========================================================================= -->
+      <section style="padding-block: 80px; background-color: var(--clr-bg-page);" id="besoin-daide">
+        <div class="container">
+          
+          <div class="help-section-box" data-reveal="bottom">
+            
+            <div data-reveal="left">
+              <span class="badge-pill-blue" data-i18n="badge_boucenna_network">Réseau Boucenna</span>
+              <h2 class="hero-title-modern" style="font-size: clamp(2.6rem, 4vw, 3.8rem); margin-bottom: 14px;" data-i18n="title_help_box">Besoin d'aide ?<br><span>Notre équipe est à votre écoute</span></h2>
+              <p style="font-size: 1.55rem; color: #475569; line-height: 1.65; margin-bottom: 24px;" data-i18n="sub_help_box">Vous venez de l'étranger et vous avez besoin d'organiser vos séances de dialyse avant votre voyage en Algérie ? Notre équipe Boucenna vous accompagne à chaque étape pour planifier sereinement vos séances dans l'un de nos centres.</p>
+
+              <div class="btn-group" style="margin-bottom: 20px;">
+                <a href="https://wa.me/213770313136?text=Bonjour%2C%20je%20souhaite%20organiser%20mon%20s%C3%A9jour%20de%20dialyse." target="_blank" rel="noopener" class="btn-blue-solid">
+                  <ion-icon name="logo-whatsapp"></ion-icon>
+                  <span data-i18n="btn_whatsapp">WhatsApp</span>
+                </a>
+                <a href="tel:+2130770313136" class="btn-blue-outline">
+                  <ion-icon name="call-outline"></ion-icon>
+                  <span data-i18n="btn_call">Appeler</span>
+                </a>
+                <a href="contact.html" class="btn-blue-outline">
+                  <ion-icon name="mail-outline"></ion-icon>
+                  <span data-i18n="btn_write_us">Nous écrire</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="help-media-col" data-reveal="right">
+              <img src="./assets/images/about-banner.png" alt="Assistante médicale de coordination Boucenna">
+              <div class="help-floating-badge">
+                <ion-icon name="headset-outline" style="font-size: 2.6rem; color: #0066cc; flex-shrink: 0;"></ion-icon>
+                <p style="font-size: 1.25rem; color: #0f172a; font-weight: 500; margin: 0; line-height: 1.4;"><strong data-i18n="vac_side_avail">Notre équipe patient est disponible</strong><br><span data-i18n="vac_side_hours">du lundi au samedi de 8h à 18h.</span><br><span data-i18n="vac_side_here">Nous sommes là pour vous.</span></p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom 4 Highlights -->
+          <div class="modern-value-props-bar" data-reveal="bottom">
+            <div class="modern-prop-item">
+              <ion-icon name="person-outline" class="modern-prop-icon"></ion-icon>
+              <div>
+                <h4 class="modern-prop-title" data-i18n="vac_hl1_title">Accompagnement personnalisé</h4><p class="modern-prop-desc" data-i18n="vac_hl1_desc">Un interlocuteur dédié pour organiser votre prise en charge.</p>
+              </div>
+            </div>
+
+            <div class="modern-prop-item">
+              <ion-icon name="calendar-outline" class="modern-prop-icon"></ion-icon>
+              <div>
+                <h4 class="modern-prop-title" data-i18n="vac_hl2_title">Organisation avant départ</h4><p class="modern-prop-desc" data-i18n="vac_hl2_desc">Planifiez vos séances de dialyse à l'avance en toute sérénité.</p>
+              </div>
+            </div>
+
+            <div class="modern-prop-item">
+              <ion-icon name="shield-checkmark-outline" class="modern-prop-icon"></ion-icon>
+              <div>
+                <h4 class="modern-prop-title" data-i18n="vac_hl3_title">Soins de qualité et sécurité</h4><p class="modern-prop-desc" data-i18n="vac_hl3_desc">Des centres modernes avec des équipes médicales expérimentées.</p>
+              </div>
+            </div>
+
+            <div class="modern-prop-item">
+              <ion-icon name="airplane-outline" class="modern-prop-icon"></ion-icon>
+              <div>
+                <h4 class="modern-prop-title" data-i18n="vac_hl4_title">Voyage en toute tranquillité</h4><p class="modern-prop-desc" data-i18n="vac_hl4_desc">Profitez de votre séjour en Algérie, nous prenons soin de vous.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+    <!-- FOOTER (Screen 9 Reference A) -->
+  <footer class="footer-screen9">
+    <div class="container">
+      <div class="footer-screen9-grid">
+        
+        <!-- Col 1: Brand & Info -->
+        <div>
+          <a href="index.html" class="logo">
+            <img src="./assets/images/SVG/new/logo-long-light.png" alt="Dialyses Boucenna" class="logo-footer-img" width="180" height="44" loading="lazy">
+          </a>
+          <p style="margin-top: 14px; color: #94a3b8; font-size: 1.35rem; line-height: 1.6;" data-i18n="footer_tagline">
+            Vos soins rénaux, notre priorité.<br>
+            Transport sanitaire, consultations et pharmacie.
+          </p>
+          <div class="social-list" style="margin-top: 18px;">
+            <a href="https://wa.me/213770313136" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp"><ion-icon name="logo-whatsapp"></ion-icon></a>
+            <a href="tel:+2130770313136" class="social-link" aria-label="Téléphone"><ion-icon name="call-outline"></ion-icon></a>
+            <a href="mailto:transmalades.boucenna@gmail.com" class="social-link" aria-label="Email"><ion-icon name="mail-outline"></ion-icon></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Cherchell -->
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_c2_title">Boucenna Cherchell</h4>
+          <p class="footer-col-address" data-i18n="footer_c2_address">Cité Zitouni El Kheir<br>Cherchell, Tipaza</p>
+          <span class="footer-col-phone" dir="ltr"><bdi><span data-i18n="label_phone_whatsapp">Tél / WhatsApp :</span> +213 (0) 770 31 31 36</bdi></span>
+          <a href="https://maps.app.goo.gl/dnBsbRCGPkD7GJVZ9" target="_blank" rel="noopener" class="footer-col-maplink">
+            <ion-icon name="location-outline"></ion-icon>
+            <span data-i18n="footer_maps_link">Itinéraire Google Maps</span>
+          </a>
+        </div>
+
+        <!-- Col 3: Bouira -->
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_c3_title">Boucenna Bouira</h4>
+          <p class="footer-col-address" data-i18n="footer_c3_address">Cité 2000 Logements<br>Bouira</p>
+          <span class="footer-col-phone" dir="ltr"><bdi><span data-i18n="label_phone_whatsapp">Tél / WhatsApp :</span> +213 (0) 770 31 31 36</bdi></span>
+          <a href="https://maps.app.goo.gl/CTBTxc24xgg93dGW8" target="_blank" rel="noopener" class="footer-col-maplink">
+            <ion-icon name="location-outline"></ion-icon>
+            <span data-i18n="footer_maps_link">Itinéraire Google Maps</span>
+          </a>
+        </div>
+
+        <!-- Col 4: Ain Oulmene -->
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_c4_title">Boucenna Aïn Oulmène</h4>
+          <p class="footer-col-address" data-i18n="footer_c4_address">Aïn Oulmène, Sétif<br>(Plateau & Pharmacie)</p>
+          <span class="footer-col-phone" dir="ltr"><bdi><span data-i18n="label_phone_whatsapp">Tél / WhatsApp :</span> +213 (0) 770 31 31 36</bdi></span>
+          <a href="https://maps.app.goo.gl/xXewNB57cKCSLivw7?g_st=aw" target="_blank" rel="noopener" class="footer-col-maplink">
+            <ion-icon name="location-outline"></ion-icon>
+            <span data-i18n="footer_maps_link">Itinéraire Google Maps</span>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-screen9-bottom">
+        <p data-i18n="footer_copyright">© 2025 Clinique Dialyse Boucenna — Tous droits réservés.</p>
+        <div class="footer-legal-links">
+          <a href="apropos.html" data-i18n="nav_about">À Propos</a>
+          <a href="departement.html" data-i18n="nav_depts">Départements</a>
+          <a href="conseil.html" data-i18n="nav_advice">Conseils</a>
+          <a href="contact.html" data-i18n="nav_contact">Contact</a>
+          <a href="sitemap.xml" data-i18n="footer_sitemap">Plan du site</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/213770313136?text=Bonjour%2C%20je%20souhaite%20des%20informations%20sur%20les%20centres%20de%20dialyse%20Boucenna." target="_blank" rel="noopener" class="floating-whatsapp" aria-label="Discuter sur WhatsApp">
+    <ion-icon name="logo-whatsapp"></ion-icon>
+    <span class="tooltip" data-i18n="whatsapp_tooltip">Besoin d'aide ? Écrivez-nous</span>
+  </a>
+
+  <!-- BACK TO TOP -->
+  <a href="#top" class="back-top-btn" aria-label="Haut de page" data-back-top-btn><ion-icon name="chevron-up"></ion-icon></a>
+
+  <!-- Scripts -->
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
