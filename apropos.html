@@ -3,14 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="color-scheme" content="light">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>À Propos — Réseau de centres d'hémodialyse Boucenna</title>
+  <!-- Canonical & Hreflang SEO -->
+  <link rel="canonical" href="https://www.dialyseboucenna.com/apropos.html">
+  <link rel="alternate" hreflang="fr" href="https://www.dialyseboucenna.com/apropos.html?lang=fr">
+  <link rel="alternate" hreflang="ar" href="https://www.dialyseboucenna.com/apropos.html?lang=ar">
+  <link rel="alternate" hreflang="en" href="https://www.dialyseboucenna.com/apropos.html?lang=en">
+  <link rel="alternate" hreflang="x-default" href="https://www.dialyseboucenna.com/apropos.html">
   <meta name="description" content="Découvrez le Réseau Boucenna, leader en hémodialyse en Algérie. Notre mission, notre équipe médicale et nos engagements pour votre bien-être.">
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- Schema.org JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalOrganization",
+    "name": "Réseau de centres d'hémodialyse Boucenna",
+    "url": "https://www.dialyseboucenna.com/",
+    "logo": "https://www.dialyseboucenna.com/assets/images/SVG/new/logo-long-light.png",
+    "telephone": "+213770313136",
+    "department": [
+      {
+        "@type": "MedicalClinic",
+        "name": "Centre d'Hémodialyse Boucenna – Cherchell",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Cité Zitouni El Kheir",
+          "addressLocality": "Cherchell",
+          "addressRegion": "Tipaza",
+          "addressCountry": "DZ"
+        },
+        "telephone": "+213770313136"
+      },
+      {
+        "@type": "MedicalClinic",
+        "name": "Centre d'Hémodialyse Boucenna – Bouira",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Cité 2000 Logements",
+          "addressLocality": "Bouira",
+          "addressRegion": "Bouira",
+          "addressCountry": "DZ"
+        },
+        "telephone": "+213770313136"
+      },
+      {
+        "@type": "MedicalClinic",
+        "name": "Centre d'Hémodialyse Boucenna – Aïn Oulmène",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Aïn Oulmène",
+          "addressRegion": "Sétif",
+          "addressCountry": "DZ"
+        },
+        "telephone": "+213770313136"
+      }
+    ]
+  }
+  </script>
 </head>
 <body id="top">
   <div class="preloader" data-preloader><div class="circle"></div></div>
@@ -106,7 +162,7 @@
       <section style="padding-block: 70px; background-color: #ffffff;">
         <div class="container">
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: center;" data-reveal="bottom">
-            <div><img src="./assets/images/cherchcel/chch4.jpg" alt="Clinique Boucenna Cherchell" style="width: 100%; border-radius: 16px; object-fit: cover; max-height: 400px;"></div>
+            <div><img src="./assets/images/cherchcel/cherchel_real_main.jpg" alt="Clinique Boucenna Cherchell" style="width: 100%; border-radius: 16px; object-fit: cover; max-height: 400px;"></div>
             <div>
               <span class="badge-pill-blue" data-i18n="about_section1_badge">Notre réseau</span>
               <h2 class="hero-title-modern" style="font-size: clamp(2.4rem, 3.2vw, 3.4rem); margin-bottom: 16px;" data-i18n="about_section1_title">Leader de l'Assistance<br><span>Médicale en Algérie</span></h2>
@@ -131,7 +187,9 @@
                 <li style="display: flex; align-items: flex-start; gap: 12px; font-size: 1.45rem; color: #334155;"><span style="width:10px;height:10px;border-radius:50%;background:#f59e0b;flex-shrink:0;margin-top:6px;"></span><span data-i18n="about_doctor_b3">Passionné par l'innovation et l'amélioration du bien-être des patients, il conçoit et déploie des solutions de santé avancées alignées sur les besoins réels du terrain.</span></li>
               </ul>
             </div>
-            <div><img src="./assets/images/DrNassim.jpg" alt="Dr Nassim Boucenna, Néphrologue et Directeur Médical" style="width: 100%; border-radius: 16px; object-fit: cover; max-height: 480px;"></div>
+            <div style="text-align: center;">
+              <img src="./assets/images/DrNassim.png" alt="Dr Nassim Boucenna, Néphrologue et Directeur Médical" style="width: 100%; max-width: 440px; border-radius: 20px; object-fit: cover; box-shadow: 0 20px 40px -12px rgba(0, 102, 204, 0.18); border: 1.5px solid #e2e8f0; display: block; margin: 0 auto; image-rendering: -webkit-optimize-contrast;">
+            </div>
           </div>
         </div>
       </section>
@@ -191,7 +249,7 @@
           <p style="margin-top: 14px; color: #94a3b8; font-size: 1.35rem; line-height: 1.6;" data-i18n="footer_tagline">Vos soins rénaux, notre priorité.<br>Transport sanitaire, consultations et pharmacie.</p>
           <div class="social-list" style="margin-top: 18px;">
             <a href="https://wa.me/213770313136" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp"><ion-icon name="logo-whatsapp"></ion-icon></a>
-            <a href="tel:+2130770313136" class="social-link" aria-label="Téléphone"><ion-icon name="call-outline"></ion-icon></a>
+            <a href="tel:+213770313136" class="social-link" aria-label="Téléphone"><ion-icon name="call-outline"></ion-icon></a>
             <a href="mailto:transmalades.boucenna@gmail.com" class="social-link" aria-label="Email"><ion-icon name="mail-outline"></ion-icon></a>
           </div>
         </div>
@@ -199,13 +257,13 @@
           <h4 class="footer-col-title" data-i18n="footer_c2_title">Boucenna Cherchell</h4>
           <p class="footer-col-address" data-i18n="footer_c2_address">Cité Zitouni El Kheir<br>Cherchell, Tipaza</p>
           <span class="footer-col-phone" dir="ltr"><bdi><span data-i18n="label_phone_whatsapp">Tél / WhatsApp :</span> +213 (0) 770 31 31 36</bdi></span>
-          <a href="https://maps.app.goo.gl/dnBsbRCGPkD7GJVZ9" target="_blank" rel="noopener" class="footer-col-maplink"><ion-icon name="location-outline"></ion-icon> <span data-i18n="footer_maps_link">Itinéraire Google Maps</span></a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Dialyse+Boucenna+3+Cherchell" target="_blank" rel="noopener" class="footer-col-maplink"><ion-icon name="location-outline"></ion-icon> <span data-i18n="footer_maps_link">Itinéraire Google Maps</span></a>
         </div>
         <div>
           <h4 class="footer-col-title" data-i18n="footer_c3_title">Boucenna Bouira</h4>
           <p class="footer-col-address" data-i18n="footer_c3_address">Cité 2000 Logements<br>Bouira</p>
           <span class="footer-col-phone" dir="ltr"><bdi><span data-i18n="label_phone_whatsapp">Tél / WhatsApp :</span> +213 (0) 770 31 31 36</bdi></span>
-          <a href="https://maps.app.goo.gl/CTBTxc24xgg93dGW8" target="_blank" rel="noopener" class="footer-col-maplink"><ion-icon name="location-outline"></ion-icon> <span data-i18n="footer_maps_link">Itinéraire Google Maps</span></a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Clinique+Dialyse+Boucenna+2+Bouira" target="_blank" rel="noopener" class="footer-col-maplink"><ion-icon name="location-outline"></ion-icon> <span data-i18n="footer_maps_link">Itinéraire Google Maps</span></a>
         </div>
         <div>
           <h4 class="footer-col-title" data-i18n="footer_c4_title">Boucenna Aïn Oulmène</h4>

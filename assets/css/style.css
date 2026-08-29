@@ -1,3 +1,28 @@
+
+/* ==========================================================================
+   STRICT LIGHT MODE ENFORCEMENT (Zero Dark Mode / Anti-Inversion)
+   ========================================================================== */
+:root {
+  color-scheme: light !important;
+}
+
+html, body {
+  color-scheme: light !important;
+  background-color: #ffffff !important;
+  color: #334155 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: light !important;
+  }
+  html, body {
+    color-scheme: light !important;
+    background-color: #ffffff !important;
+    color: #334155 !important;
+  }
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap');
 
@@ -59,7 +84,7 @@
    */
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
-  --font-family-ar: 'Noto Sans Arabic', 'Segoe UI', Tahoma, sans-serif;
+  --font-family-ar: 'Cairo', 'Segoe UI', Tahoma, Arial, sans-serif;
 }
 
 /*-----------------------------------*\
@@ -3310,3 +3335,853 @@ body[data-page="apropos"] ul {
   margin-bottom: 18px;
 }
 
+
+
+/* ==========================================================================
+   LANDING PAGE « DIALYSE VACANCES » — 12-SECTION ENHANCEMENTS (CdC)
+   ========================================================================== */
+
+.vacances-hero-section {
+  padding-top: 140px;
+  padding-bottom: 70px;
+  background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 50%, #f8fafc 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.reassurance-inline-bar {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 18px;
+  background-color: rgba(0, 102, 204, 0.08);
+  border: 1px solid rgba(0, 102, 204, 0.18);
+  border-radius: 9999px;
+  margin-top: 18px;
+}
+
+.reassurance-line-text {
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0;
+}
+
+.btn-whatsapp-action {
+  background-color: #25d366;
+  color: #ffffff;
+  border: 1px solid #25d366;
+  border-radius: var(--radius-btn);
+  padding: 12px 24px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.btn-whatsapp-action:hover {
+  background-color: #20ba59;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.modern-value-props-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  border: 1px solid #e2e8f0;
+}
+
+.modern-prop-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.modern-prop-icon {
+  font-size: 2.8rem;
+  color: var(--clr-blue-primary);
+  flex-shrink: 0;
+}
+
+.modern-prop-title {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.modern-prop-desc {
+  font-size: 1.35rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* 2. CENTERS SELECTION */
+.vacances-centers-section {
+  padding-block: 80px;
+  background-color: #ffffff;
+}
+
+.center-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+.modern-center-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 1.5px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+}
+
+.modern-center-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.modern-center-card.highlight-card {
+  border-color: var(--clr-blue-primary);
+  box-shadow: 0 10px 25px -5px rgba(0, 102, 204, 0.18);
+}
+
+.card-ribbon {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background-color: #0066cc;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
+.modern-center-card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.modern-center-card-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.center-zone-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0066cc;
+  margin-bottom: 8px;
+}
+
+.modern-center-card-title {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.modern-center-card-desc {
+  font-size: 1.42rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+.center-card-quickinfo {
+  display: flex;
+  gap: 16px;
+  font-size: 1.3rem;
+  color: #334155;
+  margin-bottom: 20px;
+  padding-block: 10px;
+  border-top: 1px dashed #e2e8f0;
+  border-bottom: 1px dashed #e2e8f0;
+}
+
+.center-card-quickinfo span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.center-card-actions-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-card-action {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--clr-blue-primary);
+  text-align: center;
+  padding-block: 4px;
+}
+
+.btn-card-action:hover {
+  text-decoration: underline;
+}
+
+/* 3. PARCOURS 4 ÉTAPES */
+.timeline-section {
+  padding-block: 80px;
+  background-color: #f8fafc;
+}
+
+.journey-track {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.journey-step-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-card);
+  padding: 28px 22px;
+  box-shadow: var(--shadow-card);
+  border: 1px solid #e2e8f0;
+  position: relative;
+  text-align: center;
+}
+
+.step-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 32px;
+  height: 32px;
+  background-color: var(--clr-blue-primary);
+  color: #ffffff;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 102, 204, 0.3);
+}
+
+.step-icon-wrap {
+  font-size: 3.2rem;
+  color: var(--clr-blue-primary);
+  margin-top: 10px;
+  margin-bottom: 14px;
+}
+
+.step-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.step-desc {
+  font-size: 1.4rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.parcours-micro-note {
+  margin-top: 36px;
+  padding: 16px 20px;
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: var(--radius-card);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.parcours-micro-note ion-icon {
+  font-size: 2.4rem;
+  color: #16a34a;
+  flex-shrink: 0;
+}
+
+.parcours-micro-note p {
+  font-size: 1.42rem;
+  font-weight: 600;
+  color: #166534;
+  margin: 0;
+}
+
+/* 4. FORM & SIDE PANEL */
+.vacation-form-section {
+  padding-block: 80px;
+  background-color: #ffffff;
+}
+
+.form-layout-wrapper {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.vacation-form-card {
+  background-color: #ffffff;
+  padding: 36px;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  border: 1px solid #e2e8f0;
+}
+
+.form-consent-group {
+  margin-block: 20px 24px;
+  padding: 14px;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-btn);
+}
+
+.consent-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.consent-checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  cursor: pointer;
+  accent-color: var(--clr-blue-primary);
+  flex-shrink: 0;
+}
+
+.consent-text {
+  font-size: 1.35rem;
+  color: #334155;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.privacy-sublink {
+  margin-top: 8px;
+  padding-left: 28px;
+}
+
+.privacy-anchor {
+  font-size: 1.25rem;
+  color: var(--clr-blue-primary);
+  text-decoration: underline;
+}
+
+.reassurance-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-card);
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+  border: 1px solid #e2e8f0;
+}
+
+.reassurance-image img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: var(--radius-btn);
+  margin-bottom: 16px;
+}
+
+.reassurance-list {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reassurance-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.38rem;
+  color: #334155;
+}
+
+.reassurance-list li ion-icon {
+  color: #10b981;
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+/* 5. WHY BOUCENNA */
+.why-boucenna-section {
+  padding-block: 80px;
+  background-color: #f8fafc;
+}
+
+.modern-why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.modern-why-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-card);
+  padding: 26px;
+  box-shadow: var(--shadow-card);
+  border: 1px solid #e2e8f0;
+  transition: transform var(--transition-fast);
+}
+
+.modern-why-card:hover {
+  transform: translateY(-3px);
+}
+
+.modern-why-icon-bubble {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background-color: rgba(0, 102, 204, 0.1);
+  color: var(--clr-blue-primary);
+  font-size: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.modern-why-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.modern-why-desc {
+  font-size: 1.42rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.modern-priority-banner {
+  background: linear-gradient(135deg, #0a2540 0%, #0066cc 100%);
+  border-radius: var(--radius-card);
+  padding: 28px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  color: #ffffff;
+}
+
+.modern-priority-content {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.modern-priority-icon {
+  font-size: 3.6rem;
+  color: #38bdf8;
+  flex-shrink: 0;
+}
+
+.modern-priority-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.modern-priority-desc {
+  font-size: 1.42rem;
+  color: #e0f2fe;
+  line-height: 1.5;
+}
+
+/* 6. VIDEO SHOWCASE */
+.video-showcase-section {
+  padding-block: 80px;
+  background-color: #ffffff;
+}
+
+.center-video-frame video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #0f172a;
+}
+
+/* 7. MEDICAL SECURITY */
+.medical-security-section {
+  padding-block: 80px;
+  background-color: #f8fafc;
+}
+
+.medical-security-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.medical-security-workflow-card,
+.medical-docs-checklist-card {
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  border: 1px solid #e2e8f0;
+}
+
+.sec-workflow-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.sec-num {
+  width: 36px;
+  height: 36px;
+  background-color: rgba(0, 102, 204, 0.12);
+  color: #0066cc;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.medical-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.medical-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 1.42rem;
+  color: #334155;
+  line-height: 1.5;
+}
+
+.medical-checklist li ion-icon {
+  color: #0066cc;
+  font-size: 2rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* 8. COVERAGE & PRICING */
+.coverage-pricing-section {
+  padding-block: 80px;
+  background-color: #ffffff;
+}
+
+.cautious-quote-box {
+  background-color: #f0f7ff;
+  border-left: 4px solid var(--clr-blue-primary);
+  padding: 20px 24px;
+  border-radius: 0 var(--radius-card) var(--radius-card) 0;
+  margin-top: 18px;
+  text-align: left;
+}
+
+.cautious-text {
+  font-size: 1.52rem;
+  color: #0f172a;
+  font-weight: 600;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.coverage-3grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.coverage-item-card {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-card);
+  padding: 26px;
+}
+
+.coverage-item-icon {
+  font-size: 3rem;
+  color: var(--clr-blue-primary);
+  margin-bottom: 14px;
+}
+
+/* 9. TESTIMONIALS */
+.testimonials-vacation-section {
+  padding-block: 80px;
+  background-color: #f8fafc;
+}
+
+.testimonials-3grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.quote-mark {
+  font-size: 4.5rem;
+  line-height: 1;
+  font-family: serif;
+  color: #0066cc;
+  opacity: 0.35;
+  display: block;
+  margin-bottom: -10px;
+}
+
+.testi-quote-text {
+  font-size: 1.45rem;
+  color: #334155;
+  line-height: 1.65;
+  margin-bottom: 18px;
+  font-style: italic;
+}
+
+/* 11. MAPS & ACCESS */
+.centers-map-section {
+  padding-block: 80px;
+  background-color: #ffffff;
+}
+
+.center-map-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.map-location-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-card);
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+}
+
+.map-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+/* 12. FINAL CTA */
+.final-cta-section {
+  padding-block: 90px;
+  background: linear-gradient(135deg, #f0f7ff 0%, #e0f2fe 100%);
+}
+
+.final-cta-box {
+  background-color: #ffffff;
+  border-radius: var(--radius-card);
+  padding: 50px 36px;
+  text-align: center;
+  box-shadow: 0 20px 40px -10px rgba(0, 102, 204, 0.15);
+  border: 1.5px solid rgba(0, 102, 204, 0.2);
+}
+
+/* RTL ADJUSTMENTS */
+[dir="rtl"] .card-ribbon {
+  right: auto;
+  left: 14px;
+}
+
+[dir="rtl"] .cautious-quote-box {
+  border-left: none;
+  border-right: 4px solid var(--clr-blue-primary);
+  border-radius: var(--radius-card) 0 0 var(--radius-card);
+  text-align: right;
+}
+
+[dir="rtl"] .privacy-sublink {
+  padding-left: 0;
+  padding-right: 28px;
+}
+
+[dir="rtl"] .form-input-icon-wrap ion-icon {
+  left: auto;
+  right: 12px;
+}
+
+[dir="rtl"] .form-input-icon-wrap .form-control-custom {
+  padding-left: 14px;
+  padding-right: 40px;
+}
+
+[dir="rtl"] .form-input-icon-wrap textarea.form-control-custom {
+  padding-left: 14px;
+  padding-right: 40px;
+}
+
+/* RESPONSIVE BREAKPOINTS (Mobile Readability >= 16px text) */
+@media (max-width: 992px) {
+  .form-layout-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .medical-security-grid {
+    grid-template-columns: 1fr;
+  }
+  .modern-priority-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .modern-priority-content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .vacances-hero-section {
+    padding-top: 110px;
+    padding-bottom: 50px;
+  }
+  .vacation-form-card {
+    padding: 24px 18px;
+  }
+  .final-cta-box {
+    padding: 36px 20px;
+  }
+  .hero-subtitle-modern,
+  .modern-center-card-desc,
+  .step-desc,
+  .modern-why-desc,
+  .testi-quote-text,
+  .cautious-text,
+  .medical-checklist li,
+  .form-control-custom {
+    font-size: 1.6rem !important; /* >= 16px mobile compliance */
+  }
+}
+
+
+/* ==========================================================================
+   MODERN ARABIC TYPOGRAPHY SYSTEM (Cairo Font & RTL Elevation)
+   ========================================================================== */
+
+[dir="rtl"],
+.lang-ar,
+html[lang="ar"],
+html[dir="rtl"] body {
+  font-family: var(--font-family-ar) !important;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+[dir="rtl"] *,
+.lang-ar * {
+  font-family: var(--font-family-ar) !important;
+}
+
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] .hero-title-modern,
+[dir="rtl"] .modern-center-card-title,
+[dir="rtl"] .step-title,
+[dir="rtl"] .modern-why-title,
+[dir="rtl"] .section-title {
+  font-family: var(--font-family-ar) !important;
+  font-weight: 800 !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0 !important;
+}
+
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6,
+[dir="rtl"] strong,
+[dir="rtl"] b {
+  font-family: var(--font-family-ar) !important;
+  font-weight: 700 !important;
+}
+
+[dir="rtl"] p,
+[dir="rtl"] li,
+[dir="rtl"] span,
+[dir="rtl"] a,
+[dir="rtl"] label,
+[dir="rtl"] input,
+[dir="rtl"] select,
+[dir="rtl"] textarea,
+[dir="rtl"] button {
+  font-family: var(--font-family-ar) !important;
+  line-height: 1.75 !important;
+  letter-spacing: 0 !important;
+}
+
+[dir="rtl"] .navbar-link {
+  font-weight: 600 !important;
+  font-size: 1.55rem !important;
+}
+
+[dir="rtl"] .btn-blue-solid,
+[dir="rtl"] .btn-blue-outline,
+[dir="rtl"] .btn-whatsapp-action,
+[dir="rtl"] .btn-whatsapp-centre,
+[dir="rtl"] .btn-itineraire-centre,
+[dir="rtl"] .btn-call-outline {
+  font-family: var(--font-family-ar) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+}
+
+[dir="rtl"] .badge-pill-blue,
+[dir="rtl"] .card-ribbon,
+[dir="rtl"] .center-zone-tag {
+  font-family: var(--font-family-ar) !important;
+  font-weight: 700 !important;
+}
+
+[dir="rtl"] .cautious-text {
+  line-height: 1.85 !important;
+  font-weight: 600 !important;
+  font-size: 1.55rem !important;
+}
+
+[dir="rtl"] .testi-quote-text {
+  font-style: normal !important;
+  line-height: 1.85 !important;
+  font-size: 1.48rem !important;
+}
+
+[dir="rtl"] .parcours-micro-note p {
+  line-height: 1.7 !important;
+  font-weight: 600 !important;
+}
+
+[dir="rtl"] .reassurance-line-text {
+  font-weight: 700 !important;
+  font-size: 1.45rem !important;
+}
