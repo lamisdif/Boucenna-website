@@ -1,4 +1,4 @@
-
+﻿
 /* ==========================================================================
    STRICT LIGHT MODE ENFORCEMENT (Zero Dark Mode / Anti-Inversion)
    ========================================================================== */
@@ -2597,7 +2597,6 @@ body[data-page="apropos"] ul {
   font-size: 1.6rem;
 }
 
-}
 
 
 
@@ -4493,21 +4492,55 @@ html[dir="rtl"] body {
 
 @media (max-width: 860px) {
   .hero-pp-inner {
-    min-height: 520px;
+    min-height: 580px;
+    padding-top: 96px;
+    padding-bottom: 50px;
+  }
+
+  .hero-pp-bg {
+    background-position: 70% center;
   }
 
   .hero-pp-overlay {
     background: linear-gradient(
-      180deg,
-      rgba(10, 37, 64, 0.82) 0%,
-      rgba(10, 37, 64, 0.65) 60%,
-      rgba(10, 37, 64, 0.20) 100%
+      105deg,
+      rgba(10, 37, 64, 0.90) 0%,
+      rgba(10, 37, 64, 0.78) 45%,
+      rgba(10, 37, 64, 0.35) 75%,
+      rgba(10, 37, 64, 0.08) 100%
     );
   }
 
   .hero-pp-content {
     max-width: 100%;
-    padding-block: 56px;
+    padding-block: 40px;
+  }
+
+  .hero-pp-title {
+    font-size: clamp(2.6rem, 6.2vw, 3.6rem);
+    line-height: 1.16;
+    margin-bottom: 16px;
+  }
+
+  .hero-pp-sub {
+    font-size: 1.45rem;
+    line-height: 1.65;
+    margin-bottom: 26px;
+    max-width: 480px;
+  }
+
+  .hero-pp-ctas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .hero-pp-btn-primary,
+  .hero-pp-btn-ghost {
+    padding: 12px 18px;
+    font-size: 1.35rem;
   }
 
   .hero-intro-sep {
@@ -4530,20 +4563,18 @@ html[dir="rtl"] body {
 
 @media (max-width: 480px) {
   .hero-pp-inner {
-    min-height: 480px;
+    min-height: 560px;
+    padding-top: 88px;
   }
 
   .hero-pp-title {
-    font-size: 3rem;
-  }
-
-  .hero-pp-ctas {
-    flex-direction: column;
+    font-size: clamp(2.4rem, 6.8vw, 3.2rem);
   }
 
   .hero-pp-btn-primary,
   .hero-pp-btn-ghost {
-    justify-content: center;
+    padding: 11px 16px;
+    font-size: 1.3rem;
   }
 }
 
@@ -4561,4 +4592,19 @@ html[dir="rtl"] body {
 [dir="rtl"] .hero-pp-content {
   margin-left: auto;
   margin-right: 0;
+}
+
+@media (max-width: 860px) {
+  [dir="rtl"] .hero-pp-bg {
+    background-position: 30% center;
+  }
+  [dir="rtl"] .hero-pp-overlay {
+    background: linear-gradient(
+      255deg,
+      rgba(10, 37, 64, 0.90) 0%,
+      rgba(10, 37, 64, 0.78) 45%,
+      rgba(10, 37, 64, 0.35) 75%,
+      rgba(10, 37, 64, 0.08) 100%
+    );
+  }
 }
