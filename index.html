@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -150,76 +150,143 @@
   <main>
     <article>
       
-      <!-- SCREEN 1: HERO SITE PRINCIPAL WITH CLINIC BACKGROUND -->
+      <!-- HERO PREMIUM -->
       <section class="hero-site-principal" aria-label="Réseau Boucenna">
-        <div class="container">
-          
-          <div data-reveal="left" style="max-width: 620px;">
-            <h1 class="hero-title-modern" data-i18n="hero_title_home">
-              Réseau de centres<br><span>d'hémodialyse Boucenna</span>
+        <div class="hero-pp-inner">
+
+          <!-- Overlay gradient: dark on left for text, fades to transparent on right -->
+          <div class="hero-pp-overlay"></div>
+
+          <!-- Background image via inline style so CSS keeps it simple -->
+          <div class="hero-pp-bg" style="background-image: url('./assets/photoprincipal/photo_2026-09-14_21-01-14.jpg');"></div>
+
+          <!-- Content -->
+          <div class="container hero-pp-content" data-reveal="left">
+            <span class="hero-pp-eyebrow">Dialyse Boucenna</span>
+            <h1 class="hero-pp-title" data-i18n="hero_title_home">
+              Une prise en charge médicale<br>
+              <span>au cœur de votre parcours.</span>
             </h1>
-            <p class="hero-subtitle-modern" data-i18n="hero_sub_home">
-              Un réseau de centres de qualité, humain et innovant à votre service à Cherchell, Bouira et Aïn Oulmène.
+            <p class="hero-pp-sub" data-i18n="hero_sub_home">
+              Trois centres d'hémodialyse de référence — Cherchell, Bouira et Aïn Oulmène —
+              alliant expertise médicale, équipements de dernière génération et accompagnement humain.
             </p>
-            <div class="btn-group" style="margin-bottom: 30px;">
-              <a href="#centres" class="btn-blue-solid">
+            <div class="hero-pp-ctas">
+              <a href="#centres" class="hero-pp-btn-primary">
                 <ion-icon name="business-outline"></ion-icon>
                 <span data-i18n="btn_discover_centers">Découvrir nos centres</span>
               </a>
-              <a href="dialyse-vacances.html" class="btn-blue-outline">
-                <ion-icon name="airplane-outline"></ion-icon>
-                <span data-i18n="btn_vacation_cta">Dialyse Vacances en Algérie</span>
+              <a href="contact.html" class="hero-pp-btn-ghost">
+                <ion-icon name="call-outline"></ion-icon>
+                <span data-i18n="nav_contact_btn">Nous contacter</span>
               </a>
             </div>
           </div>
 
-          <!-- 3 Center Hero Cards (Screen 1 Bottom) -->
-          <div class="center-cards-grid" id="centres" data-reveal="bottom">
-            
-            <!-- Aïn Oulmène -->
-            <div class="modern-center-card">
-              <img src="./assets/images/ain oulmene/am.jpg" alt="Centre Aïn Oulmène" class="modern-center-card-img" loading="eager">
-              <div class="modern-center-card-content" style="text-align: center; align-items: center;">
-                <h3 class="modern-center-card-title" data-i18n="home_c1_title">Aïn Oulmène</h3>
-                <p class="modern-center-card-desc" style="color: #64748b; font-size: 1.35rem; margin-bottom: 14px;" data-i18n="home_c1_sub">
-                  Sétif et sud de Sétif
-                </p>
-                <a href="centre-ain-oulmene.html" class="btn-blue-solid w-100" style="padding: 10px 16px; font-size: 1.4rem;">
-                  <span data-i18n="btn_discover">Découvrir</span>
-                </a>
-              </div>
-            </div>
+        </div>
+      </section>
 
-            <!-- Bouira -->
-            <div class="modern-center-card">
-              <img src="./assets/images/bouira/bouira.jpg" alt="Centre Bouira" class="modern-center-card-img" loading="eager">
-              <div class="modern-center-card-content" style="text-align: center; align-items: center;">
-                <h3 class="modern-center-card-title" data-i18n="home_c2_title">Bouira</h3>
-                <p class="modern-center-card-desc" style="color: #64748b; font-size: 1.35rem; margin-bottom: 14px;" data-i18n="home_c2_sub">
-                  Bouira et environs
-                </p>
-                <a href="centre-bouira.html" class="btn-blue-solid w-100" style="padding: 10px 16px; font-size: 1.4rem;">
-                  <span data-i18n="btn_discover">Découvrir</span>
-                </a>
-              </div>
+      <!-- INTRO STRIP -->
+      <section class="hero-intro-strip">
+        <div class="container hero-intro-grid">
+          <div class="hero-intro-item">
+            <ion-icon name="heart-circle-outline" class="hero-intro-icon"></ion-icon>
+            <div>
+              <strong>Soins spécialisés</strong>
+              <span>Hémodialyse & Néphologie</span>
             </div>
-
-            <!-- Cherchell -->
-            <div class="modern-center-card">
-              <img src="./assets/images/cherchcel/cherchel_real_main.jpg" alt="Centre Cherchell" class="modern-center-card-img" loading="eager">
-              <div class="modern-center-card-content" style="text-align: center; align-items: center;">
-                <h3 class="modern-center-card-title" data-i18n="home_c3_title">Cherchell</h3>
-                <p class="modern-center-card-desc" style="color: #64748b; font-size: 1.35rem; margin-bottom: 14px;" data-i18n="home_c3_sub">
-                  Tipaza / Littoral
-                </p>
-                <a href="centre-cherchell.html" class="btn-blue-solid w-100" style="padding: 10px 16px; font-size: 1.4rem;">
-                  <span data-i18n="btn_discover">Découvrir</span>
-                </a>
-              </div>
+          </div>
+          <div class="hero-intro-sep"></div>
+          <div class="hero-intro-item">
+            <ion-icon name="shield-checkmark-outline" class="hero-intro-icon"></ion-icon>
+            <div>
+              <strong>100 % pris en charge</strong>
+              <span>CNAS / CASNOS</span>
             </div>
+          </div>
+          <div class="hero-intro-sep"></div>
+          <div class="hero-intro-item">
+            <ion-icon name="car-outline" class="hero-intro-icon"></ion-icon>
+            <div>
+              <strong>Transport dédié</strong>
+              <span>Domicile — Clinique</span>
+            </div>
+          </div>
+          <div class="hero-intro-sep"></div>
+          <div class="hero-intro-item">
+            <ion-icon name="location-outline" class="hero-intro-icon"></ion-icon>
+            <div>
+              <strong>3 centres</strong>
+              <span>Cherchell · Bouira · Sétif</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <!-- NOS CENTRES -->
+      <section class="centres-section" id="centres">
+        <div class="container">
+          <div class="centres-heading" data-reveal="bottom">
+            <span class="badge-pill-blue" data-i18n="badge_our_centers">Nos centres</span>
+            <h2 class="hero-title-modern" style="font-size: clamp(2.8rem, 3.8vw, 4rem); margin-bottom: 10px;" data-i18n="home_centres_title">
+              Une présence médicale <span>au plus près de vous</span>
+            </h2>
+            <p style="font-size: 1.55rem; color: #64748b; max-width: 560px; margin: 0 auto;" data-i18n="home_centres_sub">
+              Chaque centre Boucenna est conçu pour offrir le même niveau d'excellence, quelle que soit votre région.
+            </p>
           </div>
 
+          <div class="centres-cards-grid" data-reveal="bottom">
+
+            <!-- Bouira -->
+            <a href="centre-bouira.html" class="centre-card-premium">
+              <div class="centre-card-img-wrap">
+                <img src="./photosbouira/photo_7_2026-09-14_20-58-54.jpg" alt="Centre Boucenna Bouira" loading="eager">
+                <div class="centre-card-img-overlay"></div>
+              </div>
+              <div class="centre-card-body">
+                <span class="centre-card-region">
+                  <ion-icon name="location-sharp"></ion-icon> Bouira &amp; environs
+                </span>
+                <h3 class="centre-card-name" data-i18n="home_c2_title">Bouira</h3>
+                <p class="centre-card-desc" data-i18n="home_c2_sub">Cité 2000 Logements — accès direct autoroute Est-Ouest.</p>
+                <span class="centre-card-link">Découvrir le centre <ion-icon name="arrow-forward-outline"></ion-icon></span>
+              </div>
+            </a>
+
+            <!-- Cherchell -->
+            <a href="centre-cherchell.html" class="centre-card-premium">
+              <div class="centre-card-img-wrap">
+                <img src="./photoscherchell/photo_7_2026-09-14_20-57-09.jpg" alt="Centre Boucenna Cherchell" loading="eager">
+                <div class="centre-card-img-overlay"></div>
+              </div>
+              <div class="centre-card-body">
+                <span class="centre-card-region">
+                  <ion-icon name="location-sharp"></ion-icon> Tipaza · Littoral
+                </span>
+                <h3 class="centre-card-name" data-i18n="home_c3_title">Cherchell</h3>
+                <p class="centre-card-desc" data-i18n="home_c3_sub">Cadre maritime apaisant, générateurs de dernière génération.</p>
+                <span class="centre-card-link">Découvrir le centre <ion-icon name="arrow-forward-outline"></ion-icon></span>
+              </div>
+            </a>
+
+            <!-- Aïn Oulmène -->
+            <a href="centre-ain-oulmene.html" class="centre-card-premium">
+              <div class="centre-card-img-wrap">
+                <img src="./photosainulmen/photo_7_2026-09-14_20-58-06.jpg" alt="Centre Boucenna Aïn Oulmène" loading="eager">
+                <div class="centre-card-img-overlay"></div>
+              </div>
+              <div class="centre-card-body">
+                <span class="centre-card-region">
+                  <ion-icon name="location-sharp"></ion-icon> Sétif &amp; sud de Sétif
+                </span>
+                <h3 class="centre-card-name" data-i18n="home_c1_title">Aïn Oulmène</h3>
+                <p class="centre-card-desc" data-i18n="home_c1_sub">Plateau technique de pointe et service de transport médicalisé.</p>
+                <span class="centre-card-link">Découvrir le centre <ion-icon name="arrow-forward-outline"></ion-icon></span>
+              </div>
+            </a>
+
+          </div>
         </div>
       </section>
 
@@ -240,7 +307,7 @@
             
             <div class="modern-center-card">
               <div class="center-video-frame" style="border-radius: 0; border: none; aspect-ratio: 16/9;">
-                <video controls muted playsinline preload="none" poster="./assets/images/cherchcel/cherchel_real_1.jpg" preload="none">
+                <video controls muted playsinline preload="none" poster="./photoscherchell/photo_5_2026-09-14_20-57-09.jpg">
                   <source src="./assets/images/cherchcel/videoChh.MP4" type="video/mp4">
                 </video>
               </div>
@@ -253,7 +320,7 @@
 
             <div class="modern-center-card">
               <div class="center-video-frame" style="border-radius: 0; border: none; aspect-ratio: 16/9;">
-                <video controls muted playsinline preload="none" poster="./assets/images/bouira/bouira.jpg" preload="none">
+                <video controls muted playsinline preload="none" poster="./photosbouira/photo_6_2026-09-14_20-58-54.jpg">
                   <source src="./assets/images/bouira/videoBouira.MP4" type="video/mp4">
                 </video>
               </div>

@@ -1411,24 +1411,7 @@ textarea.form-control-custom {
    REFERENCE A (9 SCREENS) COMPLETE STYLING EXTENSION
    ========================================================================== */
 
-/* Screen 1: Homepage Hero with Real Clinic Background */
-.hero-site-principal {
-  position: relative;
-  padding-top: 130px;
-  padding-bottom: 70px;
-  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.88) 50%, rgba(255, 255, 255, 0.45) 100%), url('../images/clinique.jpg');
-  background-size: cover;
-  background-position: right center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-}
-
-@media (max-width: 860px) {
-  .hero-site-principal {
-    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%), url('../images/clinique.jpg');
-    background-position: center;
-  }
-}
+/* Screen 1: Homepage Hero — see premium section below */
 
 /* Screen 2: Center Dedicated Hero */
 .center-hero-layout {
@@ -2040,6 +2023,8 @@ textarea.form-control-custom {
   direction: rtl;
   text-align: right;
 }
+
+
 
 [dir="rtl"] .navbar-list {
   display: flex;
@@ -4184,4 +4169,396 @@ html[dir="rtl"] body {
 [dir="rtl"] .reassurance-line-text {
   font-weight: 700 !important;
   font-size: 1.45rem !important;
+}
+
+
+/* ==========================================================================
+   PREMIUM HERO — photoprincipal as cinematic background
+   ========================================================================== */
+
+.hero-site-principal {
+  position: relative;
+  background: #fff;
+  overflow: hidden;
+}
+
+.hero-pp-inner {
+  position: relative;
+  width: 100%;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  padding-top: 88px; /* navbar height */
+  overflow: hidden;
+}
+
+/* Background photo — cropped to show the clinic exterior, not the full banner */
+.hero-pp-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center 40%;
+  background-repeat: no-repeat;
+  transform: scale(1.02);
+}
+
+/* Gradient overlay: opaque dark-navy left → transparent right */
+.hero-pp-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    rgba(10, 37, 64, 0.88) 0%,
+    rgba(10, 37, 64, 0.72) 38%,
+    rgba(10, 37, 64, 0.30) 65%,
+    rgba(10, 37, 64, 0.04) 100%
+  );
+  z-index: 1;
+}
+
+/* Content sits above overlay */
+.hero-pp-content {
+  position: relative;
+  z-index: 2;
+  padding-block: 80px;
+  max-width: 620px;
+}
+
+/* Eyebrow */
+.hero-pp-eyebrow {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #7dd3fc;
+  margin-bottom: 18px;
+}
+
+/* Headline */
+.hero-pp-title {
+  font-size: clamp(3rem, 4.5vw, 5rem);
+  font-weight: 800;
+  line-height: 1.13;
+  color: #ffffff;
+  margin-bottom: 22px;
+  letter-spacing: -0.02em;
+}
+
+.hero-pp-title span {
+  color: #38bdf8;
+}
+
+/* Subtitle */
+.hero-pp-sub {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.80);
+  margin-bottom: 36px;
+  max-width: 520px;
+}
+
+/* CTA row */
+.hero-pp-ctas {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-pp-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #0066cc;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 14px 26px;
+  border-radius: 10px;
+  box-shadow: 0 4px 18px rgba(0, 102, 204, 0.35);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.hero-pp-btn-primary:hover {
+  background: #0052a3;
+  transform: translateY(-2px);
+}
+
+.hero-pp-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 14px 26px;
+  border-radius: 10px;
+  border: 1.5px solid rgba(255,255,255,0.30);
+  transition: background 0.2s ease, border-color 0.2s ease;
+  backdrop-filter: blur(4px);
+}
+.hero-pp-btn-ghost:hover {
+  background: rgba(255,255,255,0.20);
+  border-color: rgba(255,255,255,0.55);
+}
+
+/* ==========================================================================
+   INTRO STRIP — 4 trust pillars
+   ========================================================================== */
+
+.hero-intro-strip {
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  padding-block: 24px;
+}
+
+.hero-intro-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.hero-intro-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 32px;
+  flex: 1;
+  min-width: 200px;
+  justify-content: center;
+}
+
+.hero-intro-item div {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-intro-item strong {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.3;
+}
+
+.hero-intro-item span {
+  font-size: 1.25rem;
+  color: #64748b;
+}
+
+.hero-intro-icon {
+  font-size: 2.4rem;
+  color: #0066cc;
+  flex-shrink: 0;
+}
+
+.hero-intro-sep {
+  width: 1px;
+  height: 40px;
+  background: #e2e8f0;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+   NOS CENTRES — premium cards
+   ========================================================================== */
+
+.centres-section {
+  padding-block: 80px 90px;
+  background: #ffffff;
+}
+
+.centres-heading {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.centres-heading .badge-pill-blue {
+  margin-bottom: 14px;
+}
+
+.centres-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.centre-card-premium {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #eef2f6;
+  box-shadow: 0 4px 24px rgba(10, 37, 64, 0.06);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.centre-card-premium:hover {
+  box-shadow: 0 12px 40px rgba(0, 102, 204, 0.14);
+  transform: translateY(-4px);
+}
+
+.centre-card-img-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 220px;
+}
+
+.centre-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.45s ease;
+}
+
+.centre-card-premium:hover .centre-card-img-wrap img {
+  transform: scale(1.05);
+}
+
+.centre-card-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(10, 37, 64, 0.18) 100%);
+}
+
+.centre-card-body {
+  padding: 24px 26px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.centre-card-region {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0066cc;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.centre-card-region ion-icon {
+  font-size: 1.4rem;
+}
+
+.centre-card-name {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-top: 4px;
+  line-height: 1.2;
+}
+
+.centre-card-desc {
+  font-size: 1.4rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-top: 6px;
+  flex: 1;
+}
+
+.centre-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #0066cc;
+  margin-top: 16px;
+  transition: gap 0.2s ease;
+}
+
+.centre-card-premium:hover .centre-card-link {
+  gap: 10px;
+}
+
+/* ==========================================================================
+   RESPONSIVE — hero & centres
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .centres-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .hero-pp-inner {
+    min-height: 520px;
+  }
+
+  .hero-pp-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(10, 37, 64, 0.82) 0%,
+      rgba(10, 37, 64, 0.65) 60%,
+      rgba(10, 37, 64, 0.20) 100%
+    );
+  }
+
+  .hero-pp-content {
+    max-width: 100%;
+    padding-block: 56px;
+  }
+
+  .hero-intro-sep {
+    display: none;
+  }
+
+  .hero-intro-item {
+    min-width: 160px;
+    padding: 10px 16px;
+  }
+
+  .centres-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .centre-card-img-wrap {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-pp-inner {
+    min-height: 480px;
+  }
+
+  .hero-pp-title {
+    font-size: 3rem;
+  }
+
+  .hero-pp-ctas {
+    flex-direction: column;
+  }
+
+  .hero-pp-btn-primary,
+  .hero-pp-btn-ghost {
+    justify-content: center;
+  }
+}
+
+/* RTL support */
+[dir="rtl"] .hero-pp-overlay {
+  background: linear-gradient(
+    260deg,
+    rgba(10, 37, 64, 0.88) 0%,
+    rgba(10, 37, 64, 0.72) 38%,
+    rgba(10, 37, 64, 0.30) 65%,
+    rgba(10, 37, 64, 0.04) 100%
+  );
+}
+
+[dir="rtl"] .hero-pp-content {
+  margin-left: auto;
+  margin-right: 0;
 }
